@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PlayStyles>
+  <Override>
+    <PlayStyleBanner identifier="Serious" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,0,1161,340" color="#20686c" />
+    <PlayStyleBanner identifier="Casual" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,342,1161,340" color="#1f661c" />
+    <PlayStyleBanner identifier="Roleplay" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,683,1161,340" color="#8b1b45" />
+  </Override>
+</PlayStyles>

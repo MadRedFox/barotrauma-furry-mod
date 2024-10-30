@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<names format="[firstname] [lastname]">
+  <firstname value="Андрэ" />
+  <firstname value="Юки" />
+  <firstname value="Такуми" />
+  <firstname value="Рэн" />
+  <firstname value="Кассия" />
+  <firstname value="Акира" />
+  <firstname value="Хикари" />
+  <firstname value="Мицуки" />
+  <firstname value="Широ" />
+  <firstname value="Аи" />
+  <firstname value="Хидель" />
+  <firstname value="Ран" />
+  <firstname value="Зеро" />
+  <firstname value="Изуми" />
+  <firstname value="Нобуми" />
+  <firstname value="Хацу" />
+  <firstname tags="male" value="Джек" />
+  <firstname tags="male" value="Валера" />
+  <firstname tags="male" value="Исида" />
+  <firstname tags="male" value="Михаэль" />
+  <firstname tags="male" value="Шарль" />
+  <firstname tags="male" value="Феофан" />
+  <firstname tags="male" value="Рудольф" />
+  <firstname tags="male" value="Георгий" />
+  <firstname tags="male" value="Джеймс" />
+  <firstname tags="male" value="Николас" />
+  <firstname tags="male" value="Николай" />
+  <firstname tags="male" value="Крейн" />
+  <firstname tags="male" value="Айзек" />
+  <firstname tags="male" value="Ноктис" />
+  <firstname tags="male" value="Арсений" />
+  <firstname tags="male" value="Дмитрий" />
+  <firstname tags="male" value="Александр" />
+  <firstname tags="male" value="Йцукен" />
+  <firstname tags="male" value="Федор" />
+  <firstname tags="male" value="Мигель" />
+  <firstname tags="male" value="Энцо" />
+  <firstname tags="male" value="Чаппи" />
+  <firstname tags="male" value="Теодор" />
+  <firstname tags="male" value="Шерлок" />
+  <firstname tags="male" value="Иеремия" />
+  <firstname tags="male" value="Петр" />
+  <firstname tags="male" value="Теодор" />
+  <firstname tags="male" value="Чарльз" />
+  <firstname tags="male" value="Владимир" />
+  <firstname tags="male" value="Гарольд" />
+  <firstname tags="male" value="Кратос" />
+  <firstname tags="male" value="Один" />
+  <firstname tags="male" value="Роберт" />
+  <firstname tags="male" value="Ральф" />
+  <firstname tags="male" value="Альф" />
+  <firstname tags="male" value="Тирион" />
+  <firstname tags="male" value="Барни" />
+  <firstname tags="male" value="Гомер" />
+  <firstname tags="male" value="Уильям" />
+  <firstname tags="male" value="Юрий" />
+  <firstname tags="male" value="Акакий" />
+  <firstname tags="male" value="Харитон" />
+  <firstname tags="male" value="Пьер" />
+  <firstname tags="male" value="Илья" />
+  <firstname tags="male" value="Весимир" />
+  <firstname tags="male" value="Геральт" />
+  <firstname tags="male" value="Даррел" />
+  <firstname tags="male" value="Декстер" />
+  <firstname tags="male" value="Кирилл" />
+  <firstname tags="male" value="Дэвид" />
+  <firstname tags="male" value="Хуан" />
+  <firstname tags="male" value="Диего" />
+  <firstname tags="male" value="Сантьяго" />
+  <firstname tags="male" value="Антонио" />
+  <firstname tags="male" value="Хосе" />
+  <firstname tags="male" value="Ганс" />
+  <firstname tags="male" value="Адольф" />
+  <firstname tags="male" value="Авраам" />
+  <firstname tags="male" value="Адам" />
+  <firstname tags="male" value="Гесер" />
+  <firstname tags="male" value="Калеб" />
+  <firstname tags="male" value="Зигмунд" />
+  <firstname tags="male" value="Вальдемар" />
+  <firstname tags="male" value="Генрих" />
+  <firstname tags="male" value="Герберт" />
+  <firstname tags="male" value="Магнус" />
+  <firstname tags="male" value="Хорус" />
+  <firstname tags="male" value="Каин" />
+  <firstname tags="male" value="Юрген" />
+  <firstname tags="male" value="Феликс" />
+  <firstname tags="male" value="Фердинанд" />
+  <firstname tags="male" value="Себастьян" />
+  <firstname tags="male" value="Эмиль" />
+  <firstname tags="male" value="Клаус" />
+  <firstname tags="male" value="Гарри" />
+  <firstname tags="male" value="Дитрих" />
+  <firstname tags="male" value="Такума" />
+  <firstname tags="male" value="Пауль" />
+  <firstname tags="male" value="Никон" />
+  <firstname tags="male" value="Феанор" />
+  <firstname tags="male" value="Гендальф" />
+  <firstname tags="male" value="Фродо" />
+  <firstname tags="male" value="Сэм" />
+  <firstname tags="male" value="Спайк" />
+  <firstname tags="male" value="Йондо" />
+  <firstname tags="male" value="Альберт" />
+  <firstname tags="male" value="Жак" />
+  <firstname tags="female" value="Юки" />
+  <firstname tags="female" value="Милана" />
+  <firstname tags="female" value="Лина" />
+  <firstname tags="female" value="Бриджит" />
+  <firstname tags="female" value="Алексия" />
+  <firstname tags="female" value="Фалька" />
+  <firstname tags="female" value="Трисс" />
+  <firstname tags="female" value="Йенифер" />
+  <firstname tags="female" value="Лия" />
+  <firstname tags="female" value="Марта" />
+  <firstname tags="female" value="Джессика" />
+  <firstname tags="female" value="Берта" />
+  <firstname tags="female" value="Миранда" />
+  <firstname tags="female" value="Тали" />
+  <firstname tags="female" value="Лиара" />
+  <firstname tags="female" value="Клара" />
+  <firstname tags="female" value="Чиффа" />
+  <firstname tags="female" value="Меламори" />
+  <firstname tags="female" value="Тарна" />
+  <firstname tags="female" value="Ольга" />
+  <firstname tags="female" value="Рукия" />
+  <firstname tags="female" value="Шакти" />
+  <firstname tags="female" value="Мириам" />
+  <firstname tags="female" value="Миса" />
+  <firstname tags="female" value="Ванга" />
+  <firstname tags="female" value="Алиса" />
+  <firstname tags="female" value="Юлия" />
+  <firstname tags="female" value="Кристина" />
+  <firstname tags="female" value="Мария" />
+  <firstname tags="female" value="Екатерина" />
+  <firstname tags="female" value="Анна" />
+  <firstname tags="female" value="Юнона" />
+  <firstname tags="female" value="Альма" />
+  <firstname tags="female" value="Асука" />
+  <firstname tags="female" value="Рэй" />
+  <firstname tags="female" value="Урсула" />
+  <firstname tags="female" value="Петра" />
+  <firstname tags="female" value="Барбара" />
+  <firstname tags="female" value="Стефания" />
+  <firstname tags="female" value="Линда" />
+  <firstname tags="female" value="Аманда" />
+  <firstname tags="female" value="Карла" />
+  <firstname tags="female" value="Эльза" />
+  <firstname tags="female" value="Долорес" />
+  <firstname tags="female" value="Сесилия" />
+  <firstname tags="female" value="Эльвира" />
+  <firstname tags="female" value="Эсмеральда" />
+  <firstname tags="female" value="Елена" />
+  <firstname tags="female" value="Линда" />
+  <firstname tags="female" value="Летиция" />
+  <firstname tags="female" value="Магдалена" />
+  <firstname tags="female" value="Ева" />
+  <firstname tags="female" value="Джессика" />
+  <firstname tags="female" value="Фиона" />
+  <firstname tags="female" value="Ксандра" />
+  <firstname tags="female" value="Фелиция" />
+  <firstname tags="female" value="Талия" />
+  <firstname tags="female" value="Жанна" />
+  <firstname tags="female" value="Моана" />
+  <firstname tags="female" value="Мила" />
+  <firstname tags="female" value="Шани" />
+  <firstname tags="female" value="Анаис" />
+  <firstname tags="female" value="Камилла" />
+  <firstname tags="female" value="Кэрри" />
+  <firstname tags="female" value="Шарлотта" />
+  <firstname tags="female" value="Дафна" />
+  <firstname tags="female" value="Афина" />
+  <firstname tags="female" value="Гера" />
+  <firstname tags="female" value="Геката" />
+  <firstname tags="female" value="Персефона" />
+  <firstname tags="female" value="Афродита" />
+  <firstname tags="female" value="Делайла" />
+  <firstname tags="female" value="Диана" />
+  <firstname tags="female" value="Лилианна" />
+  <firstname tags="female" value="Розалинда" />
+  <firstname tags="female" value="Роза" />
+  <firstname tags="female" value="Офелия" />
+  <firstname tags="female" value="Флоренс" />
+  <firstname tags="female" value="Виктория" />
+  <firstname tags="female" value="Людмила" />
+  <firstname tags="female" value="Агнес" />
+  <firstname tags="female" value="Беатриса" />
+  <firstname tags="female" value="Генриетта" />
+  <firstname tags="female" value="Октавия" />
+  <firstname tags="female" value="Кейко" />
+  <firstname tags="female" value="Арвен" />
+  <firstname tags="female" value="Оливия" />
+  <firstname tags="female" value="Эвелин" />
+  <firstname tags="female" value="Шарлотта" />
+  <firstname tags="female" value="Ава" />
+  <lastname value="Сайто" />
+  <lastname value="Сузуки" />
+  <lastname value="Леклер" />
+  <lastname value="Сайнс" />
+  <lastname value="Такеда" />
+  <lastname value="Меригольд" />
+  <lastname value="Лэнгли" />
+  <lastname value="Аянами" />
+  <lastname value="Исида" />
+  <lastname value="Накамура" />
+  <lastname value="Линкольн" />
+  <lastname value="Мартинез" />
+  <lastname value="Родригез" />
+  <lastname value="Флорес" />
+  <lastname value="Лопез" />
+  <lastname value="Диаз" />
+  <lastname value="Хуарез" />
+  <lastname value="Чавез" />
+  <lastname value="Кастро" />
+  <lastname value="Риос" />
+  <lastname value="Фернандес" />
+  <lastname value="Леон" />
+  <lastname value="Ортега" />
+  <lastname value="Медина" />
+  <lastname value="Трехо" />
+  <lastname value="Ферстаппен" />
+  <lastname value="Окон" />
+  <lastname value="Гасли" />
+  <lastname value="де`Врис" />
+  <lastname value="де`Тревиль" />
+  <lastname value="О`Коннор" />
+  <lastname value="мак`Дафф" />
+  <lastname value="д`Арк" />
+  <lastname value="Келли" />
+  <lastname value="О`Нил" />
+  <lastname value="Дойл" />
+  <lastname value="Маккарти" />
+  <lastname value="Галлахер" />
+  <lastname value="Уилсон" />
+  <lastname value="Кэмпбелл" />
+  <lastname value="Кларк" />
+  <lastname value="Нолан" />
+  <lastname value="Браун" />
+  <lastname value="Мартин" />
+  <lastname value="Беггинс" />
+  <lastname value="Томпсон" />
+  <lastname value="Ридус" />
+  <lastname value="Магвайр" />
+  <lastname value="О`Каллахан" />
+  <lastname value="Пауэр" />
+  <lastname value="Суини" />
+  <lastname value="Уайт" />
+  <lastname value="Бойл" />
+  <lastname value="Даффи" />
+  <lastname value="Робинсон" />
+  <lastname value="Джексон" />
+  <lastname value="Мэнсон" />
+  <lastname value="Лоусон" />
+  <lastname value="Зора" />
+  <lastname value="Хирака" />
+  <lastname value="Уорд" />
+  <lastname value="Кинг" />
+  <lastname value="Дальмайер" />
+  <lastname value="Мюллер" />
+  <lastname value="Ницше" />
+  <lastname value="Меркель" />
+  <lastname value="Михельсон" />
+  <lastname value="Йодль" />
+  <lastname value="Рау" />
+  <lastname value="Райх" />
+  <lastname value="Бернхард" />
+  <lastname value="Вагнер" />
+  <lastname value="Вальтер" />
+  <lastname value="Вассерман" />
+  <lastname value="Киснер" />
+  <lastname value="Кнапп" />
+  <lastname value="Бах" />
+  <lastname value="Дитрих" />
+  <lastname value="Майер" />
+  <lastname value="Фет" />
+  <lastname value="Грос" />
+  <lastname value="Готтлиб" />
+  <lastname value="Шиба" />
+  <lastname value="Тельман" />
+  <lastname value="Хайнц" />
+  <lastname value="Дисней" />
+  <lastname value="Буше" />
+  <lastname value="Идальго" />
+  <lastname value="Озон" />
+  <lastname value="Олланд" />
+  <lastname value="Костье" />
+  <lastname value="Боррель" />
+  <lastname value="Галлимар" />
+  <lastname value="Сартр" />
+  <lastname value="Макрон" />
+  <lastname value="Моне" />
+  <lastname value="Жером" />
+  <lastname value="Дюма" />
+</names>

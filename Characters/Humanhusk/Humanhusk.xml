@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Character speciesname="Humanhusk" displayname="" husk="True" humanoid="True" caninteract="True" hasinfo="True" usehuskappendage="False" needsair="False" specifiertags="true" canspeak="False" blooddecal="blood" group="husk" speciestranslationoverride="" needswater="False" noise="100" visibility="100" bleedparticleair="blooddrop" bleedparticlewater="waterblood" bleedparticlemultiplier="1" eatingspeed="10" pathfinderpriority="1" hideinsonar="False" hideinthermalgoggles="True" sonardisruption="0" disabledistance="25000">
+    <inherit identifier="Humanhusk" package="Vanilla">
+      <doinherit />
+      <del sel="./names" />
+    </inherit>
+    <names path="%ModDir%/Characters/Human/names.xml" />
+    <ragdolls folder="default" />
+  </Character>
+</Override>

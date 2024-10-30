@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character specifiertags="true" SpeciesName="Felinid" skincolors="(#ffffff, 0)" haircolors="(#dfdfdf, 100); (#a2a2a2, 100); (#343434, 100); (#101010, 100); (#d2a36f, 100); (#f8e474, 100); (#862609, 100); (#bf0000, 100); (#e7a72b, 100); (#a10b0b, 100); (#db1b83, 100); (#111347, 100); (#4870d7, 100); (#ff5a00, 100); (#0d9816, 100); (#6d0fc5, 100)" facialhaircolors="(#ded7cc, 100); (#a19c93, 100); (#444444, 100); (#252424, 100)" SpeciesTranslationOverride="" DisplayName="" Group="human" Humanoid="True" HasInfo="True" CanInteract="True" UseHumanAI="True" Husk="False" UseHuskAppendage="True" NeedsAir="True" NeedsWater="False" CanSpeak="True" UseBossHealthBar="False" Noise="150" Visibility="150" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="True" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10">
+  <!-- TODO: Настроить имена -->
+  <names path="%ModDir%/Characters/Felinid/names.xml" />
+  <ragdolls folder="default" />
+  <animations folder="default" />
+  <damageemitter drawontop="True" Particle="gib" AngleMin="0" AngleMax="360" ScaleMin="0.25" ScaleMax="0.5" VelocityMin="50" VelocityMax="300" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="10" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <bloodemitter Particle="blood" AngleMin="0" AngleMax="0" ScaleMin="1" ScaleMax="1" VelocityMin="0" VelocityMax="0" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="10" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <bloodemitter Particle="waterblood" AngleMin="0" AngleMax="0" ScaleMin="1" ScaleMax="1" VelocityMin="0" VelocityMax="0" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="1" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <gibemitter Particle="gib" AngleMin="0" AngleMax="360" ScaleMin="1" ScaleMax="1" VelocityMin="200" VelocityMax="700" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="20" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <gibemitter Particle="heavygib" AngleMin="0" AngleMax="360" ScaleMin="1" ScaleMax="1" VelocityMin="50" VelocityMax="500" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="10" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <sound File="Content/Characters/Human/female_damage1.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage2.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage3.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage4.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage5.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage6.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage7.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage8.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage9.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/female_damage10.ogg" State="Damage" Range="500" Volume="1" Tags="Female" />
+  <sound File="Content/Characters/Human/male_damage1.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage2.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage3.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage4.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage5.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage6.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage7.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage8.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage9.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage10.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <sound File="Content/Characters/Human/male_damage11.ogg" State="Damage" Range="500" Volume="1" Tags="Male" />
+  <health Vitality="100" DoesBleed="True" CrushDepth="6000" UseHealthWindow="True" BleedingReduction="0" BurnReduction="0.075" ConstantHealthRegeneration="0" HealthRegenerationWhenEating="0" StunImmunity="False" PoisonImmunity="False" ApplyAfflictionColors="True">
+    <MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748" />
+    <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024" />
+    <Limb name="Head">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="2.0" />
+    </Limb>
+    <Limb name="Torso">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374" />
+      <VitalityMultiplier type="bleeding" multiplier="2.0" />
+    </Limb>
+    <Limb name="LeftArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+    <Limb name="RightArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+    <Limb name="LeftLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+    <Limb name="RightLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+  </health>
+  <inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" AccessibleWhenAlive="True" Commonness="1" />
+
+  <!-- TODO: Оставить только кошачьих. -->
+  <Heads>
+    <Head id="56" gender="female" sheetindex="0,7" tags="furry,body_ara" />
+    <!-- <Head id="57" gender="female" sheetindex="1,7" tags="furry,body_zta" /> -->
+    <Head id="58" gender="female" sheetindex="2,7" tags="furry,body_ayn" />
+    <Head id="59" gender="female" sheetindex="3,7" tags="furry,body_zofie" />
+    <!-- <Head id="60" gender="female" sheetindex="4,0" tags="furry,body_tvk" /> -->
+    <!-- <Head id="61" gender="female" sheetindex="5,0" tags="furry,body_rane" /> -->
+    <Head id="62" gender="female" sheetindex="6,0" tags="furry,body_srk" />
+    <Head id="63" gender="female" sheetindex="7,0" tags="furry,body_kesis" />
+    <Head id="64" gender="female" sheetindex="4,1" tags="furry,body_radoslav" />
+    <Head id="65" gender="female" sheetindex="5,1" tags="furry,body_vikna" />
+    <Head id="66" gender="female" sheetindex="6,1" tags="furry,body_silk" />
+    <Head id="67" gender="female" sheetindex="7,1" tags="furry,body_nytro" />
+    <Head id="68" gender="female" sheetindex="4,2" tags="furry,body_lia" />
+    <Head id="69" gender="female" sheetindex="5,2" tags="furry,body_hyena" />
+    <Head id="70" gender="female" sheetindex="6,2" tags="furry,body_aardwolf" />
+  </Heads>
+
+  <Vars>
+    <Var var="SPECIES" tags="furry" />
+    <Var var="GENDER" tags="female" />
+    <!-- TODO: Оставить только кошачьих. Переименовать теги? -->
+    <Var var="BODY" tags="human,body_ara,body_zta,body_ayn,body_zofie,body_tvk,body_rane,body_srk,body_kesis,body_radoslav,body_vikna,body_silk,body_nytro,body_lia,body_hyena,body_aardwolf" />
+  </Vars>
+
+  <MenuCategory var="GENDER" />
+  <Pronouns var="GENDER" />
+
+  <HeadAttachments>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 65" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="0,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 66" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="1,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 67" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="2,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 68" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="3,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 69" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="0,1" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 70" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="1,1" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 71" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="2,1" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 72" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="3,1" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 73" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="0,2" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 74" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="1,2" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 75" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="2,2" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 76" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="3,2" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 77" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="0,3" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 78" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="1,3" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 79" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="2,3" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 80" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="3,3" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 80" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_2.png" sheetindex="0,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 80" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_2.png" sheetindex="1,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 80" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_2.png" sheetindex="2,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 80" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_2.png" sheetindex="3,0" />
+    </Wearable>
+    <Wearable type="Hair" tags="female,furry">
+      <sprite name="Hair 80" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_2.png" sheetindex="1,1" />
+    </Wearable>
+    <Wearable type="Husk" tags="male">
+      <sprite name="Husk" texture="%ModDir%/Characters/Human/Human_male_husk.png" hidewearablesoftype="Beard" sheetindex="0,0" />
+    </Wearable>
+    <Wearable type="Husk" tags="female">
+      <sprite name="Husk" texture="%ModDir%/Characters/Human/Human_female_husk.png" hidewearablesoftype="Beard" sheetindex="0,0" />
+    </Wearable>
+      <!-- <Wearable type="FaceAttachment" commonness="1" tags="furry,body_ayn">
+        <sprite name="FurryEars Ayn" texture="%ModDir%/Characters/Human/Ears/ears_portrait_accs.png" sheetindex="2,7" depth="0.01"/>
+        <sprite name="FurryEars 1" texture="%ModDir%/Characters/Human/Ears/body_ayn_ears.png" sourcerect="0,0,127,127" origin="0.1,0.5" depth="0.01" ignoretint="False" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+        <sprite name="FurryEars 2"  texture="%ModDir%/Characters/Human/Ears/body_ayn_ears.png" sourcerect="128,0,127,127" origin="0.9,0.5" depth="0.11" ignoretint="False" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+        <sprite name="FurryEars 3" texture="%ModDir%/Characters/Human/Ears/body_ayn_ears.png" sourcerect="0,128,127,127" origin="0.5,0.5" depth="0.01" ignoretint="False" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+      </Wearable> -->
+      <Wearable type="Herpes" tags="male,human">
+        <sprite name="Herpes" texture="%ModDir%/Characters/Felinid/Felinid_male_karma.png" sheetindex="0,0" />
+      </Wearable>
+      <Wearable type="Herpes" tags="female,human">
+        <sprite name="Herpes" texture="%ModDir%/Characters/Felinid/Felinid_female_karma.png" sheetindex="0,0" />
+      </Wearable>
+  </HeadAttachments>
+  <ai />
+</Character>

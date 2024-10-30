@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <entityname.weeaboo>Катана</entityname.weeaboo>
+  <entitydescription.weeaboo>Антикварное оружие выданное старому виабушнику. Всё ещё смертельно опасно в опытных руках.</entitydescription.weeaboo>
+  <entityname.bunnyears>Зайчьи ушки</entityname.bunnyears>
+  <entityname.bunnysuit>Костюм Зайки</entityname.bunnysuit>
+  <entitydescription.bunnysuit>Шишка колом</entitydescription.bunnysuit>
+  <entityname.bdsmsuit>BDSM костюм</entityname.bdsmsuit>
+  <entitydescription.bdsmsuit>♂OH YES SIR♂</entitydescription.bdsmsuit>
+  <entityname.ccape1>Капитанское пальто</entityname.ccape1>
+  <entityname.ccape2>Капитанский плащ</entityname.ccape2>
+  <entityname.ccape3>Капитанская дублёнка</entityname.ccape3>
+  <entityname.captainscap4>Капитанская пилотка</entityname.captainscap4>
+  <entityname.medicalbandolier>Разгрузка парамедика</entityname.medicalbandolier>
+  <entityname.athame>Атам</entityname.athame>
+  <entityname.devilcostume>Мр. Дьявол костюм</entityname.devilcostume>
+  <entityname.devilmask>Мр. Дьявол</entityname.devilmask>
+  <entityname.christmashat_red1>Красная Новогодняя шапка</entityname.christmashat_red1>
+  <entityname.christmashat_red2>Красная Новогодняя шапка</entityname.christmashat_red2>
+  <entityname.christmashat_red3>Красная Новогодняя шапка</entityname.christmashat_red3>
+  <entityname.christmashat_red4>Красная Новогодняя шапка</entityname.christmashat_red4>
+  <entityname.christmashat_green1>Зелёная Новогодняя шапка</entityname.christmashat_green1>
+  <entityname.christmashat_green2>Зелёная Новогодняя шапка</entityname.christmashat_green2>
+  <entityname.christmashat_green3>Зелёная Новогодняя шапка</entityname.christmashat_green3>
+  <entityname.christmashat_green4>Зелёная Новогодняя шапка</entityname.christmashat_green4>
+  <entityname.aks74ucostume>Kalina</entityname.aks74ucostume>
+  <entityname.hk416ucostume>HK416</entityname.hk416ucostume>
+  <entityname.m200ucostume>M200</entityname.m200ucostume>
+  <entityname.mp7costume>MP7</entityname.mp7costume>
+  <entityname.ro635ucostume>RO635</entityname.ro635ucostume>
+  <entityname.ump9ucostume>UMP9</entityname.ump9ucostume>
+  <entityname.vsk94ucostume>VSK94</entityname.vsk94ucostume>
+  <entityname.m45ucostume>M45</entityname.m45ucostume>
+  <entityname.captainsuniform_corpse>Изорванная униформа капитана судна</entityname.captainsuniform_corpse>
+  <entitydescription.captainsuniform_corpse>Годится лишь на переработку</entitydescription.captainsuniform_corpse>
+  <entityname.doctorsuniform_corpse>Изорванная униформа дока</entityname.doctorsuniform_corpse>
+  <entitydescription.doctorsuniform_corpse>Годится лишь на переработку</entitydescription.doctorsuniform_corpse>
+  <entityname.orangejumpsuit_corpse>Обгоревший комбинезон электрика</entityname.orangejumpsuit_corpse>
+  <entitydescription.orangejumpsuit_corpse>Годится лишь на переработку</entitydescription.orangejumpsuit_corpse>
+  <entityname.bluejumpsuit_corpse>Изорванная форма механика</entityname.bluejumpsuit_corpse>
+  <entitydescription.bluejumpsuit_corpse>Годится лишь на переработку</entitydescription.bluejumpsuit_corpse>
+  <entityname.securityuniform_corpse>Изорванная форма сотрудника безопасности</entityname.securityuniform_corpse>
+  <entitydescription.securityuniform_corpse>Годится лишь на переработку</entitydescription.securityuniform_corpse>
+  <entityname.divingsuit_corpse>Проржавевший скафандр</entityname.divingsuit_corpse>
+  <entitydescription.divingsuit_corpse>Годится лишь на переработку</entitydescription.divingsuit_corpse>
+  <!-- Misc-->
+  <human>Человек</human>
+  <furry>Фурри</furry>
+</infotexts>

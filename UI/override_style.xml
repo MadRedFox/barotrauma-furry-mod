@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <style>
+    <TitleText color="255,255,255,255" hovercolor="255,255,255,255" selectedcolor="255,255,255,255" pressedcolor="255,255,255,255">
+      <Sprite texture="%ModDir%/UI/titleText.png" sourcerect="0,520,1161,328" tile="false" maintainaspectratio="true">
+        <override language="Traditional Chinese" texture="%ModDir%/UI/titleText.png" sourcerect="0,176,1161,343" />
+        <override language="Simplified Chinese" texture="%ModDir%/UI/titleText.png" sourcerect="0,176,1161,343" />
+      </Sprite>
+    </TitleText>
+  </style>
+</Override>

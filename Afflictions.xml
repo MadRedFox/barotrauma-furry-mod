@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <!-- VANILLA -->
+  <Affliction identifier="nausea">
+    <inherit identifier="nausea">
+      <doinherit />
+      <del sel="./PeriodicEffect/StatusEffect[@target='Character' or @comparison='and']" />
+      <add sel="./PeriodicEffect">
+        <StatusEffect target="Character" comparison="and">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="male" />
+          <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
+          <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
+          <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
+        </StatusEffect>
+        <StatusEffect target="Character" comparison="and">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="female" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale2.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale3.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale4.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale5.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale6.ogg" />
+        </StatusEffect>
+      </add>
+    </inherit>
+  </Affliction>
+  <Affliction identifier="concussion">
+    <inherit identifier="concussion">
+      <doinherit />
+      <del sel="./PeriodicEffect/StatusEffect[@target='Character' or @comparison='and']" />
+      <add sel="./PeriodicEffect">
+        <StatusEffect target="Character" comparison="and">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="male" />
+          <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
+          <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
+          <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
+        </StatusEffect>
+        <StatusEffect target="Character" comparison="and">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="female" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale2.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale3.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale4.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale5.ogg" />
+          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale6.ogg" />
+        </StatusEffect>
+      </add>
+    </inherit>
+  </Affliction>
+</Override>
