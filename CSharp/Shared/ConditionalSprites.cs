@@ -210,7 +210,7 @@ namespace ConditionalSpritesNamespace
     //     }
     // }
 
-    /** Добавляем расовое разнообразие для NPC */
+    /** Adding racial diversity for NPC*/
 
     [HarmonyPatch(typeof(HumanPrefab))]
     class HumanPrefabPatch
@@ -223,7 +223,7 @@ namespace ConditionalSpritesNamespace
             CharacterInfo characterInfo;
             if (characterElement == null)
             {
-                Random random = new Random();
+                Random random = new Random(); //TODO replace with Rand.RandSync, add weights
                 string[] speciesList = {"human","felinid","ratmen"};
                 int i = random.Next(0, speciesList.Length);
 
