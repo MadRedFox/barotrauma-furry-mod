@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+    <Item name="" identifier="ek_merc_armor_uniform" category="Equipment" tags="smallitem,uniform,toolbelt,toolbox,cargoscooter,mobilecontainer" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+        <Price baseprice="180" soldeverywhere="false" minleveldifficulty="25">
+            <Price storeidentifier="merchantoutpost" multiplier="1.3" sold="false" />
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
+            <Price storeidentifier="merchantresearch" multiplier="1.2" sold="false" />
+            <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" />
+            <Price storeidentifier="merchantmine" multiplier="1" sold="false" />
+            <Price storeidentifier="merchantarmory" multiplier="1.25" minavailable="1" />
+        </Price>
+        <Deconstruct time="10">
+            <Item identifier="ballisticfiber" />
+            <Item identifier="ballisticfiber" />
+            <Item identifier="plastic" />
+            <Item identifier="plastic" />
+        </Deconstruct>
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="weapons" level="50" />
+            <RequiredItem identifier="ballisticfiber" amount="2" />
+            <RequiredItem identifier="plastic" amount="2" />
+        </Fabricate>
+        <InventoryIcon texture="%ModDir%/Items/Jobgear/EK/InventoryIcons.png" sourcerect="0,512,64,64" />
+        <Sprite texture="%ModDir%/Items/Jobgear/EK/ek_armor_clothes.png" sourcerect="208,0,208,96" depth="0.6" origin="0.5,0.5" />
+        <Body width="100" height="60" density="30" />
+        <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+            <sprite name="Mercenary Combat Undershirt Torso" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,32,128,192" />
+            <sprite name="Mercenary Combat Undershirt Right Arm" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="128,0,64,128" />
+            <sprite name="Mercenary Combat Undershirt Left Arm" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="128,128,64,128" />
+            <sprite name="Mercenary Combat Undershirt Right Lower Arm" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="192,0,64,64" />
+            <sprite name="Mercenary Combat Undershirt Left Lower Arm" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="192,128,64,64" />
+            <sprite name="Mercenary Combat Undershirt Right Hand" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="192,64,64,64" />
+            <sprite name="Mercenary Combat Undershirt Left Hand" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="192,192,64,64" />
+            <sprite name="Mercenary Combat Undershirt Waist" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,104,90" />
+            <sprite name="Mercenary Combat Undershirt Right Thigh" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="104,0,72,144" />
+            <sprite name="Mercenary Combat Undershirt Left Thigh" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="184,0,72,144" />
+            <sprite name="Mercenary Combat Undershirt Right Leg" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="104,144,72,112" />
+            <sprite name="Mercenary Combat Undershirt Left Leg" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="184,144,72,112" />
+            <sprite name="Mercenary Combat Undershirt Right Shoe" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,80,104,112" >
+                <conditionalSprite target="person">
+                <conditional hasSpecifiertag="furry" />
+                <properties>
+                    <property name="hidelimb">false</property>
+                </properties>
+                </conditionalSprite>
+                <ConditionalSprite target="person">
+                <conditional hasspecifiertag="human" />
+                <properties>
+                    <property name="hidelimb">true</property>
+                </properties>
+                </ConditionalSprite>
+            </sprite>
+            <sprite name="Mercenary Combat Undershirt Left Shoe" texture="%ModDir%/Items/Jobgear/EK/armor_mercenary_uniform_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,80,104,112" >
+                <conditionalSprite target="person">
+                <conditional hasSpecifiertag="furry" />
+                <properties>
+                    <property name="hidelimb">false</property>
+                </properties>
+                </conditionalSprite>
+                <ConditionalSprite target="person">
+                <conditional hasspecifiertag="human" />
+                <properties>
+                    <property name="hidelimb">true</property>
+                </properties>
+                </ConditionalSprite>
+            </sprite>
+            <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.75" damagesound="LimbArmor" deflectprojectiles="true" />
+            <SkillModifier skillidentifier="medical" skillvalue="5" />
+            <SkillModifier skillidentifier="mechanical" skillvalue="5" />
+            <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.88" setvalue="true" />
+        </Wearable>
+        <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+            <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
+        </ItemContainer>
+    </Item>
+</Override>

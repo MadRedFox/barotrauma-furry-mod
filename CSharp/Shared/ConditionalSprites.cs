@@ -211,7 +211,6 @@ namespace ConditionalSpritesNamespace
     // }
 
     /** Добавляем расовое разнообразие для NPC */
-
     [HarmonyPatch(typeof(HumanPrefab))]
     class HumanPrefabPatch
     {
