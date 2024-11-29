@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Item identifier="divingmask">
+    <inherit identifier="divingmask">
+      <doinherit />
+      <replace sel="./InventoryIcon/@texture">%ModDir%/Items/Jobgear/headgears_male.png</replace>
+      <replace sel="./InventoryIcon/@sourcerect">226,327,77,85</replace>
+      <replace sel="./Sprite/@texture">%ModDir%/Items/Jobgear/headgears_male.png</replace>
+      <replace sel="./Sprite/@sourcerect">226,327,77,85</replace>
+      <replace sel="./Wearable[@limbtype='Head']/sprite/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+      <replace sel="./Wearable[@limbtype='Head']/sprite/@sourcerect">226,327,77,85</replace>
+      <replace sel="./Wearable[@limbtype='Head']/sprite/@origin">0.5,0.5</replace>
+      <add sel="./Wearable[@limbtype='Head']/sprite/@scale">0.75</add>
+    </inherit>
+  </Item>
+  <Item identifier="clowndivingmask">
+    <inherit identifier="clowndivingmask">
+      <doinherit />
+      <replace sel="./InventoryIcon/@texture">%ModDir%/Items/Jobgear/headgears_male.png</replace>
+      <replace sel="./InventoryIcon/@sourcerect">595,323,44,48</replace>
+      <replace sel="./Sprite/@texture">%ModDir%/Items/Jobgear/headgears_male.png</replace>
+      <replace sel="./Sprite/@sourcerect">512,320,80,80</replace>
+      <replace sel="./Wearable[@limbtype='Head']/sprite/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+      <replace sel="./Wearable[@limbtype='Head']/sprite/@sourcerect">512,320,80,80</replace>
+      <replace sel="./Wearable[@limbtype='Head']/sprite/@origin">0.525,0.575</replace>
+      <replace sel="./Wearable[@limbtype='Head']/sprite/@scale">1</replace>
+    </inherit>
+  </Item>
+  <Item identifier="divingsuit">
+    <inherit identifier="divingsuit">
+      <doinherit />
+      <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/reg_DivingSuit_[GENDER]_[SPECIES].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@sourcerect">5,4,92,94</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@scale">0.65</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@hideotherwearables">false</replace>
+    </inherit>
+  </Item>
+  <Item identifier="abyssdivingsuit">
+    <inherit identifier="abyssdivingsuit">
+      <doinherit />
+      <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/Abyss_DivingSuit_[GENDER]_[SPECIES].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@sourcerect">0,409,103,103</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@scale">0.65</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@hideotherwearables">false</replace>
+    </inherit>
+  </Item>
+  <Item identifier="combatdivingsuit">
+    <inherit identifier="combatdivingsuit">
+      <doinherit />
+      <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/combat_DivingSuit_[GENDER]_[SPECIES].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@sourcerect">326,0,103,103</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@scale">0.65</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@hideotherwearables">false</replace>
+    </inherit>
+  </Item>
+  <Item identifier="pucs">
+    <inherit identifier="pucs">
+      <doinherit />
+      <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/pucs_[GENDER]_[SPECIES].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@sourcerect">127,520,105,124</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@scale">0.70</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@hideotherwearables">false</replace>
+    </inherit>
+  </Item>
+  <Item identifier="slipsuit">
+    <inherit identifier="slipsuit">
+      <doinherit />
+      <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/slipsuit_[GENDER]_[SPECIES].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@sourcerect">0,520,105,124</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@scale">0.70</replace>
+      <replace sel="./Wearable/sprite[@limb='Head']/@hideotherwearables">false</replace>
+    </inherit>
+  </Item>
+  <!--     <Item identifier="respawndivingsuit">
+      <inherit identifier="respawndivingsuit">
+        <doinherit />
+		
+        <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/RespawnSuit_[GENDER].png</replace>
+		
+        <replace sel="./Wearable/sprite[@limb='Head']/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+        <replace sel="./Wearable/sprite[@limb='Head']/@sourcerect">100,409,103,103</replace>
+        <replace sel="./Wearable/sprite[@limb='Head']/@scale">0.65</replace>
+		
+      </inherit>
+    </Item>
+     <Item identifier="exosuit">
+      <inherit identifier="exosuit">
+        <doinherit />
+		
+        <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/Exosuit_[GENDER].png</replace>
+		
+        <replace sel="./Wearable/sprite[@limb='Head']/@texture">%ModDir%/Items/Jobgear/headgears_[GENDER].png</replace>
+        <replace sel="./Wearable/sprite[@limb='Head']/@sourcerect">0,0,1,1</replace>
+        <replace sel="./Wearable/sprite[@limb='Head']/@scale">0.65</replace>
+		
+      </inherit>
+    </Item> -->
+</Override>

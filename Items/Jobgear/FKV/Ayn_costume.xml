@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Ayn Costume" identifier="Ayn_costume" tags="anthro,smallitem,clothing" aliases="AynCostume" category="Equipment" fireproof="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5">
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="Ayn Clothes Icon" texture="OutfitIcons.png" sourcerect="129,678,128,110" origin="0.5,0.5" />
+    <Sprite name="Ayn Outfit" texture="MiscJobGear.png" sourcerect="0,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <sprite name="Ayn Torso" texture="Ayn_Outfit.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9106" />
+      <sprite name="Ayn Right Hand" texture="Ayn_Outfit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.91015" />
+      <sprite name="Ayn Right Upper Arm" texture="Ayn_Outfit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9101" />
+      <sprite name="Ayn Right Lower Arm" texture="Ayn_Outfit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9102" />
+      <sprite name="Ayn Waist" texture="Ayn_Outfit.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Ayn Left Hand" texture="Ayn_Outfit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.916" />
+      <sprite name="Ayn Left Upper Arm" texture="Ayn_Outfit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.915" />
+      <sprite name="Ayn Left Lower Arm" texture="Ayn_Outfit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.914" />
+      <sprite name="Ayn Right Thigh" texture="Ayn_Outfit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.912" />
+      <sprite name="Ayn Right Leg" texture="Ayn_Outfit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Ayn Right Shoe" texture="Ayn_Outfit.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="Ayn Left Thigh" texture="Ayn_Outfit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.913" />
+      <sprite name="Ayn Left Leg" texture="Ayn_Outfit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9131" />
+      <sprite name="Ayn Left Shoe" texture="Ayn_Outfit.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9132" />
+      <sprite name="Ayn Tail 1" texture="Ayn_Tail.png" limb="30" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Ayn Tail 2" texture="Ayn_Tail.png" limb="31" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="Ayn Tail 3" texture="Ayn_Tail.png" limb="32" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9123" />
+      <sprite name="Ayn Tail B" texture="Ayn_Tail.png" limb="33" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <!--
+      <sprite name="Ayn Hair 1" texture="Ayn_Hair.png" limb="40" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121"/>
+      <sprite name="Ayn Hair 2" texture="Ayn_Hair.png" limb="41" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122"/>
+      <sprite name="Ayn Hair 3" texture="Ayn_Hair.png" limb="42" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9123"/>
+        -->
+      <sprite name="Ayn Head" alphaclipotherwearables="true" sourcerect="384,512,256,256" Origin="0.55,0.5" Scale="0.25" texture="head.png" limb="Head" hidelimb="true" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9105" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+    </Wearable>
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <!--RequiredItems items="mobilebattery" type="Contained" /-->
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" autoinject="true">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="384,448,64,64" origin="0.5,0.5" />
+      <Containable items="chem,syringe" />
+    </ItemContainer>
+  </Item>
+</Items>

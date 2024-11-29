@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+    <Item identifier="barodrama_cobrasuit">
+      <inherit identifier="barodrama_cobrasuit" package="BaroDrama V5">
+        <doinherit />
+        <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_body_[SPECIES].png</replace>
+      </inherit>
+    </Item>
+    <Item identifier="barodrama_vipersuit">
+      <inherit identifier="barodrama_vipersuit" package="BaroDrama V5">
+        <doinherit />
+        <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png</replace>
+      </inherit>
+    </Item>
+    <Item identifier="barodrama_windersuit">
+      <inherit identifier="barodrama_windersuit" package="BaroDrama V5">
+        <doinherit />
+        <replace sel="./Wearable/sprite/@texture">%ModDir%/Items/Diving/Barodrama/Security/sidewinder_[SPECIES].png</replace>
+      </inherit>
+    </Item>
+</Override>

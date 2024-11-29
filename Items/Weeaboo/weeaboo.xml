@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="weeaboo" scale="0.34" category="Equipment" tags="smallitem,weapon" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="armcab" />
+    <PreferredContainer secondary="wreckstoragecab" maxamount="1" spawnprobability="0.02" />
+    <PreferredContainer secondary="wreckarmcab" maxamount="1" spawnprobability="0.03" />
+    <PreferredContainer secondary="abandonedarmcab" maxamount="1" spawnprobability="0.02" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="999" sold="false" canbespecial="false" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredSkill identifier="helm" level="40" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="copper" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="tin" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="carbon" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Items/Weeaboo/weeaboo.png" sourcerect="385,0,42,42" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Weeaboo/weeaboo.png" sourcerect="0,0,384,42" depth="0.55" origin="0.5,0.5" />
+    <Body width="305" height="32" density="45" />
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" handle1="-42,3" handle2="-54,6" holdpos="65,-60" aimpos="80,40" holdangle="28" aimangle="65" reload="1.3" range="50" combatPriority="35" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" lifetime="1" targettype="This">
+        <sound file="%ModDir%/Sounds/weeaboo.ogg" range="300" />
+      </StatusEffect>
+      <Attack targetimpulse="3" severlimbsprobability="0.5" itemdamage="20" penetration="0.25">
+        <Affliction identifier="internaldamage" strength="5" />
+        <Affliction identifier="lacerations" strength="25" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.1" />
+        <Sound file="%ModDir%/Sounds/weeaboo1.ogg" range="500" />
+      </Attack>
+    </MeleeWeapon>
+  </Item>
+  <!--Yuppie Psycho-->
+  <Item name="" identifier="devilmask" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" scale="0.45">
+    <Price baseprice="1" sold="false" canbespecial="false" />
+    <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.01" />
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <InventoryIcon texture="%ModDir%/Items/Weeaboo/devil_male_human.png" sourcerect="464,144,48,112" />
+    <Sprite name="Mr.Devil Mask" texture="%ModDir%/Items/Weeaboo/devil_male_human.png" depth="0.6" sourcerect="512,220,112,32" origin="0.5,0.5" scale="0.5" />
+    <Body width="100" height="30" rotation="90" density="15" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Mr.Devil Mask Wearable" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="464,128,48,128" origin="0.1,0.575" />
+      <StatusEffect tags="devil" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <StatusEffect type="OnWearing" target="Character" delay="3" stackable="false">
+        <Affliction identifier="psychosis" strength="0.5" />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="" identifier="devilcostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="1" sold="false" canbespecial="false" />
+    <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.01" />
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <InventoryIcon name="Mr.Devil Costume Icon" texture="%ModDir%/Items/Weeaboo/devil_male_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="Mr.Devil Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Mr.Devil Costume Torso" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="160,0,112,190" origin="0.54,0.535" />
+      <sprite name="Mr.Devil Costume Right Hand" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Left Hand" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Waist" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="false" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="Mr.Devil Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Right Leg" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Left Leg" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mr.Devil Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <sprite name="Mr.Devil Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/devil_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+    </Wearable>
+  </Item>
+  <Item name="" identifier="athame" category="Equipment" tags="weapon,smallitem,hornitem" scale="0.4" cargocontaineridentifier="metalcrate">
+    <Price baseprice="1" sold="false" canbespecial="false" />
+    <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.001" />
+    <InventoryIcon texture="%ModDir%/Items/Weeaboo/devil_male_human.png" sourcerect="464,0,48,128" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Weeaboo/devil_male_human.png" scale="0.4" sourcerect="464,0,48,128" depth="0.55" />
+    <Body width="20" height="50" density="15" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-3,-13" holdangle="345" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="10">
+        <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.2" />
+        <Affliction identifier="morbusinepoisoning" strength="1" />
+        <StatusEffect type="OnUse" target="Character">
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </Attack>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+  </Item>
+  <!-- Additions -->
+  <Item name="" identifier="bunnyears" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" scale="0.5">
+    <Price baseprice="10" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" maxavailable="1" />
+      <Price storeidentifier="merchantcity" maxavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+    </Price>
+    <Sprite name="Bunny Ears" texture="%ModDir%/Items/Weeaboo/bunny_female_human.png" depth="0.6" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Bunny ears" texture="%ModDir%/Items/Weeaboo/bunny_female_human.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="1" sourcerect="448,0,64,64" origin="0.3,0.83" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="bunnysuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.8">
+    <Price baseprice="100" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" maxavailable="1" />
+      <Price storeidentifier="merchantcity" maxavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="ballisticfiber" />
+    </Fabricate>
+    <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.001" />
+    <InventoryIcon name="Bunny Suit Icon" texture="%ModDir%/Items/Weeaboo/bunny_female_human.png" sourcerect="448,128,64,64" origin="0.5,0.5" />
+    <Sprite name="Bunny suit" texture="%ModDir%/Items/Weeaboo/bunny_female_human.png" sourcerect="416,224,96,32" depth="0.6" origin="0.49714875,0.2169215" />
+    <Body width="180" height="40" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Bunny Suit Torso" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Right Hand" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Left Hand" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Right Lower Arm" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Left Lower Arm" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Right Upper Arm" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Bunny Suit Left Upper Arm" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Bunny Suit Waist" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Right Thigh" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Left Thigh" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Right Leg" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Left Leg" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="Bunny Suit Left Shoe" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_bunny" sourcerect="0,0,512,256" origin="0.5,0.5" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <sprite name="Bunny Suit Right Shoe" texture="%ModDir%/Items/Weeaboo/bunny_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_bunny" sourcerect="0,0,512,256" origin="0.5,0.5" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+    </Wearable>
+  </Item>
+  <Item name="" identifier="bdsmsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.8">
+    <Price baseprice="69" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" maxavailable="1" />
+      <Price storeidentifier="merchantcity" maxavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <InventoryIcon name="BDSM Costume Icon" texture="%ModDir%/Items/Weeaboo/bdsm_female_human.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Sprite name="BDSM Costume" texture="%ModDir%/Items/Weeaboo/bdsm_female_human.png" sourcerect="400,208,112,48" depth="0.6" origin="0.49714875,0.2169215" />
+    <Body width="180" height="60" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="BDSM Costume Torso" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Right Hand" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Left Hand" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="BDSM Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="BDSM Costume Waist" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Right Leg" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Left Leg" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_bunny" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="BDSM Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_bunny" sourcerect="0,0,512,256" origin="0.5,0.5" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="ccape1" category="Equipment" tags="deepdiving,mediumitem,toolbelt,toolbox,mobilecontainer" allowdroppingonswapwith="diving" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.75" fireproof="false" description="" impactsoundtag="impact_soft">
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="35" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="200">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <InventoryIcon name="Captain's cape icon" texture="%ModDir%/Items/Weeaboo/capcape1_male.png" sourcerect="165,36,96,96" origin="0.5,0.5" />
+    <Sprite name="Captain's cape 1" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="247,209,125,77" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="25" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Captain's cape 1 Torso" texture="%ModDir%/Items/Weeaboo/capcape1_[GENDER].png" limb="Torso" depthlimb="Jaw" hidelimb="false" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="Captain's cape 1 Right Lower Arm" texture="%ModDir%/Items/Weeaboo/capcape1_[GENDER].png" limb="RightArm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain's cape 1 Left Lower Arm" texture="%ModDir%/Items/Weeaboo/capcape1_[GENDER].png" limb="LeftArm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain's cape 1 Right Upper Arm" texture="%ModDir%/Items/Weeaboo/capcape1_[GENDER].png" limb="RightForearm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain's cape 1 Left Upper Arm" texture="%ModDir%/Items/Weeaboo/capcape1_[GENDER].png" limb="LeftForearm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <!-- <sprite name="Captain's cape 1 Boobs" texture="%ModDir%/Items/Weeaboo/capcape1_[GENDER].png" limb="Tail" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.75" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false" />
+    <ItemContainer capacity="4" depth="0.5">
+      <Containable items="smallitem,smallarmsammo" excludeditems="toolbelt,toolbox,uniform,mobilecontainer,rucksack,backpack,waistbelt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ccape2" category="Equipment" tags="deepdiving,mediumitem,toolbelt,toolbox,mobilecontainer" allowdroppingonswapwith="diving" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.35" fireproof="false" description="" impactsoundtag="impact_soft">
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="35" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="200">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <InventoryIcon name="Captain's cape icon" texture="%ModDir%/Items/Weeaboo/capcape2.png" sourcerect="48,32,160,160" origin="0.5,0.5" />
+    <Sprite name="Captain's cape sprite" texture="%ModDir%/Items/Weeaboo/capcape2.png" sourcerect="0,512,256,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Captain's cape" texture="%ModDir%/Items/Weeaboo/capcape2.png" limb="Torso" depthlimb="RightForearm" sourcerect="0,0,256,512" inheritlimbdepth="false" scale="0.205" origin="0.51,0.36" />
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false" />
+    <ItemContainer capacity="6" depth="0.5">
+      <Containable items="smallitem,smallarmsammo" excludeditems="toolbelt,toolbox,uniform,mobilecontainer,rucksack,backpack,waistbelt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ccape3" category="Equipment" tags="deepdiving,mediumitem,toolbelt,toolbox,mobilecontainer" allowdroppingonswapwith="diving" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="false" description="" impactsoundtag="impact_soft">
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="35" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="200">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <InventoryIcon name="Captain's cape icon" texture="%ModDir%/Items/Weeaboo/capcape3_male.png" sourcerect="160,41,96,96" origin="0.5,0.5" />
+    <Sprite name="Captain's cape sprite" texture="%ModDir%/Items/Weeaboo/capcape3_male.png" sourcerect="279,203,121,53" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Captain's cape 3 Torso" texture="%ModDir%/Items/Weeaboo/capcape3_[GENDER].png" limb="Torso" depthlimb="Jaw" hidelimb="false" CanBeHiddenByOtherWearables="true" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="Captain's cape 3 Right Lower Arm" texture="%ModDir%/Items/Weeaboo/capcape3_[GENDER].png" limb="RightArm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain's cape 3 Left Lower Arm" texture="%ModDir%/Items/Weeaboo/capcape3_[GENDER].png" limb="LeftArm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain's cape 3 Right Upper Arm" texture="%ModDir%/Items/Weeaboo/capcape3_[GENDER].png" limb="RightForearm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain's cape 3 Left Upper Arm" texture="%ModDir%/Items/Weeaboo/capcape3_[GENDER].png" limb="LeftForearm" hidelimb="true" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.75" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false" />
+    <ItemContainer capacity="4" depth="0.5">
+      <Containable items="smallitem,smallarmsammo" excludeditems="toolbelt,toolbox,uniform,mobilecontainer,rucksack,backpack,waistbelt" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="captainscap4" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" scale="0.3">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <Deconstruct time="10" />
+    <Sprite name="Captain's Cap 4" texture="%ModDir%/Items/Jobgear/headgears_female.png" depth="0.6" sourcerect="336,112,112,64" origin="0.5,0.5" />
+    <Body width="50" height="30" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Captain's Cap 4 Wearable" texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.45" hidelimb="false" sourcerect="336,112,112,80" origin="0.5,1" />
+      <SkillModifier skillidentifier="helm" skillvalue="10" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations" armorsector="0.0,360.0" damagemultiplier="0.8" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="medicalbandolier" category="Equipment" tags="smallitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer secondary="locker" />
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="medical" level="35" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon name="icon" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_male_human.png" sourcerect="280,325,88,103" origin="0.45,0.5" />
+    <Sprite name="sprite" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_male_human.png" sourcerect="280,320,88,144" depth="0.6" origin="0.5,0.5" />
+    <Body radius="30" height="30" density="40" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="1" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inheritscale="true" scale="0.65" inheritorigin="false" origin="0.5,0.65" inheritsourcerect="false" sourcerect="256,288,128,192" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="origin">0.6,0.65</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="origin">0.5,0.65</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      
+      <!-- <sprite name="1" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="Tail" hidelimb="false" CanBeHiddenByOtherWearables="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="0,0,1,1" /> -->
+      <SkillModifier skillidentifier="medical" skillvalue="15" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="0,0-30" handle2="0,-30" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false" />
+    <ItemContainer capacity="6">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,medicalbandolier,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <!-- Girls Frontline -->
+  <Item name="" identifier="aks74ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="Kalina Costume Icon" texture="%ModDir%/Items/Weeaboo/AKS74U_female_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="Kalina Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Kalina Costume Torso" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="Kalina Costume Right Hand" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Left Hand" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Waist" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="Kalina Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Right Leg" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Left Leg" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Kalina Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="Kalina Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/AKS74U_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
+      <damagemodifier afflictionidentifiers="bleeding,huskinfection" armorsector="0.0,360.0" damagemultiplier="0.9" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="hk416ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="HK416 Costume Icon" texture="%ModDir%/Items/Weeaboo/HK416_female_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="HK416 Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="HK416 Costume Torso" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,512,256" origin="0.5,0.5" />
+      <sprite name="HK416 Costume Right Hand" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Left Hand" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Waist" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="false" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="HK416 Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Right Leg" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Left Leg" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="HK416 Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <sprite name="HK416 Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/HK416_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.7" />
+      <damagemodifier afflictionidentifiers="bleeding,huskinfection" armorsector="0.0,360.0" damagemultiplier="0.9" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="m200ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="M200 Costume Icon" texture="%ModDir%/Items/Weeaboo/M200_female_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="M200 Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="M200 Costume Torso" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="M200 Costume Right Hand" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Left Hand" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Waist" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="M200 Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Right Leg" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Left Leg" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M200 Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <sprite name="M200 Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/M200_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="mp7costume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="MP7 Costume Icon" texture="%ModDir%/Items/Weeaboo/MP7_female_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="MP7 Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="MP7 Costume Head" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hidelimb="false" sourcerect="512,129,128,127" origin="0.46,0.67" />
+      <sprite name="MP7 Costume Torso" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="MP7 Costume Right Hand" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Left Hand" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Waist" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="false" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="MP7 Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Right Leg" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Left Leg" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="MP7 Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <sprite name="MP7 Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <!-- <sprite name="MP7 Costume Boobs" texture="%ModDir%/Items/Weeaboo/MP7_[GENDER]_[SPECIES].png" limb="Tail" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ro635ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="RO635 Costume Icon" texture="%ModDir%/Items/Weeaboo/RO635_female_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="RO635 Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="RO635 Costume Torso" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="RO635 Costume Right Hand" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Left Hand" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Waist" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="RO635 Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Right Leg" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Left Leg" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="RO635 Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <sprite name="RO635 Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <!-- <sprite name="RO635 Costume Boobs" texture="%ModDir%/Items/Weeaboo/RO635_[GENDER]_[SPECIES].png" limb="Tail" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="ump9ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="UMP9 Costume Icon" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_female_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="UMP9 Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="UMP9 Costume Torso" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="UMP9 Costume Right Hand" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Left Hand" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Waist" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="UMP9 Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Right Leg" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Left Leg" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="UMP9 Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <sprite name="UMP9 Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </conditionalSprite>
+      </sprite>
+      <!-- <sprite name="UMP9 Costume Boobs" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="Tail" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="vsk94ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="VSK94 Costume Icon" texture="%ModDir%/Items/Weeaboo/VSK94_female_human.png" sourcerect="512,1,128,127" origin="0.5,0.5" />
+    <Sprite name="VSK94 Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="VSK94 Costume Torso" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="VSK94 Costume Right Hand" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="VSK94 Costume Left Hand" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="VSK94 Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="VSK94 Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="VSK94 Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="VSK94 Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="VSK94 Costume Waist" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="VSK94 Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="VSK94 Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="VSK94 Costume Right Leg" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="VSK94 Costume Left Leg" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="VSK94 Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="VSK94 Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <!-- <sprite name="VSK94 Costume Boobs" texture="%ModDir%/Items/Weeaboo/VSK94_[GENDER]_[SPECIES].png" limb="Tail" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.6" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="m45ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" maxavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.025" />
+    <InventoryIcon name="M45 Costume Icon" texture="%ModDir%/Items/Weeaboo/M45_female.png" sourcerect="416,129,128,127" origin="0.5,0.5" />
+    <Sprite name="M45 Costume" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="642,296,119,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="90" height="45" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="M45 Costume Head" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.53" hidelimb="false" sourcerect="768,1,256,127" origin="0.525,0.93" />
+      <sprite name="M45 Costume Torso" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="570,0,160,256" origin="0.45,0.4" />
+      <sprite name="M45 Costume Torso" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="M45 Costume Right Hand" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Left Hand" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Right Lower Arm" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Left Lower Arm" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Right Upper Arm" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Left Upper Arm" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Waist" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="M45 Costume Right Thigh" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Left Thigh" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Right Leg" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Left Leg" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="M45 Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="M45 Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <!-- <sprite name="M45 Costume Boobs" texture="%ModDir%/Items/Weeaboo/M45_[GENDER].png" limb="Tail" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Override>
+    <Item name="" identifier="op_storesign1.png" nameidentifier="opdeco_adposter" width="326" height="165" scale="0.5" noninteractable="true" category="Decorative">
+      <sprite texture="%ModDir%/Items/Weeaboo/Posters.png" sourcerect="327,687,326,165" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <LightComponent range="70" lightcolor="213,213,185,120" flicker="0.3" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" />
+    </Item>
+    <Item name="" identifier="op_lightbox1" width="163" height="209" texturescale="1.0,1.0" scale="0.5" category="Decorative" noninteractable="true">
+      <sprite texture="%ModDir%/Items/Weeaboo/Posters.png" sourcerect="20,146,163,209" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <LightComponent range="60.0" lightcolor="255,234,181,200" IsOn="true" castshadows="false" allowingameediting="false" />
+    </Item>
+    <Item name="" identifier="op_lightbox3" nameidentifier="op_lightbox1" width="289" height="194" texturescale="1.0,1.0" scale="0.5" category="Decorative" noninteractable="true">
+      <sprite texture="%ModDir%/Items/Weeaboo/Posters.png" sourcerect="181,145,289,194" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <LightComponent range="60.0" lightcolor="255,234,181,200" IsOn="true" castshadows="false" allowingameediting="false" />
+    </Item>
+    <Item name="" identifier="op_lightbox5" nameidentifier="op_lightbox1" width="145" height="194" texturescale="1.0,1.0" scale="0.5" category="Decorative" noninteractable="true">
+      <sprite texture="%ModDir%/Items/Weeaboo/Posters.png" sourcerect="20,360,144,194" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <LightComponent range="60.0" lightcolor="255,234,181,200" IsOn="true" castshadows="false" allowingameediting="false" />
+    </Item>
+  </Override>
+</Items>

@@ -223,7 +223,7 @@ namespace ConditionalSpritesNamespace
             if (characterElement == null)
             {
                 Random random = new Random();
-                string[] speciesList = {"human","felinid","ratmen"};
+                string[] speciesList = {"human","felinid"};
                 int i = random.Next(0, speciesList.Length);
 
                 characterInfo = new CharacterInfo(speciesList[i].ToIdentifier(), jobOrJobPrefab: __instance.GetJobPrefab(randSync), npcIdentifier: __instance.Identifier, randSync: randSync);
