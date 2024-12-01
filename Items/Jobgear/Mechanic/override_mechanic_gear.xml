@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <!-- UNIFORMS START-->
+  <!-- Blue Jumpsuit 1 -->
+  <Item name="" identifier="bluejumpsuit1" aliases="bluejumpsuit" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150" minavailable="1" requiredfaction="coalition">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="Mechanic Uniform 1 Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="256,256,128,128" origin="0.5,0.5" />
+    <Sprite name="Mechanic Uniform 1" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="513,9,117,55" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Mechanic's Uniform 1 Torso" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Right Hand" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Left Hand" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Right Lower Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Left Lower Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Right Upper Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Left Upper Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Waist" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" sourcerect="405,180,105,76" origin="0.59,0.35" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Mechanic's Uniform 1 Waist" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="Waist" depthlimb="Legs" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="405,180,105,76" origin="0.59,0.35" />
+      <sprite name="Mechanic's Uniform 1 Right Thigh" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Left Thigh" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Right Leg" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Left Leg" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 1 Left Shoe" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="Mechanic's Uniform 1 Right Shoe" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_1.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+
+  <!-- Blue Jumpsuit 2 -->
+  <Item name="" identifier="bluejumpsuit2" category="Equipment" tags="smallitem,clothing" fireproof="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150" minavailable="1" requiredfaction="coalition">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="Mechanic Uniform 2 Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="128,256,128,128" origin="0.5,0.5" />
+    <Sprite name="Mechanic Uniform 2" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="637,7,121,56" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Mechanic's Uniform 2 Torso" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="Torso" sourcerect="160,0,112,140" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" />
+      <sprite name="Mechanic's Uniform 2 Right Hand" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Left Hand" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Right Lower Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Left Lower Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Right Upper Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Left Upper Arm" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Waist" depthlimb="Legs" sourcerect="155,180,105,65" origin="0.59,0.6" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="Waist" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Mechanic's Uniform 2 Right Thigh" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Left Thigh" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Right Leg" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Left Leg" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mechanic's Uniform 2 Left Shoe" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="Mechanic's Uniform 2 Right Shoe" texture="%ModDir%/Items/Jobgear/Mechanic/mechanic_[GENDER]_[SPECIES]_2.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+
+  <!-- Safety harness -->
+  <Item name="" identifier="safetyharness" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" allowasextracargo="true" description="" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" secondary="engcab"/>
+    <Price baseprice="120" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.2" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" multiplier="1.2" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="rubber" />
+      <Item identifier="steel" />
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="rubber" amount="2" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="organicfiber" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="198,132,67,57" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="58,326,143,40" depth="0.6" origin="0.5,0.5" />
+    <Body width="120" height="35" density="15" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.1" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.25" />
+      <sprite name="safetyharness Torso" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" origin="0.45,0.5" inheritsourcerect="false" SourceRect="160,0,112,192" />
+      <sprite name="safetyharness Right Hand" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="safetyharness Left Hand" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="safetyharness Right Lower Arm" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="safetyharness Left Lower Arm" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="safetyharness Right Upper Arm" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="safetyharness Left Upper Arm" texture="%ModDir%/Items/Jobgear/Mechanic/safetyharness_[GENDER]_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatValue stattype="FlowResistance" value="0.9" />
+    </Wearable>
+  </Item>
+
+  <!-- Baseball Cap -->
+  <Item name="" identifier="baseballcap" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" notcampaign="true"/>
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="wreckcrewcab" spawnprobability="0.02" />
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="5" />
+    <Sprite name="Baseball Cap" texture="%ModDir%/Items/Jobgear/headgears_male.png" depth="0.6" sourcerect="321,332,86,45" origin="0.5,0.5" />
+    <Body width="80" height="45" density="15" waterdragcoefficient="10"/>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.68" sourcerect="321,332,86,45" origin="0.45,1.17" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="scale">0.68</property>
+            <property name="origin">0.45,1.17</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="scale">0.7</property>
+            <property name="origin">0.45,1.0</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+    </Wearable>
+  </Item>
+
+</Override>

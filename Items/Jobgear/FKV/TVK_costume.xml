@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="TVK Costume" identifier="TVK_costume" tags="anthroid,smallitem,clothing" aliases="TVKCostume" category="Equipment" fireproof="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5">
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="TVK Outfit Icon" texture="OutfitIcons.png" sourcerect="129,238,128,110" origin="0.5,0.5" />
+    <Sprite name="TVK Outfit" texture="MiscJobGear.png" sourcerect="0,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <sprite name="TVK Torso" texture="TVK_Outfit.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9106" />
+      <sprite name="TVK Right Hand" texture="TVK_Outfit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.91015" />
+      <sprite name="TVK Right Upper Arm" texture="TVK_Outfit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9101" />
+      <sprite name="TVK Right Lower Arm" texture="TVK_Outfit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9102" />
+      <sprite name="TVK Right Upper Wing" texture="TVK_Outfit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9101" SourceRect="337,266,180,246" Origin="0.72,0.20" />
+      <sprite name="TVK Right Lower Wing" texture="TVK_Outfit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9102" SourceRect="162,266,175,114" Origin="0.9,0.25" />
+      <sprite name="TVK Waist" texture="TVK_Outfit.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="TVK Left Hand" texture="TVK_Outfit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.916" />
+      <sprite name="TVK Left Upper Arm" texture="TVK_Outfit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.915" />
+      <sprite name="TVK Left Lower Arm" texture="TVK_Outfit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.914" />
+      <sprite name="TVK Left Upper Wing" texture="TVK_Outfit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9101" SourceRect="337,266,180,246" Origin="0.72,0.20" />
+      <sprite name="TVK Left Lower Wing" texture="TVK_Outfit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9102" SourceRect="162,266,175,114" Origin="0.9,0.25" />
+      <sprite name="TVK Right Thigh" texture="TVK_Outfit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.912" />
+      <sprite name="TVK Right Leg" texture="TVK_Outfit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="TVK Right Shoe" texture="TVK_Outfit.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9122" SourceRect="272,208,128,48" Origin="0.24,0.55" />
+      <sprite name="TVK Left Thigh" texture="TVK_Outfit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.913" />
+      <sprite name="TVK Left Leg" texture="TVK_Outfit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9131" />
+      <sprite name="TVK Left Shoe" texture="TVK_Outfit.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9132" SourceRect="272,208,128,48" Origin="0.24,0.55" />
+      <!--limb type: "Tail" - multiple limbs with one type-->
+      <sprite name="TVK Tail 1" texture="TVK_Tail.png" limb="30" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="TVK Tail 2" texture="TVK_Tail.png" limb="31" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="TVK Tail 3" texture="TVK_Tail.png" limb="32" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9123" />
+      <sprite name="TVK Tail B" texture="TVK_Tail.png" limb="33" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="TVK Head" alphaclipotherwearables="true" sourcerect="384,0,256,256" Origin="0.55,0.5" Scale="0.25" texture="head.png" limb="Head" hidelimb="true" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9105" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" OxygenAvailable="1000.0" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.7" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.7" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.6" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="emp" damagemultiplier="2" />
+    </Wearable>
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <!--RequiredItems items="mobilebattery" type="Contained" /-->
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" autoinject="true">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="384,448,64,64" origin="0.5,0.5" />
+      <Containable items="chem,syringe" />
+    </ItemContainer>
+  </Item>
+</Items>

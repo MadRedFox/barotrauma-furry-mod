@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="ARA Costume" identifier="ARA_costume" tags="anthroid,smallitem,clothing" aliases="ARACostume" category="Equipment" fireproof="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5">
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="ARA Clothes Icon" texture="OutfitIcons.png" sourcerect="129,18,128,110" origin="0.5,0.5" />
+    <Sprite name="ARA Outfit" texture="MiscJobGear.png" sourcerect="190,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <sprite name="ARA Torso" texture="ARA_Outfit.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9106" />
+      <sprite name="ARA Right Hand" texture="ARA_Outfit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.91015" />
+      <sprite name="ARA Right Upper Arm" texture="ARA_Outfit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9101" />
+      <sprite name="ARA Right Lower Arm" texture="ARA_Outfit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9102" />
+      <sprite name="ARA Waist" texture="ARA_Outfit.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="ARA Left Hand" texture="ARA_Outfit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.916" />
+      <sprite name="ARA Left Upper Arm" texture="ARA_Outfit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.915" />
+      <sprite name="ARA Left Lower Arm" texture="ARA_Outfit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.914" />
+      <sprite name="ARA Right Thigh" texture="ARA_Outfit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.912" />
+      <sprite name="ARA Right Leg" texture="ARA_Outfit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="ARA Right Shoe" texture="ARA_Outfit.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="ARA Left Thigh" texture="ARA_Outfit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.913" />
+      <sprite name="ARA Left Leg" texture="ARA_Outfit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9131" />
+      <sprite name="ARA Left Shoe" texture="ARA_Outfit.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9132" />
+      <!--limb type: "Tail" - multiple limbs with one type-->
+      <sprite name="ARA Tail 1" texture="ARA_Tail.png" limb="30" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="ARA Tail 2" texture="ARA_Tail.png" limb="31" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="ARA Tail 3" texture="ARA_Tail.png" limb="32" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9123" />
+      <sprite name="ARA Tail B" texture="ARA_Tail.png" limb="33" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="ARA Head" alphaclipotherwearables="true" sourcerect="0,0,128,256" Origin="0.55,0.25" Scale="0.25" texture="head.png" limb="Head" hidelimb="true" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9105" />
+      <sprite name="ARA Hair 1" texture="ARA_Hair.png" limb="40" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="ARA Hair 2" texture="ARA_Hair.png" limb="41" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="ARA Hair 3" texture="ARA_Hair.png" limb="42" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9123" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" OxygenAvailable="1000.0" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.7" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.7" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.6" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="emp" damagemultiplier="2" />
+    </Wearable>
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <!--RequiredItems items="mobilebattery" type="Contained" /-->
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" autoinject="true">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="384,448,64,64" origin="0.5,0.5" />
+      <Containable items="chem,syringe" />
+    </ItemContainer>
+  </Item>
+  <!--
+  <Item name="Anthroid transport box" identifier="anthroid_container" tags="crate" scale="0.5" linkable="true" 
+    pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" DisableItemUsageWhenSelected="true" waterproof="true">
+    <Price baseprice="170" sold="false" canbespecial="false" />
+    <Deconstruct time="5" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredItem identifier="metalcrate" />
+      <RequiredItem identifier="redpaint" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <sprite texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="5,0,158,83" depth="0.54" origin="0.5,0.5" />
+    <Body width="150" height="76" density="25" />
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="0,-80" handle1="-20,14" handle2="20,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="12" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,cargoscooter" />
+    </ItemContainer>
+    <Controller UserPos="0,-20" direction="Right" canbeselected="true" selectkey="Use" drawuserbehind="true" msg="itemmsggoinside">
+      <RequiredItem items="anthroid" type="Equipped" />
+      <limbposition limb="Head" position="74,-40" />
+      <limbposition limb="Torso" position="74,-40" />
+      <limbposition limb="Waist" position="74,-40" />
+      <limbposition limb="LeftHand" position="74,-40" />
+      <limbposition limb="RightHand" position="74,-40" />
+      <limbposition limb="RightLeg" position="74,-40" />
+      <limbposition limb="LeftLeg" position="74,-40" />
+      <limbposition limb="RightFoot" position="74,-40" />
+      <limbposition limb="LeftFoot" position="74,-40" />
+      <StatusEffect type="OnActive" targettype="Character" delay="0.25" stackable="true" indetectable="true" DisableFocusingOnEntities="true" invisibletimer="0.1" IgnoreMeleeWeapons="true" setvalue="true"/>
+    </Controller>
+  </Item>
+  -->
+</Items>

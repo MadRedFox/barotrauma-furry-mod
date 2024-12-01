@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <Affliction name="" identifier="cobrapower" description="" type="talentbuff" isbuff="true" limbspecific="false" treatmentthreshold="1000" maxstrength="3">
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1" resistancefor="stun" minresistance="0" maxresistance="0.75">&gt;
+      <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="0.6" /><StatValue stattype="MovementSpeed" minvalue="0" maxvalue="0.4" /><StatValue stattype="FlowResistance" minvalue="0" maxvalue="1.8" /></Effect>
+    <Icon texture="Content/UI/MainIconsAtlas.png" sheetindex="4,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+</Afflictions>

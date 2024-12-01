@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Item name="" identifier="watchmanclothes" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <Price baseprice="150" sold="false" />
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,320,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="123,144,121,62" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" variants="1" msg="ItemMsgPickUpSelect">
+      <sprite name="Watchman Torso" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="Torso" depthlimb="Jaw" sourcerect="160,0,112,190" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" />
+      <sprite name="Watchman Right Hand" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Left Hand" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Right Lower Arm" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Left Lower Arm" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Right Upper Arm" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Left Upper Arm" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Waist" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="Waist" hidelimb="true" sourcerect="160,200,112,56" origin="0.5,0.5" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Watchman Right Thigh" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Left Thigh" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Right Leg" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Left Leg" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Watchman Left Shoe" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="Watchman Right Shoe" texture="%ModDir%/Items/Jobgear/Watchman/watchman_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations, bitewounds" damagemultiplier="0.9" deflectprojectiles="false" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+
+</Override>

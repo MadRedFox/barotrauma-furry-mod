@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Radoslav Costume" identifier="Radoslav_costume" tags="anthro,smallitem,clothing" aliases="RadoslavCostume" category="Equipment" fireproof="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="5">
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="Radoslav Outfit Icon" texture="OutfitIcons.png" sourcerect="129,899,128,110" origin="0.5,0.5" />
+    <Sprite name="Radoslav Outfit" texture="MiscJobGear.png" sourcerect="380,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <sprite name="Radoslav Torso" texture="Radoslav_Outfit.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9106" />
+      <sprite name="Radoslav Right Hand" texture="Radoslav_Outfit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.91015" />
+      <sprite name="Radoslav Right Upper Arm" texture="Radoslav_Outfit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9101" />
+      <sprite name="Radoslav Right Lower Arm" texture="Radoslav_Outfit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9102" />
+      <sprite name="Radoslav Waist" texture="Radoslav_Outfit.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Radoslav Left Hand" texture="Radoslav_Outfit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.916" />
+      <sprite name="Radoslav Left Upper Arm" texture="Radoslav_Outfit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.915" />
+      <sprite name="Radoslav Left Lower Arm" texture="Radoslav_Outfit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.914" />
+      <sprite name="Radoslav Right Thigh" texture="Radoslav_Outfit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.912" />
+      <sprite name="Radoslav Right Leg" texture="Radoslav_Outfit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Radoslav Right Shoe" texture="Radoslav_Outfit.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="Radoslav Left Thigh" texture="Radoslav_Outfit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.913" />
+      <sprite name="Radoslav Left Leg" texture="Radoslav_Outfit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9131" />
+      <sprite name="Radoslav Left Shoe" texture="Radoslav_Outfit.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9132" />
+      <!--limb type: "Tail" - multiple limbs with one type-->
+      <sprite name="Radoslav Tail 1" texture="Radoslav_Tail.png" limb="30" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Radoslav Tail 2" texture="Radoslav_Tail.png" limb="31" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="Radoslav Tail 3" texture="Radoslav_Tail.png" limb="32" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9123" />
+      <sprite name="Radoslav Tail B" texture="Radoslav_Tail.png" limb="33" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Radoslav Head" alphaclipotherwearables="true" sourcerect="640,256,256,256" Origin="0.55,0.5" Scale="0.25" texture="head.png" limb="Head" hidelimb="true" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.9105" />
+      <sprite name="Radoslav Hair 1" texture="Radoslav_Hair.png" limb="40" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9121" />
+      <sprite name="Radoslav Hair 2" texture="Radoslav_Hair.png" limb="41" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9122" />
+      <sprite name="Radoslav Hair 3" texture="Radoslav_Hair.png" limb="42" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.9123" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.6" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.6" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.6" />
+    </Wearable>
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <!--RequiredItems items="mobilebattery" type="Contained" /-->
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" autoinject="true">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="384,448,64,64" origin="0.5,0.5" />
+      <Containable items="chem,syringe" />
+    </ItemContainer>
+  </Item>
+</Items>

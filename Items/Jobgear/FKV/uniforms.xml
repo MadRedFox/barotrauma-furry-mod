@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="ARA Uniform" identifier="ARA_uniform" aliases="ARAUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="plastic" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="ARA Clothes Icon" texture="OutfitIcons.png" sourcerect="0,18,128,110" origin="0.5,0.5" />
+    <Sprite name="ARA Outfit" texture="MiscJobGear.png" sourcerect="190,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="ARA Torso" texture="ARA_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="ARA Right Hand" texture="ARA_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="ARA Right Upper Arm" texture="ARA_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="ARA Right Lower Arm" texture="ARA_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="ARA Waist" texture="ARA_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ARA Left Hand" texture="ARA_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="ARA Left Upper Arm" texture="ARA_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="ARA Left Lower Arm" texture="ARA_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="ARA Right Thigh" texture="ARA_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="ARA Right Leg" texture="ARA_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ARA Right Shoe" texture="ARA_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="ARA Left Thigh" texture="ARA_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="ARA Left Leg" texture="ARA_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="ARA Left Shoe" texture="ARA_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="ARA Uniform M" identifier="ARA_uniform_m" aliases="ARAUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="ARA Clothes Icon" texture="OutfitIcons.png" sourcerect="0,18,128,110" origin="0.5,0.5" />
+    <Sprite name="ARA Outfit" texture="MiscJobGear.png" sourcerect="190,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="ARA Torso" texture="ARA_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="ARA Right Hand" texture="ARA_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="ARA Right Upper Arm" texture="ARA_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="ARA Right Lower Arm" texture="ARA_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="ARA Waist" texture="ARA_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ARA Left Hand" texture="ARA_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="ARA Left Upper Arm" texture="ARA_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="ARA Left Lower Arm" texture="ARA_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="ARA Right Thigh" texture="ARA_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="ARA Right Leg" texture="ARA_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ARA Right Shoe" texture="ARA_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="ARA Left Thigh" texture="ARA_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="ARA Left Leg" texture="ARA_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="ARA Left Shoe" texture="ARA_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Zofie Uniform" identifier="Zofie_uniform" aliases="ZofieUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Zofie Clothes Icon" texture="OutfitIcons.png" sourcerect="0,459,128,110" origin="0.5,0.5" />
+    <Sprite name="Zofie Outfit" texture="MiscJobGear.png" sourcerect="190,73,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Zofie Torso" texture="Zofie_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Zofie Right Hand" texture="Zofie_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Zofie Right Upper Arm" texture="Zofie_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Zofie Right Lower Arm" texture="Zofie_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Zofie Waist" texture="Zofie_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Zofie Left Hand" texture="Zofie_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Zofie Left Upper Arm" texture="Zofie_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Zofie Left Lower Arm" texture="Zofie_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Zofie Right Thigh" texture="Zofie_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Zofie Right Leg" texture="Zofie_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Zofie Right Shoe" texture="Zofie_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Zofie Left Thigh" texture="Zofie_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Zofie Left Leg" texture="Zofie_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Zofie Left Shoe" texture="Zofie_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Zofie Uniform M" identifier="Zofie_uniform_m" aliases="ZofieUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Zofie Clothes Icon" texture="OutfitIcons.png" sourcerect="0,459,128,110" origin="0.5,0.5" />
+    <Sprite name="Zofie Outfit" texture="MiscJobGear.png" sourcerect="190,73,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Zofie Torso" texture="Zofie_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Zofie Right Hand" texture="Zofie_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Zofie Right Upper Arm" texture="Zofie_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Zofie Right Lower Arm" texture="Zofie_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Zofie Waist" texture="Zofie_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Zofie Left Hand" texture="Zofie_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Zofie Left Upper Arm" texture="Zofie_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Zofie Left Lower Arm" texture="Zofie_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Zofie Right Thigh" texture="Zofie_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Zofie Right Leg" texture="Zofie_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Zofie Right Shoe" texture="Zofie_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Zofie Left Thigh" texture="Zofie_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Zofie Left Leg" texture="Zofie_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Zofie Left Shoe" texture="Zofie_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Vikna Uniform" identifier="Vikna_uniform" aliases="ViknaUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Vikna Clothes Icon" texture="OutfitIcons.png" sourcerect="0,569,128,110" origin="0.5,0.5" />
+    <Sprite name="Vikna Outfit" texture="MiscJobGear.png" sourcerect="380,73,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Vikna Torso" texture="Vikna_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Vikna Right Hand" texture="Vikna_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Vikna Right Upper Arm" texture="Vikna_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Vikna Right Lower Arm" texture="Vikna_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Vikna Waist" texture="Vikna_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Vikna Left Hand" texture="Vikna_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Vikna Left Upper Arm" texture="Vikna_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Vikna Left Lower Arm" texture="Vikna_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Vikna Right Thigh" texture="Vikna_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Vikna Right Leg" texture="Vikna_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Vikna Right Shoe" texture="Vikna_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Vikna Left Thigh" texture="Vikna_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Vikna Left Leg" texture="Vikna_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Vikna Left Shoe" texture="Vikna_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Vikna Uniform M" identifier="Vikna_uniform_m" aliases="ViknaUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Vikna Clothes Icon" texture="OutfitIcons.png" sourcerect="0,569,128,110" origin="0.5,0.5" />
+    <Sprite name="Vikna Outfit" texture="MiscJobGear.png" sourcerect="380,73,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Vikna Torso" texture="Vikna_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Vikna Right Hand" texture="Vikna_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Vikna Right Upper Arm" texture="Vikna_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Vikna Right Lower Arm" texture="Vikna_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Vikna Waist" texture="Vikna_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Vikna Left Hand" texture="Vikna_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Vikna Left Upper Arm" texture="Vikna_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Vikna Left Lower Arm" texture="Vikna_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Vikna Right Thigh" texture="Vikna_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Vikna Right Leg" texture="Vikna_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Vikna Right Shoe" texture="Vikna_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Vikna Left Thigh" texture="Vikna_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Vikna Left Leg" texture="Vikna_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Vikna Left Shoe" texture="Vikna_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Ayn Uniform" identifier="Ayn_uniform" aliases="AynUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Ayn Clothes Icon" texture="OutfitIcons.png" sourcerect="0,679,128,110" origin="0.5,0.5" />
+    <Sprite name="Ayn Outfit" texture="MiscJobGear.png" sourcerect="0,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Ayn Torso" texture="Ayn_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Ayn Right Hand" texture="Ayn_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Ayn Right Upper Arm" texture="Ayn_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Ayn Right Lower Arm" texture="Ayn_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Ayn Waist" texture="Ayn_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Ayn Left Hand" texture="Ayn_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Ayn Left Upper Arm" texture="Ayn_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Ayn Left Lower Arm" texture="Ayn_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Ayn Right Thigh" texture="Ayn_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Ayn Right Leg" texture="Ayn_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Ayn Right Shoe" texture="Ayn_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Ayn Left Thigh" texture="Ayn_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Ayn Left Leg" texture="Ayn_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Ayn Left Shoe" texture="Ayn_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Ayn Uniform M" identifier="Ayn_uniform_m" aliases="AynUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Ayn Clothes Icon" texture="OutfitIcons.png" sourcerect="0,679,128,110" origin="0.5,0.5" />
+    <Sprite name="Ayn Outfit" texture="MiscJobGear.png" sourcerect="0,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Ayn Torso" texture="Ayn_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Ayn Right Hand" texture="Ayn_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Ayn Right Upper Arm" texture="Ayn_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Ayn Right Lower Arm" texture="Ayn_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Ayn Waist" texture="Ayn_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Ayn Left Hand" texture="Ayn_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Ayn Left Upper Arm" texture="Ayn_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Ayn Left Lower Arm" texture="Ayn_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Ayn Right Thigh" texture="Ayn_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Ayn Right Leg" texture="Ayn_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Ayn Right Shoe" texture="Ayn_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Ayn Left Thigh" texture="Ayn_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Ayn Left Leg" texture="Ayn_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Ayn Left Shoe" texture="Ayn_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Lia Uniform" identifier="Lia_uniform" aliases="LiaUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Lia Clothes Icon" texture="OutfitIcons.png" sourcerect="0,789,128,110" origin="0.5,0.5" />
+    <Sprite name="Lia Outfit" texture="MiscJobGear.png" sourcerect="190,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Lia Torso" texture="Lia_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Lia Right Hand" texture="Lia_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Lia Right Upper Arm" texture="Lia_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Lia Right Lower Arm" texture="Lia_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Lia Waist" texture="Lia_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Lia Left Hand" texture="Lia_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Lia Left Upper Arm" texture="Lia_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Lia Left Lower Arm" texture="Lia_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Lia Right Thigh" texture="Lia_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Lia Right Leg" texture="Lia_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Lia Right Shoe" texture="Lia_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Lia Left Thigh" texture="Lia_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Lia Left Leg" texture="Lia_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Lia Left Shoe" texture="Lia_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <!--
+  <Item name="Lia Uniform M" identifier="Lia_uniform_m" aliases="LiaUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+     
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">   
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" /> 
+      <RequiredItem identifier="rubber" /> 
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />  
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Lia Clothes Icon" texture="OutfitIcons.png" sourcerect="0,789,128,110" origin="0.5,0.5" />
+    <Sprite name="Lia Outfit" texture="MiscJobGear.png" sourcerect="190,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Lia Torso" texture="Lia_AU.png" limb="Torso" hidelimb="true" inherittexturescale="true"      
+        SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+
+      <sprite name="Lia Right Hand" texture="Lia_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true"          inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Lia Right Upper Arm" texture="Lia_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true"  inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Lia Right Lower Arm" texture="Lia_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true"      inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      
+      <sprite name="Lia Waist" texture="Lia_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true"  
+        sourcerect="160,192,112,128" Origin="0.5,0.25"         
+        inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+
+      <sprite name="Lia Left Hand" texture="Lia_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true"            inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Lia Left Upper Arm" texture="Lia_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true"    inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Lia Left Lower Arm" texture="Lia_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true"        inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+
+      <sprite name="Lia Right Thigh" texture="Lia_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true"  inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Lia Right Leg" texture="Lia_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true"      inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Lia Right Shoe" texture="Lia_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true"    inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+
+      <sprite name="Lia Left Thigh" texture="Lia_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true"    inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Lia Left Leg" texture="Lia_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true"        inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Lia Left Shoe" texture="Lia_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true"      inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+ 
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />   
+     
+  </Item>-->
+  <Item name="SRK Uniform" identifier="SRK_uniform" aliases="SRKUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="SRK Clothes Icon" texture="OutfitIcons.png" sourcerect="0,348,128,110" origin="0.5,0.5" />
+    <Sprite name="SRK Outfit" texture="MiscJobGear.png" sourcerect="0,73,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="SRK Torso" texture="SRK_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="SRK Right Upper Arm" texture="SRK_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="SRK Waist" texture="SRK_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="SRK Left Upper Arm" texture="SRK_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="SRK Right Thigh" texture="SRK_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="SRK Right Leg" texture="SRK_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="SRK Left Thigh" texture="SRK_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="SRK Left Leg" texture="SRK_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="SRK Uniform M" identifier="SRK_uniform_m" aliases="SRKUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="SRK Clothes Icon" texture="OutfitIcons.png" sourcerect="0,348,128,110" origin="0.5,0.5" />
+    <Sprite name="SRK Outfit" texture="MiscJobGear.png" sourcerect="0,73,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="SRK Torso" texture="SRK_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="SRK Right Upper Arm" texture="SRK_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="SRK Waist" texture="SRK_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="SRK Left Upper Arm" texture="SRK_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="SRK Right Thigh" texture="SRK_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="SRK Right Leg" texture="SRK_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="SRK Left Thigh" texture="SRK_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="SRK Left Leg" texture="SRK_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="ZTA Uniform" identifier="ZTA_uniform" aliases="ZTAUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="ZTA Clothes Icon" texture="OutfitIcons.png" sourcerect="0,128,128,110" origin="0.5,0.5" />
+    <Sprite name="ZTA Outfit" texture="MiscJobGear.png" sourcerect="380,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="ZTA Torso" texture="ZTA_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="ZTA Right Hand" texture="ZTA_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="ZTA Right Upper Arm" texture="ZTA_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="ZTA Right Lower Arm" texture="ZTA_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="ZTA Waist" texture="ZTA_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ZTA Left Hand" texture="ZTA_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="ZTA Left Upper Arm" texture="ZTA_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="ZTA Left Lower Arm" texture="ZTA_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="ZTA Right Thigh" texture="ZTA_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="ZTA Right Leg" texture="ZTA_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ZTA Right Shoe" texture="ZTA_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="ZTA Left Thigh" texture="ZTA_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="ZTA Left Leg" texture="ZTA_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="ZTA Left Shoe" texture="ZTA_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="ZTA Uniform M" identifier="ZTA_uniform_m" aliases="ZTAUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="ZTA Clothes Icon" texture="OutfitIcons.png" sourcerect="0,128,128,110" origin="0.5,0.5" />
+    <Sprite name="ZTA Outfit" texture="MiscJobGear.png" sourcerect="380,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="ZTA Torso" texture="ZTA_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="ZTA Right Hand" texture="ZTA_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="ZTA Right Upper Arm" texture="ZTA_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="ZTA Right Lower Arm" texture="ZTA_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="ZTA Waist" texture="ZTA_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ZTA Left Hand" texture="ZTA_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="ZTA Left Upper Arm" texture="ZTA_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="ZTA Left Lower Arm" texture="ZTA_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="ZTA Right Thigh" texture="ZTA_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="ZTA Right Leg" texture="ZTA_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ZTA Right Shoe" texture="ZTA_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="ZTA Left Thigh" texture="ZTA_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="ZTA Left Leg" texture="ZTA_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="ZTA Left Shoe" texture="ZTA_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Radoslav Uniform" identifier="Radoslav_uniform" aliases="RadoslavUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Radoslav Clothes Icon" texture="OutfitIcons.png" sourcerect="0,899,128,110" origin="0.5,0.5" />
+    <Sprite name="Radoslav Outfit" texture="MiscJobGear.png" sourcerect="190,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Radoslav Torso" texture="Radoslav_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Radoslav Right Hand" texture="Radoslav_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Radoslav Right Upper Arm" texture="Radoslav_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Radoslav Right Lower Arm" texture="Radoslav_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Radoslav Waist" texture="Radoslav_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Radoslav Left Hand" texture="Radoslav_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Radoslav Left Upper Arm" texture="Radoslav_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Radoslav Left Lower Arm" texture="Radoslav_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Radoslav Right Thigh" texture="Radoslav_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Radoslav Right Leg" texture="Radoslav_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Radoslav Right Shoe" texture="Radoslav_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Radoslav Left Thigh" texture="Radoslav_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Radoslav Left Leg" texture="Radoslav_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Radoslav Left Shoe" texture="Radoslav_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Radoslav Uniform F" identifier="Radoslav_uniform_f" aliases="RadoslavUniformF" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Radoslav Clothes Icon" texture="OutfitIcons.png" sourcerect="0,899,128,110" origin="0.5,0.5" />
+    <Sprite name="Radoslav Outfit" texture="MiscJobGear.png" sourcerect="190,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Radoslav Torso" texture="Radoslav_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Radoslav Right Hand" texture="Radoslav_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Radoslav Right Upper Arm" texture="Radoslav_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Radoslav Right Lower Arm" texture="Radoslav_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Radoslav Waist" texture="Radoslav_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Radoslav Left Hand" texture="Radoslav_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Radoslav Left Upper Arm" texture="Radoslav_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Radoslav Left Lower Arm" texture="Radoslav_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Radoslav Right Thigh" texture="Radoslav_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Radoslav Right Leg" texture="Radoslav_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Radoslav Right Shoe" texture="Radoslav_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Radoslav Left Thigh" texture="Radoslav_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Radoslav Left Leg" texture="Radoslav_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Radoslav Left Shoe" texture="Radoslav_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Nytro Uniform" identifier="Nytro_uniform" aliases="NytroUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Nytro Clothes Icon" texture="OutfitIcons.png" sourcerect="385,899,128,110" origin="0.5,0.5" />
+    <Sprite name="Nytro Outfit" texture="MiscJobGear.png" sourcerect="190,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Nytro Torso" texture="Nytro_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Nytro Right Hand" texture="Nytro_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Nytro Right Upper Arm" texture="Nytro_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Nytro Right Lower Arm" texture="Nytro_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Nytro Waist" texture="Nytro_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,90" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.0121" />
+      <sprite name="Nytro Coat" texture="Nytro_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" sourcerect="160,292,112,200" Origin="0.51,-0.18" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.0121" />
+      <sprite name="Nytro Left Hand" texture="Nytro_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Nytro Left Upper Arm" texture="Nytro_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Nytro Left Lower Arm" texture="Nytro_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Nytro Right Thigh" texture="Nytro_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Nytro Right Leg" texture="Nytro_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Nytro Right Shoe" texture="Nytro_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Nytro Left Thigh" texture="Nytro_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Nytro Left Leg" texture="Nytro_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Nytro Left Shoe" texture="Nytro_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Nytro Uniform F" identifier="Nytro_uniform_f" aliases="NytroUniformF" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Nytro Clothes Icon" texture="OutfitIcons.png" sourcerect="385,899,128,110" origin="0.5,0.5" />
+    <Sprite name="Nytro Outfit" texture="MiscJobGear.png" sourcerect="190,146,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Nytro Torso" texture="Nytro_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Nytro Right Hand" texture="Nytro_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Nytro Right Upper Arm" texture="Nytro_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Nytro Right Lower Arm" texture="Nytro_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Nytro Waist" texture="Nytro_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,90" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.0121" />
+      <sprite name="Nytro Coat" texture="Nytro_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" sourcerect="160,292,112,200" Origin="0.51,-0.18" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.0121" />
+      <sprite name="Nytro Left Hand" texture="Nytro_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Nytro Left Upper Arm" texture="Nytro_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Nytro Left Lower Arm" texture="Nytro_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Nytro Right Thigh" texture="Nytro_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Nytro Right Leg" texture="Nytro_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Nytro Right Shoe" texture="Nytro_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Nytro Left Thigh" texture="Nytro_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Nytro Left Leg" texture="Nytro_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Nytro Left Shoe" texture="Nytro_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="TVK Uniform" identifier="TVK_uniform" aliases="TVKUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="TVK Clothes Icon" texture="OutfitIcons.png" sourcerect="0,238,128,110" origin="0.5,0.5" />
+    <Sprite name="TVK Outfit" texture="MiscJobGear.png" sourcerect="0,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="TVK Torso" texture="TVK_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="TVK Right Hand" texture="TVK_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="TVK Right Upper Arm" texture="TVK_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="TVK Right Lower Arm" texture="TVK_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="TVK Waist" texture="TVK_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="TVK Left Hand" texture="TVK_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="TVK Left Upper Arm" texture="TVK_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="TVK Left Lower Arm" texture="TVK_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="TVK Right Thigh" texture="TVK_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="TVK Right Leg" texture="TVK_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="TVK Right Shoe" texture="TVK_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="TVK Left Thigh" texture="TVK_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="TVK Left Leg" texture="TVK_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="TVK Left Shoe" texture="TVK_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="TVK Uniform F" identifier="TVK_uniform_f" aliases="TVKUniformF" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="TVK Clothes Icon" texture="OutfitIcons.png" sourcerect="0,238,128,110" origin="0.5,0.5" />
+    <Sprite name="TVK Outfit" texture="MiscJobGear.png" sourcerect="0,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="TVK Torso" texture="TVK_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="TVK Right Hand" texture="TVK_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="TVK Right Upper Arm" texture="TVK_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="TVK Right Lower Arm" texture="TVK_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="TVK Waist" texture="TVK_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="TVK Left Hand" texture="TVK_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="TVK Left Upper Arm" texture="TVK_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="TVK Left Lower Arm" texture="TVK_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="TVK Right Thigh" texture="TVK_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="TVK Right Leg" texture="TVK_AU.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="TVK Right Shoe" texture="TVK_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="TVK Left Thigh" texture="TVK_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="TVK Left Leg" texture="TVK_AU.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="TVK Left Shoe" texture="TVK_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Silk Uniform" identifier="Silk_uniform" aliases="SilkUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Silk Clothes Icon" texture="OutfitIcons.png" sourcerect="385,679,128,110" origin="0.5,0.5" />
+    <Sprite name="Silk Outfit" texture="MiscJobGear.png" sourcerect="190,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Silk Torso" texture="Silk_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Silk Right Hand" texture="Silk_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Silk Right Upper Arm" texture="Silk_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Silk Right Lower Arm" texture="Silk_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Silk Waist" texture="Silk_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Silk Left Hand" texture="Silk_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Silk Left Upper Arm" texture="Silk_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Silk Left Lower Arm" texture="Silk_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Silk Right Thigh" texture="Silk_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Silk Right Leg" texture="Silk_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Silk Right Shoe" texture="Silk_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Silk Left Thigh" texture="Silk_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Silk Left Leg" texture="Silk_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Silk Left Shoe" texture="Silk_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Silk Uniform M" identifier="Silk_uniform_m" aliases="SilkUniformM" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Silk Clothes Icon" texture="OutfitIcons.png" sourcerect="385,679,128,110" origin="0.5,0.5" />
+    <Sprite name="Silk Outfit" texture="MiscJobGear.png" sourcerect="190,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Silk Torso" texture="Silk_AU.png" limb="Torso" hidelimb="false" inherittexturescale="true" SourceRect="400,0,112,192" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="Silk Right Hand" texture="Silk_AU.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="Silk Right Upper Arm" texture="Silk_AU.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="Silk Right Lower Arm" texture="Silk_AU.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="Silk Waist" texture="Silk_AU.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Silk Left Hand" texture="Silk_AU.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="Silk Left Upper Arm" texture="Silk_AU.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="Silk Left Lower Arm" texture="Silk_AU.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="Silk Right Thigh" texture="Silk_AU.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="Silk Right Leg" texture="Silk_AU.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="Silk Right Shoe" texture="Silk_AU.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="Silk Left Thigh" texture="Silk_AU.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="Silk Left Leg" texture="Silk_AU.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="Silk Left Shoe" texture="Silk_AU.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Red Anthroid Uniform" identifier="anthroid_red_uniform" aliases="RedAnthroidUniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="redwire" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="ARA Clothes Icon" texture="OutfitIcons.png" sourcerect="257,128,128,110" origin="0.5,0.5" />
+    <Sprite name="ARA Outfit" texture="MiscJobGear.png" sourcerect="190,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="ARA Torso" texture="ARA_AUR.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="ARA Right Hand" texture="ARA_AUR.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.1015" />
+      <sprite name="ARA Right Upper Arm" texture="ARA_AUR.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.101" />
+      <sprite name="ARA Right Lower Arm" texture="ARA_AUR.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.102" />
+      <sprite name="ARA Waist" texture="ARA_AUR.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ARA Left Hand" texture="ARA_AUR.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.16" />
+      <sprite name="ARA Left Upper Arm" texture="ARA_AUR.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.15" />
+      <sprite name="ARA Left Lower Arm" texture="ARA_AUR.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.14" />
+      <sprite name="ARA Right Thigh" texture="ARA_AUR.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.12" />
+      <sprite name="ARA Right Leg" texture="ARA_AUR.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.121" />
+      <sprite name="ARA Right Shoe" texture="ARA_AUR.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.122" />
+      <sprite name="ARA Left Thigh" texture="ARA_AUR.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.13" />
+      <sprite name="ARA Left Leg" texture="ARA_AUR.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.131" />
+      <sprite name="ARA Left Shoe" texture="ARA_AUR.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.132" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Simple Red Anthroid Uniform" identifier="anthroid_red_uniform_simple" aliases="RedAnthroidUniformSimple" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="redwire" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon name="Red Clothes Icon" texture="OutfitIcons.png" sourcerect="257,238,128,110" origin="0.5,0.5" />
+    <Sprite name="Red Outfit" texture="MiscJobGear.png" sourcerect="190,0,190,73" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="ARA Torso" texture="ARA_AUR.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" inheritlimbdepth="true" depth="0.106" />
+      <sprite name="ARA Waist" texture="ARA_AUR.png" limb="Waist" hidelimb="false" inherittexturescale="true" sourcerect="160,192,112,128" Origin="0.5,0.25" inheritorigin="false" inheritsourcerect="false" inheritlimbdepth="true" depth="0.121" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+  </Item>
+  <Item name="Red Anthroid Cap" identifier="anthroid_red_uniform_cap" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" scale="0.4">
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="redwire" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Sprite name="Baseball Cap" texture="ARA_AUR.png" depth="0.6" sourcerect="424,0,88,51" origin="0.5,0.5" />
+    <Body width="80" height="45" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Baseball Cap Wearable" texture="ARA_AUR.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" sourcerect="424,0,88,51" origin="0.45,1.0" />
+    </Wearable>
+  </Item>
+</Items>
