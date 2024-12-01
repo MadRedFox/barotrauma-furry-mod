@@ -12,7 +12,7 @@
   <!-- <Corpses file="%ModDir%/Corpse/corpses.xml" /> -->
   <!-- <Item file="%ModDir%/Corpse/overlays.xml" /> -->
   <Item file="%ModDir%/Items/Weeaboo/weeaboo.xml" />
-  <!-- <Item file="%ModDir%/Items/Diving/override_divinggear.xml" /> -->
+  <Item file="%ModDir%/Items/Diving/override_divinggear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Cultist/override_cultist_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Assistant/override_assistant_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Captain/override_captain_gear.xml" />
@@ -30,6 +30,6 @@
   <!-- <Text file="%ModDir%/Localization/Japanese.xml" /> -->
   <!-- <Text file="%ModDir%/Localization/BrazilianPortuguese.xml" /> -->
   <Item file="%ModDir%/Items/Jobgear/FKV/uniforms.xml" />
-  <!-- <Item file="%ModDir%/Items/Diving/override_barodrama_divinggear.xml" /> -->
+  <Item file="%ModDir%/Items/Diving/override_barodrama_divinggear.xml" />
   <Item file="%ModDir%/Items/Jobgear/EK/ek_jobgear.xml" />
 </contentpackage>
