@@ -23,8 +23,8 @@
       <RequiredItem identifier="ballisticfiber" amount="3" />
       <RequiredItem identifier="rubber" />
     </Fabricate>
-    <InventoryIcon texture="%ModDir%/JobGear/icons.png" sourcerect="0,256,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir%/Jobgear/Security/cobrasuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="0,256,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Security/cobrasuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
     <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Jobgear/Security/cobrasuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
     <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Jobgear/Security/cobrasuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
     <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Jobgear/Security/cobrasuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
@@ -32,7 +32,7 @@
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
       <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Jobgear/Security/cobrasuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.8" hidelimb="true" hideotherwearables="true" sourcerect="424,2,88,76" origin="0.5,0.5">
         <LightComponent range="150.0" lightcolor="255,255,0,250" minvoltage="0.5" powerconsumption="10" flicker="0.5" flickerspeed="1.0" IsOn="false" allowingameediting="false">
-          <poweronsound file="%ModDir%/Jobgear/Security/cobrasuit_activate.ogg" range="1000" loop="false" />
+          <poweronsound file="%ModDir:BaroDrama V5%/Jobgear/Security/cobrasuit_activate.ogg" range="1000" loop="false" />
           <StatusEffect type="OnActive" targettype="Contained" Condition="-0.55" comparison="And" targetslot="1" />
           <StatusEffect type="OnActive" targettype="Contained" Condition="0.275" compairion="And" targetslot="1">
             <RequiredItem items="fulguriumbatterycell" type="Contained" />
@@ -196,11 +196,11 @@
       <RequiredItem identifier="ballisticfiber" amount="3" />
       <RequiredItem identifier="rubber" />
     </Fabricate>
-    <InventoryIcon texture="%ModDir%/JobGear/icons.png" sourcerect="128,256,64,64" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="128,256,64,64" origin="0.5,0.5" />
     <Sprite name="Diving Suit Item" texture="%ModDir%/Jobgear/Security/vipersuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Jobgear/Security/vipersuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Jobgear/Security/vipersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Jobgear/Security/vipersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Security/vipersuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Security/vipersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Security/vipersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
       <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Jobgear/Security/vipersuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="432,0,80,80" origin="0.5,0.6">

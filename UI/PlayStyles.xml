@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PlayStyles>
+<Style>
   <Override>
-    <PlayStyleBanner identifier="Serious" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,0,1161,340" color="#20686c" />
-    <PlayStyleBanner identifier="Casual" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,342,1161,340" color="#1f661c" />
-    <PlayStyleBanner identifier="Roleplay" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,683,1161,340" color="#8b1b45" />
+    <PlayStyleBanner.Serious>
+      <Sprite name="PlayStyleBanner.Serious" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,0,1161,340" bannercolor="#20686c" /> 
+    </PlayStyleBanner.Serious>
+    <PlayStyleBanner.Casual>
+      <Sprite name="PlayStyleBanner.Casual" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,342,1161,340" bannercolor="#1f661c" /> 
+    </PlayStyleBanner.Casual>
+    <PlayStyleBanner.Roleplay>
+      <Sprite name="PlayStyleBanner.Roleplay" texture="%ModDir%/UI/ServerAtlas1.png" sourcerect="0,683,1161,340" bannercolor="#8b1b45" /> 
+    </PlayStyleBanner.Roleplay>
   </Override>
-</PlayStyles>
+</Style>
