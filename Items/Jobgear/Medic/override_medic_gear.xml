@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
-  <!-- Healthscanner -->
+<!-- Healthscanner -->
   <Item name="" identifier="healthscanner" scale="0.5" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" amount="1" spawnprobability="0.5" notcampaign="true" notpvp="true"/>
     <Price baseprice="150" minavailable="1">
@@ -43,7 +43,7 @@
     <StatusHUD drawhudwhenequipped="true" />
   </Item>
 
-  <!-- Autoinjector headset -->
+<!-- Autoinjector headset -->
   <Item name="" identifier="autoinjectorheadset" scale="0.5" category="Equipment,Medical" tags="smallitem,mobileradio" allowasextracargo="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab"/>
     <Price baseprice="140" sold="false">
@@ -75,7 +75,7 @@
     </Wearable>
   </Item>
 
-  <!-- Doctors uniform 1 -->
+<!-- Doctors uniform 1 -->
   <Item name="" identifier="doctorsuniform1" aliases="doctorsuniform" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab"/>
     <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
@@ -93,7 +93,7 @@
     <Sprite name="Medic Uniform 1" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="504,84,123,60" depth="0.6" origin="0.5,0.5" />
     <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
     <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-      <sprite name="Medic Uniform 1 Torso" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_1.png" limb="Torso" sourcerect="160,0,112,190" depthlimb="Head" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" />
+      <sprite name="Medic Uniform 1 Torso" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_1.png" limb="Torso" sourcerect="160,0,112,217" depthlimb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" />
       <sprite name="Medic Uniform 1 Torso" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_1.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="405,55,105,150" origin="0.575,0.66" />
       <sprite name="Medic Uniform 1 Right Hand" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Medic Uniform 1 Left Hand" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
@@ -139,7 +139,7 @@
       <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
   </Item>
 
-  <!-- Doctors uniform 2 -->
+<!-- Doctors uniform 2 -->
   <Item name="" identifier="doctorsuniform2" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab"/>
     <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />

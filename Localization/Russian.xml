@@ -43,7 +43,9 @@
   <entitydescription.securityuniform_corpse>Годится лишь на переработку</entitydescription.securityuniform_corpse>
   <entityname.divingsuit_corpse>Проржавевший скафандр</entityname.divingsuit_corpse>
   <entitydescription.divingsuit_corpse>Годится лишь на переработку</entitydescription.divingsuit_corpse>
-  <!-- Misc-->
+<!-- Misc-->
   <human>Человек</human>
   <furry>Фурри</furry>
+<!-- Added myself -->
+<!-- End of added myself-->
 </infotexts>

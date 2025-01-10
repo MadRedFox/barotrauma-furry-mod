@@ -378,7 +378,7 @@
         <conditionalSprite target="person">
           <conditional hasSpecifiertag="furry" />
           <properties>
-            <property name="origin">0.6,0.65</property>
+            <property name="origin">0.52,0.72</property>
           </properties>
         </conditionalSprite>
         <conditionalSprite target="person">
