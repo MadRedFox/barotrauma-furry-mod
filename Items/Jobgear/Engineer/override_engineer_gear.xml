@@ -62,7 +62,9 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.4" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
   <!-- Orange Jump Suite 2 -->
@@ -126,7 +128,9 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.95" deflectprojectiles="false" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
   <!-- Thermal googles -->

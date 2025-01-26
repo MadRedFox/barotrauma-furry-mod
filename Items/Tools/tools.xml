@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+<!-- Flashlight Backpack experiment -->
+    <Item name="" identifier="flashlight_backpack" category="Equipment" Tags="mediumitem,tool,provocative" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="divingcab" minamount="1" maxamount="1" spawnprobability="0.05" notcampaign="true" notpvp="true"/>
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab,wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.05"/>
+    <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
+    <Price baseprice="1200">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.25" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="aluminium" amount="2" />
+      <RequiredItem tag="lightcomponent" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="aluminium" />
+      <Item identifier="lightcomponent" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/Tools/tools.png" sourcerect="3,259,68,110" depth="0.55" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="3,259,68,110" depth="0.55" origin="0.5,0.5" />
+    <Body width="48" height="15" density="15" />
+    <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <StatusEffect type="OnWearing" target="Character" setvalue="true" disabledeltatime="true" />
+      <sprite name="Backpack" CanBeHiddenByOtherWearables="false" CanBeHiddenByItem="deepdivinglarge" texture="Content/Items/Tools/tools.png" sourcerect="3,259,68,110" limb="Torso" depthlimb="Waist" inherittexturescale="true" origin="1.1,0.5" >
+        <LightComponent range="2500.0" lightcolor="250,224,165,255" Flicker="0.02" powerconsumption="50" IsOn="true" allowingameediting="false">
+            <Upgrade gameversion="0.1300.0.3" allowingameediting="false" />
+            <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" Interval="0.1" setvalue="true">
+                <Conditional IsDead="false" />
+            </StatusEffect>
+            <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <StatValue stattype="MovementSpeed" value="-0.2" />
+      <StatValue stattype="PropulsionSpeed" value="-0.2" />
+      <StatusEffect type="OnWearing" targettype="Contained" Condition="-0.2">
+        <RequiredItem items="mobilebattery" type="Contained" />
+      </StatusEffect>
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,50" handle2="10,50" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.7" setvalue="true" disabledeltatime="true" />
+      <StatValue stattype="PropulsionSpeed" value="-0.3" />
+    </Holdable>
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="2" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="3" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+      </Containable>
+    </ItemContainer>
+    <AiTarget sightrange="4000" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+<!-- Hatch control panel -->
+  <Item name="" identifier="hatch_control_panel" category="Electrical" Tags="smallitem,logic, circuitboxcomponent" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" GrabWhenSelected="true" signalcomponentcolor="#6c7dd5">
+    <Price baseprice="100" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" sold="false"/>
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" />
+    </Price>
+    <PreferredContainer primary="engcab"/>
+    <PreferredContainer secondary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.05" />
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="65,391,63,52" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="0,0,32,32" origin="0.5,0.5" canflipx="false" />
+    <AndComponent canbeselected="true" />
+    <Body width="31" height="25" density="15" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench,deattachtool" excludeditems="multitool" type="Equipped" />
+    </Holdable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="signal_in1" displayname="connection.signalinx~[num]=1" />
+      <input name="signal_in2" displayname="connection.signalinx~[num]=2" />
+      <input name="signal_in3" displayname="connection.signalinx~[num]=3" />
+      <input name="signal_in4" displayname="connection.signalinx~[num]=4" />
+      <output name="signal_out1" displayname="connection.signaloutx~[num]=1" />
+      <output name="signal_out2" displayname="connection.signaloutx~[num]=2" />
+      <output name="signal_out3" displayname="connection.signaloutx~[num]=3" />
+      <output name="signal_out4" displayname="connection.signaloutx~[num]=4" />
+    </ConnectionPanel>
+    <CustomInterface canbeselected="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.10,0.10" anchor="BottomLeft" pivot="TopLeft" relativeoffset="0.2125,0.101" style="ItemUI" />
+      <Button text="Signal out #1" connection="signal_out1" />
+      <Button text="Signal out #2" connection="signal_out2" />
+      <Button text="Signal out #3" connection="signal_out3" />
+      <Button text="Signal out #4" connection="signal_out4" />
+    </CustomInterface>
+  </Item>
+<!-- EK Utility Jetscooter -->
+  <Override>
+    <Item name="" identifier="ekutility_jetscooter" aliases="ekutility_experimentalscooter" category="Equipment" Tags="smallitem,provocative,scooter,underwaterscooter,light" cargocontaineridentifier="metalcrate" Scale="0.32" impactsoundtag="impact_metal_light" isshootable="true">
+      <Price baseprice="475" sold="false" minleveldifficulty="30">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" />
+        <Price storeidentifier="merchantcity" multiplier="1.1" />
+        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="true" minavailable="2" />
+        <Price storeidentifier="merchantmilitary" multiplier="1" sold="true" minavailable="2" />
+        <Price storeidentifier="merchantmine" multiplier="1.25" />
+        <Price storeidentifier="merchantarmory" multiplier="1.2" sold="true" minavailable="1" />
+      </Price>
+      <Deconstruct time="25">
+        <Item identifier="aluminium" />
+        <Item identifier="fpgacircuit" />
+        <Item identifier="steel" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="25">
+        <RequiredSkill identifier="mechanical" level="40" />
+        <RequiredItem identifier="aluminium" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="steel" />
+      </Fabricate>
+      <InventoryIcon texture="%ModDir:EK Mods for 1.x.x.x%/Items/Diving/ekutility_divinggear.png" sourcerect="128,64,64,64" />
+      <Sprite texture="%ModDir:EK Mods for 1.x.x.x%/Items/Diving/ekutility_divinggear.png" depth="0.55" sourcerect="192,0,320,160" />
+      <Body width="228" height="96" density="10" />
+      <Holdable slots="Any,RightHand+LeftHand" aimpos="90,0" handle1="-50,55" handle2="-54,59" msg="ItemMsgPickUpSelect" />
+      <Propulsion force="200" usablein="water" particles="bubbles">
+        <RequiredItems identifier="ek_hv_battery,batterycell,fulguriumbatterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.5">
+          <RequiredItem items="batterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.25">
+          <RequiredItem items="fulguriumbatterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.125">
+          <RequiredItem items="ek_hv_battery" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-1">
+          <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell,ek_hv_battery" type="Contained" />
+        </StatusEffect>
+        <sound file="Content/Items/Diving/ScooterLoop.ogg" type="OnUse" range="500.0" loop="true" />
+        <LightComponent LightColor="1.0,1.0,1.0,0.8" range="1000" AllowInGameEditing="false">
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </Propulsion>
+      <Sonar range="6000.0" powerconsumption="10" drawhudwhenequipped="true" detectsubmarinewalls="true" displaybordersize="-0.1" characterusable="false" hasmineralscanner="true" allowuioverlap="true">
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.5" disabledeltatime="true">
+          <RequiredItem items="batterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.25" disabledeltatime="true">
+          <RequiredItem items="fulguriumbatterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.125">
+          <RequiredItem items="ek_hv_battery" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-1" disabledeltatime="true">
+          <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell,ek_hv_battery" type="Contained" />
+        </StatusEffect>
+        <sound file="Content/Items/Command/SonarPing.ogg" type="OnUse" range="1000.0" />
+        <GuiFrame relativesize="0.4,0.4" anchor="CenterLeft" relativeoffset="0.006,-0.01" />
+        <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
+        <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
+        <ScreenOverlay texture="Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
+        <ScreenBackground texture="Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
+        <DirectionalPingBackground texture="Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
+        <DirectionalPingButton index="0" texture="Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="1" texture="Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="2" texture="Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+        <Blip texture="Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
+        <LineSprite texture="Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+        <icon identifier="outpost" texture="Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
+        <icon identifier="submarine" texture="Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
+        <icon identifier="shuttle" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
+        <icon identifier="artifact" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,414,8,8" origin="0.5,0.5" />
+        <icon identifier="mineral" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,434,7,12" origin="0.5,0.5" />
+        <icon identifier="" texture="Content/UI/MainIconsAtlas.png" sourcerect="346,416,4,4" origin="0.5,0.5" />
+      </Sonar>
+      <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="true">
+        <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,184,120,32" />
+        <Containable items="ek_hv_battery,batterycell,fulguriumbatterycell">
+          <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+        </Containable>
+      </ItemContainer>
+      <AiTarget soundrange="2000" />
+      <RemoteController target="hatch_control_panel" msg="ItemMsgInteractSelect" OnlyInOwnSub="false" AllowInGameEditing="false" drawhudwhenequipped="true" />
+    </Item>
+  </Override>
+<!-- End -->
+</Items>

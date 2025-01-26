@@ -136,7 +136,76 @@
       </sprite>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.95" />
     </Wearable>
-      <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+      <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
+  </Item>
+
+<!-- Doctors uniform 3 -->
+  <Item name="" identifier="doctorsuniform3" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
+    <Price baseprice="150" minavailable="1" requiredfaction="coalition">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="Medic Uniform 1 Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="128,128,128,128" origin="0.5,0.5" />
+    <Sprite name="Medic Uniform 1" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="504,84,123,60" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Medic Uniform 3 Torso" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="Torso" sourcerect="160,0,112,217" depthlimb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" />
+      <sprite name="Medic Uniform 3 Torso" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="405,55,105,150" origin="0.575,0.66" />
+      <sprite name="Medic Uniform 3 Right Hand" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Left Hand" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Right Lower Arm" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Left Lower Arm" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Right Upper Arm" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Left Upper Arm" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Waist" depthlimb="Head" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" sourcerect="405,210,105,55" limb="Waist" origin="0.56,0.37" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Medic Uniform 3 Right Thigh" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Left Thigh" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Right Leg" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Left Leg" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Medic Uniform 3 Right Shoe" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <sprite name="Medic Uniform 3 Left Shoe" texture="%ModDir%/Items/Jobgear/Medic/medic_[GENDER]_[SPECIES]_3.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" >
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </ConditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </sprite>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.90" />
+      <SkillModifier skillidentifier="medical" skillvalue="10" />
+    </Wearable>
+    <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
+    </ItemContainer>
   </Item>
 
 <!-- Doctors uniform 2 -->
@@ -199,7 +268,9 @@
       </sprite>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.95" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
 </Override>
