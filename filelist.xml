@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Arctic Fox Furry mod V2" modversion="0.0.6" corepackage="False" steamworkshopid="3375857608" gameversion="1.7.7.0">
+<contentpackage name="Arctic Fox Furry mod V2" modversion="0.0.7" corepackage="False" steamworkshopid="3375857608" gameversion="1.7.7.0">
   <Character file="%ModDir%/Characters/Human/Human.xml" />
   <Character file="%ModDir%/Characters/Felinid/Felinid.xml" />
   <UIStyle file="%ModDir%/UI/override_style.xml" />

@@ -798,8 +798,8 @@
       <!-- <sprite name="UMP9 Costume Boobs" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="Tail" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
     </Wearable>
-    <ItemContainer capacity="4">
-      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
     </ItemContainer>
   </Item>
 <!-- VSK94U costume -->  
@@ -988,7 +988,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
-<!-- diff oferrides -->
+<!-- diff overrides -->
   <Override>
     <Item name="" identifier="op_storesign1.png" nameidentifier="opdeco_adposter" width="326" height="165" scale="0.5" noninteractable="true" category="Decorative">
       <sprite texture="%ModDir%/Items/Weeaboo/Posters.png" sourcerect="327,687,326,165" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />

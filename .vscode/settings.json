@@ -1,3 +1,4 @@
 {
-    "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}"
+    "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}",
+    "gitlab-mr.accessToken": "glpat-Xb8zuDsKDY_RuVTsecKr",
 }

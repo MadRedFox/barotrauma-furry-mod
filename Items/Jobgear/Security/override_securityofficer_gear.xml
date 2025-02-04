@@ -303,7 +303,7 @@
       <damagemodifier afflictionidentifiers="bitewounds, blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
-      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" hideotherwearables="true"  limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="0,207,112,113" origin="0.44,0.66" >
+      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" hideotherwearables="false"  limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="0,207,112,113" origin="0.44,0.66" >
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="furry" />
           <properties>
@@ -348,7 +348,7 @@
       <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
       <SkillModifier skillidentifier="weapons" skillvalue="10" />
-      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" hideotherwearables="true"  limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.60" sourcerect="112,208,96,112" origin="0.55,0.61" >
+      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" hideotherwearables="false"  limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.60" sourcerect="112,208,96,112" origin="0.55,0.61" >
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="furry" />
           <properties>
@@ -394,7 +394,7 @@
       <damagemodifier afflictionidentifiers="bitewounds, gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
-      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" hideotherwearables="true" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.50" sourcerect="208,208,112,112" origin="0.5,0.60" >
+      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" hideotherwearables="false" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.50" sourcerect="208,208,112,112" origin="0.5,0.60" >
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="furry" />
           <properties>

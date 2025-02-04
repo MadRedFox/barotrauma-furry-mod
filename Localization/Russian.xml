@@ -53,5 +53,9 @@
   <entitydescription.hatch_control_panel>Панель для удаленного управления состоянием шлюзов. Возможно подключение до 4х шлюзов одновременно</entitydescription.hatch_control_panel>
   <entityname.doctorsuniform3>Форма Врача 2</entityname.doctorsuniform3>
   <entitydescription.doctorsuniform3>Форма Врача 2</entitydescription.doctorsuniform3>
+  <entityname.doctorsuniform4>Форма Врача 3</entityname.doctorsuniform4>
+  <entitydescription.doctorsuniform4>Форма Врача 3</entitydescription.doctorsuniform4>
+  <entityname.af_medic_bag>Медицинская сумка</entityname.af_medic_bag>
+  <entitydescription.af_medic_bag>Медицинская сумка</entitydescription.af_medic_bag>
 <!-- End of added myself-->
 </infotexts>
