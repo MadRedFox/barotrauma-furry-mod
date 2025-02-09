@@ -1,6 +1,5 @@
 {
     "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}",
-    "gitlab-mr.accessToken": "glpat-3f6h81CzP8sPADW-ay4x",
     "gitlab.duoCodeSuggestions.enabledSupportedLanguages": {
         "java": false,
         "ruby": false,
