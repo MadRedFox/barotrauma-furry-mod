@@ -68,21 +68,21 @@
 
   <!-- TODO: Оставить только кошачьих. -->
   <Heads>
-    <Head id="56" gender="female" sheetindex="0,7" tags="furry,body_ara" />
-    <!-- <Head id="57" gender="female" sheetindex="1,7" tags="furry,body_zta" /> -->
+    <!--<Head id="56" gender="female" sheetindex="0,7" tags="furry,body_ara" />
+     <Head id="57" gender="female" sheetindex="1,7" tags="furry,body_zta" /> 
     <Head id="58" gender="female" sheetindex="2,7" tags="furry,body_ayn" />
     <Head id="59" gender="female" sheetindex="3,7" tags="furry,body_zofie" />
-    <!-- <Head id="60" gender="female" sheetindex="4,0" tags="furry,body_tvk" /> -->
-    <!-- <Head id="61" gender="female" sheetindex="5,0" tags="furry,body_rane" /> -->
+    <Head id="60" gender="female" sheetindex="4,0" tags="furry,body_tvk" /> 
+     <Head id="61" gender="female" sheetindex="5,0" tags="furry,body_rane" /> 
     <Head id="62" gender="female" sheetindex="6,0" tags="furry,body_srk" />
     <Head id="63" gender="female" sheetindex="7,0" tags="furry,body_kesis" />
-    <Head id="64" gender="female" sheetindex="4,1" tags="furry,body_radoslav" />
-    <Head id="65" gender="female" sheetindex="5,1" tags="furry,body_vikna" />
-    <Head id="66" gender="female" sheetindex="6,1" tags="furry,body_silk" />
-    <Head id="67" gender="female" sheetindex="7,1" tags="furry,body_nytro" />
+    <Head id="64" gender="female" sheetindex="4,1" tags="furry,body_radoslav" /> -->
+    <Head id="65" gender="female" sheetindex="1,2" tags="furry,body_vikna" /> 
+    <Head id="66" gender="female" sheetindex="2,2" tags="furry,body_silk" />
+    <!-- <Head id="67" gender="female" sheetindex="7,1" tags="furry,body_nytro" />
     <Head id="68" gender="female" sheetindex="4,2" tags="furry,body_lia" />
     <Head id="69" gender="female" sheetindex="5,2" tags="furry,body_hyena" />
-    <Head id="70" gender="female" sheetindex="6,2" tags="furry,body_aardwolf" />
+    <Head id="70" gender="female" sheetindex="6,2" tags="furry,body_aardwolf" />  -->
   </Heads>
 
   <Vars>
@@ -96,7 +96,7 @@
   <Pronouns var="GENDER" />
 
   <HeadAttachments>
-    <Wearable type="Hair" tags="female,furry">
+    <!-- <Wearable type="Hair" tags="female,furry">
       <sprite name="Hair 65" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_1.png" sheetindex="0,0" />
     </Wearable>
     <Wearable type="Hair" tags="female,furry">
@@ -158,7 +158,7 @@
     </Wearable>
     <Wearable type="Hair" tags="female,furry">
       <sprite name="Hair 80" texture="%ModDir%/Characters/Felinid/Hair/Furry_hair_2.png" sheetindex="1,1" />
-    </Wearable>
+    </Wearable> -->
     <Wearable type="Husk" tags="male">
       <sprite name="Husk" texture="%ModDir%/Characters/Human/Human_male_husk.png" hidewearablesoftype="Beard" sheetindex="0,0" />
     </Wearable>
