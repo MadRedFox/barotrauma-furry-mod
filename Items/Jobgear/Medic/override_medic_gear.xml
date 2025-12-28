@@ -277,7 +277,7 @@
   <Item name="" identifier="doctorsuniform4" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab"/>
     <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
-    <Price baseprice="150" minavailable="1" requiredfaction="coalition">
+    <Price baseprice="350" minavailable="1" minleveldifficulty="20" requiredfaction="coalition">
       <Price storeidentifier="merchantoutpost" minavailable="1" />
       <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
       <Price storeidentifier="merchantresearch" minavailable="1" />
@@ -333,12 +333,12 @@
         </ConditionalSprite>
       </sprite>
       <SkillModifier skillidentifier="medical" skillvalue="10" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" damagemultiplier="0.75" damagesound="LimbArmor" deflectprojectiles="true" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.92" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.95" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
     </Wearable>
-    <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+    <ItemContainer capacity="6" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
       <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
     </ItemContainer>
   </Item>
