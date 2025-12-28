@@ -204,7 +204,7 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.90" />
       <SkillModifier skillidentifier="medical" skillvalue="10" />
     </Wearable>
-    <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+    <ItemContainer capacity="6" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
       <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
     </ItemContainer>
   </Item>

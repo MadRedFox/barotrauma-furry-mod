@@ -65,15 +65,15 @@
                 </properties>
                 </ConditionalSprite>
             </sprite>
-            <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.88" damagesound="LimbArmor" deflectprojectiles="true" />
             <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" />
-            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
-            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.75" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
             <SkillModifier skillidentifier="medical" skillvalue="5" />
             <SkillModifier skillidentifier="mechanical" skillvalue="5" />
-            <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.88" setvalue="true" />
+            <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.95" setvalue="true" />
         </Wearable>
-        <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+        <ItemContainer capacity="6" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
             <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
         </ItemContainer>
     </Item>
@@ -101,25 +101,25 @@
         <Sprite texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" sourcerect="0,40,128,176" depth="0.6" origin="0.5,0.5" />
         <Body radius="45" height="60" density="40" />
         <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-        <sprite name="Marine Combat Armor Torso" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="Torso" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="0,32,128,192" origin="0.5,0.54" scale="0.4" />
-        <sprite name="Marine Combat Armor Right Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="RightArm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="128,0,64,128" origin="0.5,0.45" scale="0.4" />
-        <sprite name="Marine Combat Armor Left Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="LeftArm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="128,128,64,128" origin="0.5,0.45" scale="0.4" />
-        <sprite name="Marine Combat Armor Right Lower Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="RightForearm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="192,0,64,128" origin="0.5,0.4" scale="0.4" />
-        <sprite name="Marine Combat Armor Left Lower Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="LeftForearm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="192,128,64,128" origin="0.5,0.4" scale="0.4" />
-        <sprite name="Marine Combat Armor Waist" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="Waist" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="0,0,104,90" origin="0.6,0.2" scale="0.5" />
-        <sprite name="Marine Combat Armor Right Thigh" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="RightThigh" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="104,0,72,144" origin="0.5,0.5" scale="0.42" />
-        <sprite name="Marine Combat Armor Left Thigh" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="LeftThigh" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="184,0,72,144" origin="0.5,0.5" scale="0.42" />
-        <sprite name="Marine Combat Armor Right Leg" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="RightLeg" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="104,144,72,112" origin="0.5,0.5" scale="0.45" />
-        <sprite name="Marine Combat Armor Left Leg" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="LeftLeg" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="184,144,72,112" origin="0.5,0.5" scale="0.45" />
-        <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.35" damagesound="LimbArmor" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.85" damagesound="" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
-        <damagemodifier armorsector="0.0,360.0" afflictiontypes="paralysis" probabilitymultiplier="0.5" damagesound="LimbArmor" />
-        <SkillModifier skillidentifier="weapons" skillvalue="10" />
-        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.8" setvalue="true" />
-        <StatValue stattype="RangedAttackSpeed" value="0.15" />
+            <sprite name="Marine Combat Armor Torso" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="Torso" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="0,32,128,192" origin="0.5,0.54" scale="0.4" />
+            <sprite name="Marine Combat Armor Right Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="RightArm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="128,0,64,128" origin="0.5,0.45" scale="0.4" />
+            <sprite name="Marine Combat Armor Left Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="LeftArm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="128,128,64,128" origin="0.5,0.45" scale="0.4" />
+            <sprite name="Marine Combat Armor Right Lower Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="RightForearm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="192,0,64,128" origin="0.5,0.4" scale="0.4" />
+            <sprite name="Marine Combat Armor Left Lower Arm" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_torso.png" limb="LeftForearm" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="192,128,64,128" origin="0.5,0.4" scale="0.4" />
+            <sprite name="Marine Combat Armor Waist" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="Waist" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="0,0,104,90" origin="0.6,0.2" scale="0.5" />
+            <sprite name="Marine Combat Armor Right Thigh" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="RightThigh" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="104,0,72,144" origin="0.5,0.5" scale="0.42" />
+            <sprite name="Marine Combat Armor Left Thigh" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="LeftThigh" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="184,0,72,144" origin="0.5,0.5" scale="0.42" />
+            <sprite name="Marine Combat Armor Right Leg" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="RightLeg" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="104,144,72,112" origin="0.5,0.5" scale="0.45" />
+            <sprite name="Marine Combat Armor Left Leg" texture="%ModDir%/Items/Jobgear/EK/armor_marine_rig_legs.png" limb="LeftLeg" hidelimb="false" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="184,144,72,112" origin="0.5,0.5" scale="0.45" />
+            <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.35" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.85" damagesound="" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+            <damagemodifier armorsector="0.0,360.0" afflictiontypes="paralysis" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+            <SkillModifier skillidentifier="weapons" skillvalue="10" />
+            <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.8" setvalue="true" />
+            <StatValue stattype="RangedAttackSpeed" value="0.15" />
         </Wearable>
     </Item>
     <Item name="" identifier="ek_marine_armor_uniform" category="Equipment" tags="smallitem,uniform,toolbelt,toolbox,cargoscooter,mobilecontainer" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
@@ -162,13 +162,13 @@
         <sprite name="Marine Combat Undershirt Left Shoe" texture="%ModDir%/Items/Jobgear/EK/armor_marine_uniform_legs.png" limb="LeftFoot" hidelimb="true" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="0,80,104,112" origin="0.35,0.47" scale="0.35" rotation="90" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.85" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
         <SkillModifier skillidentifier="weapons" skillvalue="5" />
         <SkillModifier skillidentifier="helm" skillvalue="10" />
-        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.9" setvalue="true" />
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.95" setvalue="true" />
         </Wearable>
-        <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+        <ItemContainer capacity="6" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
         <Containable items="smallitem" excludeditems="toolbox,metalcrate,mobilecontainer,rucksack,backpack,waistbelt" />
         </ItemContainer>
     </Item>
@@ -289,13 +289,13 @@
         <sprite name="Renegade Combat Undershirt Left Shoe" texture="%ModDir%/Items/Jobgear/EK/armor_renegade_uniform_legs.png" limb="LeftFoot" hidelimb="true" inherittexturescale="false" inheritorigin="false" inheritsourcerect="false" sourcerect="0,80,104,112" origin="0.35,0.47" scale="0.35" rotation="90" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.8" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,organdamage,gunshotwound" damagemultiplier="0.90" damagesound="LimbArmor" deflectprojectiles="true" />
         <SkillModifier skillidentifier="mechanical" skillvalue="10" />
         <SkillModifier skillidentifier="electrical" skillvalue="10" />
-        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.92" setvalue="true" />
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.95" setvalue="true" />
         </Wearable>
-        <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+        <ItemContainer capacity="6" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
         <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
         </ItemContainer>
     </Item>
