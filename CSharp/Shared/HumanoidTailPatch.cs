@@ -39,6 +39,10 @@ namespace ArcticFoxFurryMod
             public bool InPause { get; set; } = false; // Currently pausing between cycles
             public float LastPauseChangeTime { get; set; } = 0.0f; // When we last entered/exited pause for smooth transitions
             
+            // Footstep detection for tail impulses
+            public float LastWalkPosY { get; set; } = 0f; // Previous walkPosY value for edge detection
+            public bool FootstepDetectionInitialized { get; set; } = false; // Track initialization
+            
             private static Random random = new Random();
             
             /// <summary>
@@ -252,6 +256,40 @@ namespace ArcticFoxFurryMod
         }
 
         /// <summary>
+        /// Apply physics impulse to tail limbs when a footstep occurs
+        /// </summary>
+        private static void ApplyFootstepImpulse(HumanoidAnimController controller, float dir, int footSide)
+        {
+            try
+            {
+                foreach (var limb in controller.Limbs)
+                {
+                    if (limb == null || limb.IsSevered) continue;
+                    if (!IsTailLimb(limb, out bool isExtendedSegment)) continue;
+                    
+                    // Calculate impulse direction
+                    // Sideways: alternates based on which foot stepped
+                    // Upward: main component for bounce
+                    Vector2 impulseDirection = new Vector2(
+                        footSide * dir * (isExtendedSegment ? 0.8f : 0.5f),  // More sideways on tip
+                        isExtendedSegment ? 2.5f : 2.0f                        // More upward on tip
+                    );
+                    
+                    // Scale by limb mass for realistic physics
+                    float impulseMagnitude = isExtendedSegment ? 15.0f : 8.0f;
+                    Vector2 impulse = impulseDirection * impulseMagnitude * limb.Mass;
+                    
+                    // Apply force with velocity limit to prevent unrealistic speeds
+                    limb.body?.ApplyForce(impulse, maxVelocity: isExtendedSegment ? 7.0f : 5.0f);
+                }
+            }
+            catch (Exception ex)
+            {
+                DebugConsole.ThrowError($"[ArcticFoxMod] Error applying footstep impulse: {ex.Message}");
+            }
+        }
+
+        /// <summary>
         /// Smooth step function for ease-in/ease-out effect
         /// </summary>
         private static float SmoothStep(float t)
@@ -360,6 +398,35 @@ namespace ArcticFoxFurryMod
                     RotateTail(limb, movementAngle, segmentAngle, __instance.Dir, mainLimb, tailTorque, effectiveBlend);
                     isAngleApplied = true;
                 }
+
+                // Footstep-synced tail impulses
+                // Initialize footstep tracking on first update
+                if (!tailProps.FootstepDetectionInitialized)
+                {
+                    tailProps.LastWalkPosY = (float)Math.Sin(__instance.WalkPos);
+                    tailProps.FootstepDetectionInitialized = true;
+                }
+
+                // Detect footsteps when moving
+                bool movingHorizontally = !MathUtils.NearlyEqual(__instance.TargetMovement.X, 0.0f);
+                if (movingHorizontally && applyMovementAngle)
+                {
+                    float currentWalkPosY = (float)Math.Sin(__instance.WalkPos);
+                    
+                    // Right foot step detection (same logic as PlayImpactSound)
+                    if (Math.Sign(Math.Sin(__instance.WalkPos)) > 0 && Math.Sign(currentWalkPosY) < 0 && Math.Sign(tailProps.LastWalkPosY) >= 0)
+                    {
+                        ApplyFootstepImpulse(__instance, __instance.Dir, 1);
+                    }
+                    // Left foot step detection
+                    else if (Math.Sign(Math.Sin(__instance.WalkPos)) < 0 && Math.Sign(currentWalkPosY) > 0 && Math.Sign(tailProps.LastWalkPosY) <= 0)
+                    {
+                        ApplyFootstepImpulse(__instance, __instance.Dir, -1);
+                    }
+                    
+                    tailProps.LastWalkPosY = currentWalkPosY;
+                }
+
 
                 // Fallback: try to get the primary tail limb
                 if (!isAngleApplied)
