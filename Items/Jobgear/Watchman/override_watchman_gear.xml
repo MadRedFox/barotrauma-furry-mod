@@ -40,7 +40,9 @@
       </sprite>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations, bitewounds" damagemultiplier="0.9" deflectprojectiles="false" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
 </Override>

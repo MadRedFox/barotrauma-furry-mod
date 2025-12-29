@@ -35,7 +35,9 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character" HideFace="true" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
   <!-- Zealot robes -->
@@ -79,7 +81,9 @@
         <ReduceAffliction type="bleeding" amount="0.1" />
       </StatusEffect>
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
 </Override>

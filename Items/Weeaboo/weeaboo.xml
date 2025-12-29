@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+<!-- Katana -->
   <Item name="" identifier="weeaboo" scale="0.34" category="Equipment" tags="smallitem,weapon" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy">
     <PreferredContainer primary="armcab" />
     <PreferredContainer secondary="wreckstoragecab" maxamount="1" spawnprobability="0.02" />
@@ -31,7 +32,7 @@
       </Attack>
     </MeleeWeapon>
   </Item>
-  <!--Yuppie Psycho-->
+<!-- Devil mask -->
   <Item name="" identifier="devilmask" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" scale="0.45">
     <Price baseprice="1" sold="false" canbespecial="false" />
     <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.01" />
@@ -123,7 +124,7 @@
     </MeleeWeapon>
     <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
   </Item>
-  <!-- Additions -->
+<!-- Bunny ears -->
   <Item name="" identifier="bunnyears" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" scale="0.5">
     <Price baseprice="10" canbespecial="false">
       <Price storeidentifier="merchantoutpost" maxavailable="1" />
@@ -138,6 +139,7 @@
       <sprite name="Bunny ears" texture="%ModDir%/Items/Weeaboo/bunny_female_human.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="1" sourcerect="448,0,64,64" origin="0.3,0.83" />
     </Wearable>
   </Item>
+<!-- Bunny suit -->
   <Item name="" identifier="bunnysuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.8">
     <Price baseprice="100" canbespecial="false">
       <Price storeidentifier="merchantoutpost" maxavailable="1" />
@@ -197,6 +199,7 @@
       </sprite>
     </Wearable>
   </Item>
+<!-- BDSM suit -->
   <Item name="" identifier="bdsmsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.8">
     <Price baseprice="69" canbespecial="false">
       <Price storeidentifier="merchantoutpost" maxavailable="1" />
@@ -230,6 +233,7 @@
       <sprite name="BDSM Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_bunny" sourcerect="0,0,512,256" origin="0.5,0.5" />
     </Wearable>
   </Item>
+<!-- Captains cape 1 -->  
   <Item name="" identifier="ccape1" category="Equipment" tags="deepdiving,mediumitem,toolbelt,toolbox,mobilecontainer" allowdroppingonswapwith="diving" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.75" fireproof="false" description="" impactsoundtag="impact_soft">
     <Deconstruct time="10">
       <Item identifier="organicfiber" />
@@ -266,6 +270,7 @@
       <Containable items="smallitem,smallarmsammo" excludeditems="toolbelt,toolbox,uniform,mobilecontainer,rucksack,backpack,waistbelt" />
     </ItemContainer>
   </Item>
+<!-- Captains cape 2 -->
   <Item name="" identifier="ccape2" category="Equipment" tags="deepdiving,mediumitem,toolbelt,toolbox,mobilecontainer" allowdroppingonswapwith="diving" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.35" fireproof="false" description="" impactsoundtag="impact_soft">
     <Deconstruct time="10">
       <Item identifier="organicfiber" />
@@ -297,6 +302,7 @@
       <Containable items="smallitem,smallarmsammo" excludeditems="toolbelt,toolbox,uniform,mobilecontainer,rucksack,backpack,waistbelt" />
     </ItemContainer>
   </Item>
+<!-- Captains cape 3 -->  
   <Item name="" identifier="ccape3" category="Equipment" tags="deepdiving,mediumitem,toolbelt,toolbox,mobilecontainer" allowdroppingonswapwith="diving" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="false" description="" impactsoundtag="impact_soft">
     <Deconstruct time="10">
       <Item identifier="organicfiber" />
@@ -332,6 +338,7 @@
       <Containable items="smallitem,smallarmsammo" excludeditems="toolbelt,toolbox,uniform,mobilecontainer,rucksack,backpack,waistbelt" />
     </ItemContainer>
   </Item>
+<!-- Captains cape 4 -->
   <Item name="" identifier="captainscap4" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" scale="0.3">
     <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <PreferredContainer secondary="locker" />
@@ -351,6 +358,7 @@
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations" armorsector="0.0,360.0" damagemultiplier="0.8" />
     </Wearable>
   </Item>
+<!-- Medical bandolier -->
   <Item name="" identifier="medicalbandolier" category="Equipment" tags="smallitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <PreferredContainer secondary="locker" />
@@ -378,7 +386,7 @@
         <conditionalSprite target="person">
           <conditional hasSpecifiertag="furry" />
           <properties>
-            <property name="origin">0.6,0.65</property>
+            <property name="origin">0.52,0.76</property>
           </properties>
         </conditionalSprite>
         <conditionalSprite target="person">
@@ -397,7 +405,8 @@
       <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,medicalbandolier,cargoscooter" />
     </ItemContainer>
   </Item>
-  <!-- Girls Frontline -->
+<!-- Girls Frontline -->
+<!-- AK74 costume -->
   <Item name="" identifier="aks74ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -463,6 +472,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
+<!-- HK416 costume -->  
   <Item name="" identifier="hk416ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -528,6 +538,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
+<!-- M200U costume -->
   <Item name="" identifier="m200ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -592,6 +603,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
+<!-- MP7 costume -->
   <Item name="" identifier="mp7costume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -658,6 +670,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
+<!-- RO635U costume -->  
   <Item name="" identifier="ro635ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -723,6 +736,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
+<!-- UMP9U costume -->  
   <Item name="" identifier="ump9ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -784,10 +798,11 @@
       <!-- <sprite name="UMP9 Costume Boobs" texture="%ModDir%/Items/Weeaboo/EuropaWaifuClothes/UMP9_[GENDER]_[SPECIES].png" limb="Tail" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" /> -->
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
     </Wearable>
-    <ItemContainer capacity="4">
-      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    <ItemContainer capacity="8" slotsperrow="4" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,cargoscooter,mobilecontainer,rucksack,backpack,waistbelt" />
     </ItemContainer>
   </Item>
+<!-- VSK94U costume -->  
   <Item name="" identifier="vsk94ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -905,6 +920,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
+<!-- MP45U costume -->  
   <Item name="" identifier="m45ucostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.5">
     <Price baseprice="300">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -972,6 +988,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
     </ItemContainer>
   </Item>
+<!-- diff overrides -->
   <Override>
     <Item name="" identifier="op_storesign1.png" nameidentifier="opdeco_adposter" width="326" height="165" scale="0.5" noninteractable="true" category="Decorative">
       <sprite texture="%ModDir%/Items/Weeaboo/Posters.png" sourcerect="327,687,326,165" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />

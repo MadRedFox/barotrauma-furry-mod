@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
 <Override>
 <!--Cobra Suit-->
   <Item name="" identifier="barodrama_cobrasuit" category="Diving" tags="diving,deepdiving,divingsuit,divinggear_wearableindoors,provocative" scale="0.5" fireproof="true" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
@@ -135,8 +136,8 @@
           <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
         </TickBox>
       </CustomInterface>
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound,explosiondamage" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations" damagemultiplier="0.35" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound,explosiondamage" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="psychosis" damagemultiplier="0.75" damagesound="LimbArmor" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn, bleeding" damagemultiplier="0.45" damagesound="LimbArmor" />
@@ -315,7 +316,7 @@
     </ItemContainer>
     <aitarget maxsightrange="1500" />
   </Item>
-<!-- Windersuit-->
+<!--Winder Suit-->
   <Item name="" identifier="barodrama_windersuit" category="Diving" tags="diving,deepdiving,divingsuit" scale="0.5" fireproof="true" description="" allowdroppingonswap="true" impactsoundtag="impact_metal_heavy">
     <Price baseprice="1250" soldeverywhere="false">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -480,3 +481,4 @@
     <AiTarget soundrange="50000" sonarlabel="entityname.sonarbeacon" sight="500" staticsight="true" />
   </Item>
 </Override>
+</Items>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
-  <!-- Bandolier-->
+<!-- Bandolier-->
   <Item name="" identifier="bandolier" category="Equipment" tags="mediumitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true" description="" impactsoundtag="impact_soft">
     <PreferredContainer primary="armcab" secondary="secarmcab"/>
     <Price baseprice="250" sold="false">
@@ -39,8 +39,8 @@
     </ItemContainer>
   </Item>
 
-  <!-- UNIFORMS START -->
-  <!-- Security Uniform 1 -->
+<!-- UNIFORMS START -->
+<!-- Security Uniform 1 -->
   <Item name="" identifier="securityuniform1" aliases="securityuniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
@@ -102,10 +102,12 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.95" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound, bitewounds" damagemultiplier="0.9" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
-  <!-- Security Uniform 2 -->
+<!-- Security Uniform 2 -->
   <Item name="" identifier="securityuniform2" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
@@ -166,10 +168,12 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.95" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound, bitewounds" damagemultiplier="0.9" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
-  <!-- Security Uniform 3 -->
+<!-- Security Uniform 3 -->
   <Item name="" identifier="securityuniform3" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
@@ -231,11 +235,13 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.95" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound, bitewounds" damagemultiplier="0.9" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
-  <!-- UNIFORMS END -->
-  <!-- Bodyarmor -->
+<!-- UNIFORMS END -->
+<!-- Bodyarmor -->
   <Item name="" identifier="bodyarmor" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.9.3.0" scale="0.35" />
     <PreferredContainer primary="secarmcab" amount="3" notcampaign="true" notpvp="true" />
@@ -268,8 +274,8 @@
     </Wearable>
   </Item>
 
-  <!-- HEADGEAR START -->
-  <!-- Ballistic helmet 1 -->
+<!-- HEADGEAR START -->
+<!-- Ballistic helmet 1 -->
   <Item name="" identifier="ballistichelmet1" aliases="ballistichelmet" category="Equipment" tags="smallitem,helmet" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy" scale="0.325">
     <Upgrade gameversion="0.9.6.0" scale="0.325" />
     <PreferredContainer primary="secarmcab" amount="1" notcampaign="true" notpvp="true" />
@@ -297,7 +303,7 @@
       <damagemodifier afflictionidentifiers="bitewounds, blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
-      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="0,207,112,113" origin="0.44,0.66" >
+      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" hideotherwearables="false"  limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="0,207,112,113" origin="0.44,0.66" >
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="furry" />
           <properties>
@@ -307,14 +313,14 @@
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="human" />
           <properties>
-            <property name="origin">0.44,0.5</property>
+            <property name="origin">0.44,0.6</property>
           </properties>
         </ConditionalSprite>
       </sprite>
     </Wearable>
   </Item>
 
-  <!-- Ballistic helmet 2 -->
+<!-- Ballistic helmet 2 -->
   <Item name="" identifier="ballistichelmet2" category="Equipment" tags="smallitem,helmet" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy" scale="0.325">
     <PreferredContainer primary="secarmcab" amount="1" notcampaign="true" notpvp="true" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab,outpostarmcab" amount="1" spawnprobability="0.05" />
@@ -342,7 +348,7 @@
       <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
       <SkillModifier skillidentifier="weapons" skillvalue="10" />
-      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.60" sourcerect="112,208,96,112" origin="0.55,0.61" >
+      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" hideotherwearables="false"  limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.60" sourcerect="112,208,96,112" origin="0.55,0.61" >
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="furry" />
           <properties>
@@ -353,7 +359,7 @@
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="human" />
           <properties>
-            <property name="origin">0.5,0.55</property>
+            <property name="origin">0.5,0.59</property>
             <property name="scale">0.65</property>
           </properties>
         </ConditionalSprite>
@@ -361,7 +367,7 @@
     </Wearable>
   </Item>
 
-  <!-- Ballistic helmet 3 -->
+<!-- Ballistic helmet 3 -->
   <Item name="" identifier="ballistichelmet3" category="Equipment" tags="smallitem,helmet" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy" scale="0.325">
     <PreferredContainer primary="secarmcab" amount="1" notcampaign="true" notpvp="true" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab,outpostarmcab" amount="1" spawnprobability="0.05" />
@@ -388,7 +394,7 @@
       <damagemodifier afflictionidentifiers="bitewounds, gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
-      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.50" sourcerect="208,208,112,112" origin="0.5,0.60" >
+      <sprite texture="%ModDir%/Items/Jobgear/headgears_[GENDER].png" limb="Head" hideotherwearables="false" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.50" sourcerect="208,208,112,112" origin="0.5,0.60" >
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="furry" />
           <properties>
@@ -399,8 +405,8 @@
         <ConditionalSprite target="person">
           <conditional hasspecifiertag="human" />
           <properties>
-            <property name="origin">0.5,0.5</property>
-            <property name="scale">0.65</property>
+            <property name="origin">0.5,0.59</property>
+            <property name="scale">0.57</property>
           </properties>
         </ConditionalSprite>
       </sprite>

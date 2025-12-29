@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Override>
 <Items>
-  <!--Renegade Diving Suit-->
+<Override>
+<!--Renegade Diving Suit-->
   <Item name="" identifier="barodrama_renegadesuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="true" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
     <Price baseprice="1250" soldeverywhere="false">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -167,7 +167,7 @@
           <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
         </LightComponent>
       </sprite>
-      <sprite name="Director Diving Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="Torso" depthlimb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true">
+      <sprite name="Director Diving Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="Torso" sourcerect="160,0,112,192" depthlimb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true">
         <LightComponent LightColor="1,0,0,1" range="50" powerconsumption="10" blinkfrequency="2" IsOn="true" canbeselected="false">
           <StatusEffect type="OnActive" targettype="Contained" Condition="-0.2" comparison="And" targetslot="1" />
           <StatusEffect type="OnActive" targettype="Contained" Condition="0.1" compairion="And" targetslot="1">
@@ -179,19 +179,19 @@
           <IsActive hasStatusTag="beacon" />
         </LightComponent>
       </sprite>
-      <sprite name="Director Control Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="400,0,70,120" />
-      <sprite name="Director Control Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="400,130,70,120" />
-      <sprite name="Director Control Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="272,60,64,100" />
-      <sprite name="Director Control Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="336,60,64,100" />
-      <sprite name="Director Control Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="LeftFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Director Control Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_body.png" limb="RightFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="400,0,70,120" />
+      <sprite name="Director Control Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="400,130,70,120" />
+      <sprite name="Director Control Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="272,60,64,100" />
+      <sprite name="Director Control Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.65" sourcerect="336,60,64,100" />
+      <sprite name="Director Control Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="LeftFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Director Control Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="RightFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
       <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="10000.0" SpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
@@ -542,6 +542,7 @@
       <Containable items="smallitem" excludeditems="toolbox,toolbelt" />
     </ItemContainer>
   </Item>
+<!--Captain's Cap-->
   <Item name="" identifier="barodrama_captainscap" category="Equipment" tags="smallitem,clothing" description="" scale="0.4">
     <Price baseprice="75">
       <Price storeidentifier="merchantoutpost" minavailable="1" />
@@ -579,6 +580,7 @@
     </Holdable>
     <RemoteController target="navterminal" msg="ItemMsgInteractSelect" OnlyInOwnSub="true" AllowInGameEditing="false" drawhudwhenequipped="true" />
   </Item>
+<!--Director PDA-->
   <Item name="" identifier="barodrama_tagpda" Tags="" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
     <Price baseprice="150" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -598,5 +600,5 @@
     </Holdable>
     <RemoteController target="ddcs" Range="25000" msg="ItemMsgInteractSelect" AllowInGameEditing="false" drawhudwhenequipped="true" />
   </Item>
-</Items>
 </Override>
+</Items>

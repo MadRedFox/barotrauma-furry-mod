@@ -2,7 +2,7 @@
 <Override>
   <!-- HATS START -->
   
-  <!-- Captain cap 1 -->
+<!-- Captain cap 1 -->
   <Item name="" identifier="captainscap1" aliases="captainscap" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.4">
     <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true"/>
     <Price baseprice="75" requiredfaction="coalition">
@@ -37,7 +37,7 @@
     </Wearable>
   </Item>
 
-  <!-- Captain cap 2 -->
+<!-- Captain cap 2 -->
   <Item name="" identifier="captainscap2" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.4">
     <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true"/>
     <Price baseprice="75" requiredfaction="coalition">
@@ -72,7 +72,7 @@
     </Wearable>
   </Item>
 
-  <!-- Captain cap 3 -->
+<!-- Captain cap 3 -->
   <Item name="" identifier="captainscap3" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.4">
     <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true"/>
     <Price baseprice="75" requiredfaction="coalition">
@@ -107,9 +107,9 @@
     </Wearable>
   </Item>
 
-  <!-- HATS END -->
-  <!-- UNIFORMS START -->
-  <!-- Captains Uniform 1 -->
+<!-- HATS END -->
+<!-- UNIFORMS START -->
+<!-- Captains Uniform 1 -->
   <Item name="" identifier="captainsuniform1" aliases="captainsuniform" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <Price baseprice="150" requiredfaction="coalition">
@@ -170,11 +170,13 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, blunttrauma" damagemultiplier="0.9" />
 
       <!-- Карманы. Потому что могу -->
-      <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+      <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+        <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+      </ItemContainer>
     </Wearable>
   </Item>
 
-  <!-- Captains Uniform 2 -->
+<!-- Captains Uniform 2 -->
   <Item name="" identifier="captainsuniform2" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <Price baseprice="150" requiredfaction="coalition">
@@ -235,10 +237,12 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, blunttrauma" damagemultiplier="0.9" />
     </Wearable>
 
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 
-  <!-- Captains Uniform 3 -->
+<!-- Captains Uniform 3 -->
   <Item name="" identifier="captainsuniform3" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <Price baseprice="150" requiredfaction="coalition">
@@ -299,7 +303,9 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, blunttrauma" damagemultiplier="0.9" />
     </Wearable>
 
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+      <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
-  <!-- UNIFORMS END -->
+<!-- UNIFORMS END -->
 </Override>
