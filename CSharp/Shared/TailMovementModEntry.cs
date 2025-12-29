@@ -27,12 +27,13 @@ namespace ArcticFoxFurryMod
                 // Create Harmony instance with unique ID
                 harmony = new Harmony("com.arcticfox.barotrauma.tailmovement");
                 
-                // Apply all patches from HumanoidTailPatch class
+                // Apply all patches from HumanoidTailPatch class and CharacterHeadPortraitPatch class
                 harmony.PatchAll(Assembly.GetExecutingAssembly());
                 
                 isInitialized = true;
                 
                 DebugConsole.NewMessage("[ArcticFoxMod] Tail movement successfully initialized! Humanoid characters can now have animated tails.", new Color(0, 255, 0));
+                DebugConsole.NewMessage("[ArcticFoxMod] Character portrait patches initialized! Ear limbs will now render on ID cards and character icons.", new Color(0, 255, 0));
             }
             catch (Exception ex)
             {
