@@ -9,8 +9,6 @@ using System.Xml.Linq;
 using Barotrauma.Items.Components;
 using System.Collections.Immutable;
 using Microsoft.Xna.Framework; // just for color
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace ConditionalSpritesNamespace 
 {
@@ -30,8 +28,8 @@ namespace ConditionalSpritesNamespace
 
         public void Dispose()
         {
-            // for some reason this doesn't work :(
-            harmony.UnpatchAll();
+            // Unpatch all patches from this Harmony instance
+            harmony?.UnpatchSelf();
             harmony = null;
         }
     }
@@ -222,9 +220,9 @@ namespace ConditionalSpritesNamespace
             CharacterInfo characterInfo;
             if (characterElement == null)
             {
-                Random random = new Random();
-                string[] speciesList = {"human","felinid"};
-                int i = random.Next(0, speciesList.Length);
+                string[] speciesList = { "human", "felinid" };
+                // Вероятность появления фелинида составляет 15%
+                int i = Rand.Value(randSync) <= 0.15f ? 1 : 0;
 
                 characterInfo = new CharacterInfo(speciesList[i].ToIdentifier(), jobOrJobPrefab: __instance.GetJobPrefab(randSync), npcIdentifier: __instance.Identifier, randSync: randSync);
             }
@@ -237,9 +235,9 @@ namespace ConditionalSpritesNamespace
                 foreach (var skill in characterInfo.Job.GetSkills())
                 {
                     float newSkill = skill.Level * __instance.SkillMultiplier;
-                    skill.IncreaseSkill(newSkill - skill.Level, increasePastMax: false);
+                    skill.IncreaseSkill(newSkill - skill.Level, canIncreasePastDefaultMaximumSkill: false);
                 }
-                characterInfo.Salary = characterInfo.CalculateSalary();
+                characterInfo.Salary = characterInfo.CalculateSalary(__instance.BaseSalary, __instance.SalaryMultiplier);
             }
             characterInfo.HumanPrefabIds = (__instance.NpcSetIdentifier, __instance.Identifier);
             characterInfo.GiveExperience(__instance.ExperiencePoints);

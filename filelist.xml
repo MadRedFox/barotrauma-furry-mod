@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Arctic Fox Furry mod V2" modversion="0.0.1" corepackage="False">
+<contentpackage name="Arctic Fox Furry mod V2" modversion="0.0.7" corepackage="False" steamworkshopid="3375857608" gameversion="1.7.7.0">
   <Character file="%ModDir%/Characters/Human/Human.xml" />
   <Character file="%ModDir%/Characters/Felinid/Felinid.xml" />
-  <!-- <Character file="%ModDir%/Characters/Humanhusk/Humanhusk.xml" /> -->
-  <!-- <Afflictions file="%ModDir%/Afflictions.xml" /> -->
-  <!-- <Sounds file="%ModDir%/Sounds/anime_sounds.xml" /> -->
   <UIStyle file="%ModDir%/UI/override_style.xml" />
-  <Other file="%ModDir%/UI/PlayStyles.xml" />
-  <!-- <Jobs file="%ModDir%/Items/Jobs.xml" /> -->
-  <!-- <Structure file="%ModDir%/Items/override_OutpostStructurePrefabs.xml" /> -->
-  <!-- <Corpses file="%ModDir%/Corpse/corpses.xml" /> -->
-  <!-- <Item file="%ModDir%/Corpse/overlays.xml" /> -->
+  <UIStyle file="%ModDir%/UI/PlayStyles.xml" />
   <Item file="%ModDir%/Items/Weeaboo/weeaboo.xml" />
   <Item file="%ModDir%/Items/Diving/override_divinggear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Cultist/override_cultist_gear.xml" />
@@ -24,12 +17,11 @@
   <Item file="%ModDir%/Items/Jobgear/Security/override_securityofficer_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Watchman/override_watchman_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/override_misc.xml" />
-  <!-- <Item file="%ModDir%/Items/Jobgear/override_pirateitems.xml" /> -->
-  <!-- <Text file="%ModDir%/Localization/English.xml" /> -->
-  <!-- <Text file="%ModDir%/Localization/Russian.xml" /> -->
-  <!-- <Text file="%ModDir%/Localization/Japanese.xml" /> -->
-  <!-- <Text file="%ModDir%/Localization/BrazilianPortuguese.xml" /> -->
   <Item file="%ModDir%/Items/Jobgear/FKV/uniforms.xml" />
-  <Item file="%ModDir%/Items/Diving/override_barodrama_divinggear.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/Security/security_gear.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/Captain/captain_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/EK/ek_jobgear.xml" />
+  <Item file="%ModDir%/Items/Tools/tools.xml" />
+  <Text file="%ModDir%/Localization/English.xml" />
+  <Text file="%ModDir%/Localization/Russian.xml" />
 </contentpackage>

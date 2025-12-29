@@ -43,4 +43,10 @@
   <entitydescription.securityuniform_corpse>Only suitable for recycling</entitydescription.securityuniform_corpse>
   <entityname.divingsuit_corpse>Rusted diving suit</entityname.divingsuit_corpse>
   <entitydescription.divingsuit_corpse>Only suitable for recycling</entitydescription.divingsuit_corpse>
+
+  <entityname.flashlight_backpack>handheld spotlight</entityname.flashlight_backpack>
+  <entitydescription.flashlight_backpack>A very powerful handheld lightsource. Uses a lot of energy.</entitydescription.flashlight_backpack>
+  <entityname.hatch_control_panel>Hatch Control Panel</entityname.hatch_control_panel>
+  <entitydescription.hatch_control_panel>Control panel for remote hatch control. Can maintain up to 4 different hatch groups</entitydescription.hatch_control_panel>
+
 </infotexts>

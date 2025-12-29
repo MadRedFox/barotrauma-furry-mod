@@ -1,0 +1,16 @@
+{
+    "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}",
+    "gitlab.duoCodeSuggestions.enabledSupportedLanguages": {
+        "java": false,
+        "ruby": false,
+        "rust": false,
+        "scala": false,
+        "swift": false,
+        "typescript": false,
+        "typescriptreact": false,
+        "svelte": false,
+        "terraform": false,
+        "terragrunt": false,
+        "haml": false
+    },
+}

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
+<!-- Assistant Clothes -->
   <Item name="" identifier="assistantclothes" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true"/>
     <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
@@ -64,6 +65,8 @@
       <SkillModifier skillidentifier="weapons" skillvalue="5" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.95" />
     </Wearable>
-    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" />
+    <ItemContainer capacity="4" maxstacksize="1" hideitems="true" >
+        <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+    </ItemContainer>
   </Item>
 </Override>
