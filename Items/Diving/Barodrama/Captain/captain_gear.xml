@@ -27,13 +27,13 @@
       <RequiredItem identifier="aliencircuitry" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="436,5,76,106" origin="0.5,0.6">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="436,5,76,106" origin="0.5,0.6">
         <LightComponent range="150.0" lightcolor="255,0,0,250" powerconsumption="10" IsOn="true" allowingameediting="false">
           <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
             <Conditional IsDead="false" />
@@ -41,24 +41,29 @@
           <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0" />
         </LightComponent>
       </sprite>
-      <sprite name="Renegade Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Right Hand" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Left Hand" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Right Lower Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Left Lower Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Right Upper Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Left Upper Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Waist" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Right Thigh" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Left Thigh" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Right Leg" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Left Leg" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Left Shoe" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Renegade Diving Suit Right Shoe" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Renegade Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
-      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="10000.0" SpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
       </StatusEffect>
       <!-- Refill oxygen when the suit is contained. -->
       <StatusEffect type="OnContained" target="Contained" Condition="1.0" interval="1" disabledeltatime="true">
@@ -95,9 +100,11 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn,radiationsickness" damagemultiplier="0.45" damagesound="LimbArmor" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="sufforinpoisoning,morbusinepoisoning,cyanidepoisoning,paralysis" damagemultiplier="0.55" probabilitymultiplier="0.5" damagesound="LimbArmor" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="organdamage" damagemultiplier="0.65" probabilitymultiplier="0.32" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="contamination" damagemultiplier="0" damagesound="LimbArmor" />
       <SkillModifier skillidentifier="weapons" skillvalue="10" />
-      <SkillModifier skillidentifier="helm" skillvalue="5" />
+      <SkillModifier skillidentifier="helm" skillvalue="5" /> 
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
       <StatValue stattype="FlowResistance" value="0.6" />
       <StatValue stattype="MeleeAttackMultiplier" value="0.4" />
       <StatValue stattype="CPRBoost" value="0.4" />
@@ -111,17 +118,17 @@
       <StatusEffect type="OnWearing" target="Contained">
         <RequiredItem items="oxygensource" type="Contained" />
         <Conditional condition="lt 5.0" />
-        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_oxygenlow.ogg" range="500" loop="true" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/renegadesuit_oxygenlow.ogg" range="500" loop="true" />
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
         <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
         <Conditional condition="lte 0.0" />
-        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_oxygenempty.ogg" range="500" loop="true" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/renegadesuit_oxygenempty.ogg" range="500" loop="true" />
       </StatusEffect>
     </ItemContainer>
     <aitarget maxsightrange="1500" />
   </Item>
-<!--Director Diving Suit-->
+  <!--Director Diving Suit-->
   <Item name="" identifier="barodrama_directorsuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="true" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
     <Price baseprice="1250" soldeverywhere="false">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -146,13 +153,13 @@
       <RequiredItem identifier="aliencircuitry" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/directorsuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/directorsuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/directorsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/directorsuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/renegadesuit_body.png" limb="Head" depthlimb="Torso" scale="0.5" hidelimb="true" hideotherwearables="true" sourcerect="436,132,106,124" origin="0.3,0.65">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Captain/renegadesuit_body.png" limb="Head" depthlimb="Torso" scale="0.5" hidelimb="true" hideotherwearables="true" sourcerect="436,132,106,124" origin="0.3,0.65">
         <LightComponent range="200.0" lightcolor="255,0,0,255" powerconsumption="10" IsOn="true" allowingameediting="false">
           <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
             <Conditional IsDead="false" />
@@ -167,7 +174,7 @@
             <RequiredItem items="fulguriumbatterycell" type="Contained" />
           </StatusEffect>
           <StatusEffect type="OnActive" targettype="This" SoundRange="25000" setvalue="true">
-            <sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/directorsuit_beacon.ogg" range="1000.0" />
+            <sound file="%ModDir:BaroDrama V5%/JobGear/Captain/directorsuit_beacon.ogg" range="1000.0" />
           </StatusEffect>
           <IsActive hasStatusTag="beacon" />
         </LightComponent>
@@ -186,9 +193,14 @@
       <sprite name="Director Control Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="LeftFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Director Control Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/directorsuit_[SPECIES].png" limb="RightFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
-      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="10000.0" SpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
       </StatusEffect>
       <!-- Refill oxygen when the suit is contained. -->
       <StatusEffect type="OnContained" target="Contained" Condition="1.0" interval="1" disabledeltatime="true">
@@ -229,8 +241,10 @@
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun,poison" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.4" probabilitymultiplier="0.4" damagesound="LimbArmor" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn,radiationsickness" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="contamination" damagemultiplier="0" damagesound="LimbArmor" />
       <SkillModifier skillidentifier="helm" skillvalue="15" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
         <GuiFrame relativesize="0.16,0.18" anchor="BottomLeft" absoluteoffset="0,160" style="ItemUI" />
         <TickBox text="sonarbeacon.beaconactive">
@@ -263,17 +277,17 @@
       <StatusEffect type="OnWearing" target="Contained" targetslot="0">
         <RequiredItem items="oxygensource" type="Contained" />
         <Conditional condition="lt 5.0" />
-        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/directorsuit_oxygenlow.ogg" range="500" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/directorsuit_oxygenlow.ogg" range="500" />
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
         <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
         <Conditional condition="lte 0.0" />
-        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/directorsuit_oxygenempty.ogg" range="500" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/directorsuit_oxygenempty.ogg" range="500" />
       </StatusEffect>
     </ItemContainer>
     <AiTarget soundrange="25000" sonarlabel="entityname.sonarbeacon" sight="500" staticsight="true" />
   </Item>
-<!--Tyrant Suit-->
+  <!--Tyrant Suit-->
   <Item name="" identifier="barodrama_tyrantsuit" category="Diving" tags="diving,deepdiving,divingsuit,divinggear_wearableindoors,provocative" scale="0.5" fireproof="true" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
     <Price baseprice="50000" soldeverywhere="false">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -298,17 +312,17 @@
       <RequiredItem identifier="aliencircuitry" amount="2" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="408,0,104,110" origin="0.5,0.6">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="408,0,104,110" origin="0.5,0.6">
         <LightComponent range="50.0" lightcolor="255,0,0,255" powerconsumption="10" IsOn="false" flicker="0.5" flickerspeed="1.0" allowingameediting="false">
           <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0" />
           <IsActive hasStatusTag="adverse" />
-          <poweronsound file="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrant_adverse.ogg" range="1000" loop="false" />
+          <poweronsound file="%ModDir:BaroDrama V5%/JobGear/Captain/tyrant_adverse.ogg" range="1000" loop="false" />
           <StatusEffect type="OnActive" targettype="Contained" Condition="-0.55" comparison="And" targetslot="1" />
           <StatusEffect type="OnActive" target="NearbyCharacters" range="5000">
             <Affliction identifier="tyrantpaintether" strength="2" />
@@ -317,7 +331,7 @@
         <LightComponent range="50.0" lightcolor="64,0,255,255" powerconsumption="10" IsOn="false" flicker="0.5" flickerspeed="1.0" allowingameediting="false">
           <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0" />
           <IsActive hasStatusTag="proverse" />
-          <poweronsound file="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrant_proverse.ogg" range="1000" loop="false" />
+          <poweronsound file="%ModDir:BaroDrama V5%/JobGear/Captain/tyrant_proverse.ogg" range="1000" loop="false" />
           <StatusEffect type="OnActive" targettype="Contained" Condition="-0.55" comparison="And" targetslot="1" />
           <StatusEffect type="OnActive" target="NearbyCharacters" range="5000">
             <Affliction identifier="tyrantgaintether" strength="2" />
@@ -326,7 +340,7 @@
         <LightComponent range="100.0" lightcolor="255,0,0,255" powerconsumption="10" IsOn="false" flicker="0.5" flickerspeed="1.0" allowingameediting="false">
           <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0" />
           <IsActive hasStatusTag="ampedadverse" />
-          <poweronsound file="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrant_ampedadverse.ogg" range="1000" loop="false" />
+          <poweronsound file="%ModDir:BaroDrama V5%/JobGear/Captain/tyrant_ampedadverse.ogg" range="1000" loop="false" />
           <StatusEffect type="OnActive" targettype="Contained" Condition="-1.1" comparison="And" targetslot="1" />
           <StatusEffect type="OnActive" target="NearbyCharacters" range="5000">
             <Affliction identifier="tyrantpaintetheramped" strength="2" />
@@ -335,32 +349,37 @@
         <LightComponent range="100.0" lightcolor="64,0,255,255" powerconsumption="10" IsOn="false" flicker="0.5" flickerspeed="1.0" allowingameediting="false">
           <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0" />
           <IsActive hasStatusTag="ampedproverse" />
-          <poweronsound file="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrant_ampedproverse.ogg" range="1000" loop="false" />
+          <poweronsound file="%ModDir:BaroDrama V5%/JobGear/Captain/tyrant_ampedproverse.ogg" range="1000" loop="false" />
           <StatusEffect type="OnActive" targettype="Contained" Condition="-1.1" comparison="And" targetslot="1" />
           <StatusEffect type="OnActive" target="NearbyCharacters" range="5000">
             <Affliction identifier="tyrantgaintetheramped" strength="2" />
           </StatusEffect>
         </LightComponent>
       </sprite>
-      <sprite name="Tyrant Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Right Hand" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Left Hand" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Right Lower Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.6" sourcerect="400,138,56,118" />
-      <sprite name="Tyrant Suit Left Lower Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.6" sourcerect="456,138,56,118" />
-      <sprite name="Tyrant Suit Right Upper Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Left Upper Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Waist" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Right Thigh" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Left Thigh" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Right Leg" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Left Leg" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Left Shoe" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Tyrant Suit Right Shoe" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrantsuit_body.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.6" sourcerect="400,138,56,118" />
+      <sprite name="Tyrant Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.6" sourcerect="456,138,56,118" />
+      <sprite name="Tyrant Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Tyrant Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/tyrantsuit_body.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
-      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
-        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrant_breathe1.ogg" range="500" />
-        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrant_breathe2.ogg" range="500" />
-        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Captain/tyrant_breathe3.ogg" range="500" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" SpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/tyrant_breathe1.ogg" range="500" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/tyrant_breathe2.ogg" range="500" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/tyrant_breathe3.ogg" range="500" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
       </StatusEffect>
       <!-- Refill oxygen when the suit is contained. -->
       <StatusEffect type="OnContained" target="Contained" Condition="1.0" interval="1" disabledeltatime="true">
@@ -454,9 +473,11 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.25" probabilitymultiplier="0.2" damagesound="LimbArmor" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn,radiationsickness" damagemultiplier="0.25" probabilitymultiplier="0.5" damagesound="LimbArmor" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="organdamage" damagemultiplier="0.65" probabilitymultiplier="0.32" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="contamination" damagemultiplier="0" damagesound="LimbArmor" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="tyranttetherpoint" damagemultiplier="0" probabilitymultiplier="0" damagesound="LimbArmor" />
       <SkillModifier skillidentifier="helm" skillvalue="20" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
       <StatValue stattype="MeleeAttackSpeed" value="1.5" />
     </Wearable>
     <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
@@ -476,7 +497,7 @@
       </SubContainer>
     </ItemContainer>
   </Item>
-<!--Admiral Uniform-->
+  <!--Admiral Uniform-->
   <Item name="" identifier="barodrama_officeruniform" category="Equipment" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft" description="">
     <Price baseprice="350" soldeverywhere="false" minleveldifficulty="25">
       <Price locationtype="outpost" multiplier="1" sold="false" />
@@ -496,23 +517,23 @@
       <RequiredItem identifier="coalitionmedal" amount="2" />
     </Fabricate>
     <InventoryIcon name="Uniform Icon" texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="192,0,64,64" origin="0.5,0.5" />
-    <Sprite name="Officer Uniform" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_item.png" sourcerect="0,0,147,60" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="Officer Uniform" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_item.png" sourcerect="0,0,147,60" depth="0.6" origin="0.5,0.5" />
     <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
     <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-      <sprite name="Officer Uniform Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Right Hand" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Left Hand" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Left Lower Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Right Lower Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Left Upper Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Right Upper Arm" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Waist" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Right Thigh" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Left Thigh" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Right Leg" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Left Leg" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Right Shoe" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Officer Uniform Left Shoe" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Torso" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Waist" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer Uniform Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <damagemodifier afflictionidentifiers="lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
       <SkillModifier skillidentifier="helm" skillvalue="10" />
       <StatValue stattype="MissionMoneyGainMultiplier" value="0.08" />
@@ -531,15 +552,15 @@
       <Price storeidentifier="merchantmine" minavailable="1" />
     </Price>
     <Deconstruct time="10" />
-    <Sprite name="Coalition Captain Cap" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" depth="0.6" sourcerect="440,0,72,44" origin="0.5,0.5" />
+    <Sprite name="Coalition Captain Cap" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" depth="0.6" sourcerect="440,0,72,44" origin="0.5,0.5" />
     <Body width="59" height="40" density="15" />
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-      <sprite name="Captain's Cap 1 Wearable" texture="%ModDir:BaroDrama V5%/Jobgear/Captain/officersuit_body.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="false" sourcerect="440,0,72,44" origin="0.4,1.0" />
+      <sprite name="Captain's Cap 1 Wearable" texture="%ModDir%/Items/Diving/Barodrama/Captain/officersuit_body.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="false" sourcerect="440,0,72,44" origin="0.4,1.0" />
       <SkillModifier skillidentifier="helm" skillvalue="10" />
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.8" />
     </Wearable>
   </Item>
-<!--Director PDA-->
+  <!--Director PDA-->
   <Item name="" identifier="barodrama_navpda" Tags="" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
     <Price baseprice="150" sold="false">
       <Price storeidentifier="merchantoutpost" />

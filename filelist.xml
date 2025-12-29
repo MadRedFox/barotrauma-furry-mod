@@ -7,13 +7,14 @@
   <Item file="%ModDir%/Items/Weeaboo/weeaboo.xml" />
   <Item file="%ModDir%/Items/Diving/override_divinggear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Cultist/override_cultist_gear.xml" />
-  <Item file="%ModDir%/Items/Jobgear/Assistant/override_assistant_gear.xml" />
-  <Item file="%ModDir%/Items/Jobgear/Captain/override_captain_gear.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/Assistant/assistant_gear.xml" />
+    <!--<Item file="%ModDir%/Items/Diving/Barodrama/Captain/captain_drama.xml" />-->
   <Item file="%ModDir%/Items/Jobgear/Clown/override_clown.xml" />
   <Item file="%ModDir%/Items/Jobgear/Commoner/override_commoner_gear.xml" />
-  <Item file="%ModDir%/Items/Jobgear/Engineer/override_engineer_gear.xml" />
-  <Item file="%ModDir%/Items/Jobgear/Mechanic/override_mechanic_gear.xml" />
-  <Item file="%ModDir%/Items/Jobgear/Medic/override_medic_gear.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/Electrician/electrician_gear.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/Mechanic/mechanic_gear.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/Special/special_gear.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/Medic/medic_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Security/override_securityofficer_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Watchman/override_watchman_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/override_misc.xml" />
@@ -24,4 +25,5 @@
   <Item file="%ModDir%/Items/Tools/tools.xml" />
   <Text file="%ModDir%/Localization/English.xml" />
   <Text file="%ModDir%/Localization/Russian.xml" />
+  <Item file="%ModDir%/Items/Diving/Barodrama/discs.xml" />
 </contentpackage>

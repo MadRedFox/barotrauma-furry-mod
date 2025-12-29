@@ -25,10 +25,10 @@
       <RequiredItem identifier="rubber" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="0,256,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Security/cobrasuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Security/cobrasuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Security/cobrasuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Security/cobrasuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
       <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_body_[SPECIES].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.8" hidelimb="true" hideotherwearables="true" sourcerect="424,2,88,76" origin="0.5,0.5">
@@ -56,14 +56,14 @@
       <sprite name="Cobra Armor Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_body_[SPECIES].png" limb="LeftFoot" sound="footstep_cobrasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Cobra Armor Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_body_[SPECIES].png" limb="RightFoot" sound="footstep_cobrasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
-      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="8000.0" SpeedMultiplier="0.4" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="8000.0" SpeedMultiplier="0.4" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
-        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
-        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkExosuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkExosuit" priority="1" ExpectedSpecies="Felinid" />
         <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
-        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
-        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+        <TriggerAnimation Type="Run" FileName="HumanRunExosuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunExosuit" priority="10" ExpectedSpecies="Felinid" />
       </StatusEffect>
       <StatusEffect type="OnContained" target="Contained" Condition="1.0" targetslot="0" interval="1" disabledeltatime="true">
         <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
@@ -139,12 +139,13 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations" damagemultiplier="0.35" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound,explosiondamage" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="nausea" damagemultiplier="0" probabilitymultiplier="0" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="psychosis" damagemultiplier="0.80" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn,radiationsickness,bleeding" damagemultiplier="0.50" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="paralysis,huskinfection" damagemultiplier="0.65" probabilitymultiplier="0.5" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="contamination" damagemultiplier="0" damagesound="LimbArmor" />
-      <SkillModifier skillidentifier="weapons" skillvalue="10" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="psychosis" damagemultiplier="0.75" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn, bleeding" damagemultiplier="0.45" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="paralysis,huskinfection" probabilitymultiplier="0.4" damagesound="LimbArmor" />
+      <SkillModifier skillidentifier="weapons" skillvalue="10" /> 
+      <StatValue stattype="PropulsionSpeed" value="-0.75" />
+      <StatValue stattype="FlowResistance" value="0.9" />
       <ItemComponent>
         <IsActive HullOxygenPercentage="lt 50" />
         <StatusEffect type="OnActive" target="Contained,Character" comparison="And" targetslot="0">
@@ -170,7 +171,7 @@
         <Containable items="oxygensource,weldingtoolfuel" />
       </SubContainer>
       <SubContainer capacity="1" maxstacksize="1">
-        <Containable items="mobilebattery">
+        <Containable items="mobilebattery"> 
           <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true">
             <Conditional IsOn="true" />
           </StatusEffect>
@@ -203,13 +204,13 @@
       <RequiredItem identifier="rubber" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="128,256,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Security/vipersuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Security/vipersuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Security/vipersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Security/vipersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="432,0,78,80" origin="0.5,0.6">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="432,0,80,80" origin="0.5,0.6">
         <LightComponent range="200.0" lightcolor="180,255,128,255" powerconsumption="10" IsOn="true" allowingameediting="false">
           <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
             <Conditional IsDead="false" />
@@ -217,7 +218,7 @@
           <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
         </LightComponent>
       </sprite>
-      <sprite name="Viper Armor Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.55" sourcerect="160,0,112,192" />
+      <sprite name="Viper Armor Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.55" sourcerect="160,0,100,192" />
       <sprite name="Viper Armor Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Viper Armor Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Viper Armor Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
@@ -232,7 +233,7 @@
       <sprite name="Viper Armor Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="LeftFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Viper Armor Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="RightFoot" sound="footstep_orcasuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
-      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.7" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.7" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
         <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
@@ -278,8 +279,10 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,gunshotwound" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn,bleeding,explosiondamage" damagemultiplier="0.6" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="paralysis,huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="contamination" damagemultiplier="0" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="paralysis,huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
       <StatValue stattype="RangedAttackSpeed" value="0.25" />
       <StatValue stattype="RangedSpreadReduction" value="0.3" />
       <SkillModifier skillidentifier="weapons" skillvalue="5" />
@@ -336,10 +339,10 @@
       <RequiredItem identifier="fulgurium" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="64,256,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Security/sidewindersuit_item.png" sourcerect="0,0,128,160" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Security/sidewindersuit_item.png" sourcerect="0,0,128,192" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Security/sidewindersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Security/sidewindersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,0,128,160" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,0,128,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
       <sprite name="Sidewinder Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewinder_[SPECIES].png" limb="Torso" hidelimb="true" hideotherwearables="true" origin="0.55,0.6" inherittexturescale="true" sourcerect="400,0,132,226">
@@ -368,7 +371,7 @@
       <sprite name="Sidewinder Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewinder_[SPECIES].png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.4,0.55" sourcerect="360,208,88,48" />
       <sprite name="Sidewinder Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewinder_[SPECIES].png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.4,0.55" sourcerect="272,208,88,48" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
-      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.8" LowPassMultiplier="0.3" setvalue="true" disabledeltatime="true">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.8" LowPassMultiplier="0.3" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
         <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
@@ -444,9 +447,8 @@
       </Sonar>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations" damagemultiplier="0.80" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding,stun,poison" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection,burn" damagemultiplier="0.5" damagesound="LimbArmor" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="contamination" damagemultiplier="0" damagesound="LimbArmor" />
-      <StatValue stattype="SwimmingSpeed" value="0.8" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection,burn" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+     <StatValue stattype="SwimmingSpeed" value="0.8" />
       <StatValue stattype="WalkingSpeed" value="-0.5" />
     </Wearable>
     <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">

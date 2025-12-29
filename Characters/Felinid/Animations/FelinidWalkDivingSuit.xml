@@ -1,4 +1,5 @@
-﻿<HumanWalk
+<?xml version="1.0" encoding="utf-8"?>
+<HumanWalk
   GetUpForce="1"
   HeadLeanAmount="0.1"
   TorsoLeanAmount="0.08"
