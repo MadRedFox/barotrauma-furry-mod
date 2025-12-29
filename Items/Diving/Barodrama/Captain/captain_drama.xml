@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <Affliction name="Holt's Curse" identifier="shellshock" description="" type="psychosis" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" karmachangeonapplied="-1" maxstrength="100">
+    <Effect minstrength="0" maxstrength="30" strengthchange="-1.0" />
+    <PeriodicEffect mininterval="60" maxinterval="120">
+      <StatusEffect target="Character" onlyoutside="true">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="Content/Items/Weapons/Emp.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Molochbaby/BABYMOLOCH_idle1.ogg" />
+        <Sound file="Content/Characters/Molochbaby/BABYMOLOCH_idle2.ogg" />
+        <Sound file="Content/Characters/Molochbaby/BABYMOLOCH_idle3.ogg" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/scream1.ogg" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/scream2.ogg" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/scream3.ogg" />
+        <Sound file="Content/Sounds/UI/RadioMsg.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" onlyinside="true">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="Content/Items/Weapons/Emp.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/fractalguardian/FRACTALGUARDIAN2_idle2.ogg" />
+        <Sound file="Content/Characters/fractalguardian/FRACTALGUARDIAN2_idle4.ogg" />
+        <Sound file="Content/Characters/Legacyfractalguardian2/FRACTALGUARDIAN2_idle2.ogg" />
+        <Sound file="Content/Characters/Legacyfractalguardian2/FRACTALGUARDIAN2_idle4.ogg" />
+        <Sound file="Content/Sounds/UI/RadioMsg.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <!--What was that?-->
+    <Effect minstrength="30" maxstrength="60" strengthchange="-1.0">
+      <StatusEffect target="Character" disabledeltatime="true">
+        <Conditional ishuman="true" />
+        <Affliction identifier="wormflash" strength="3" probability="0.02" />
+      </StatusEffect>
+    </Effect>
+    <!--Something is seriously wrong here...-->
+    <Effect minstrength="60" maxstrength="100" strengthchange="-1.0">
+      <StatusEffect target="Character">
+        <Affliction identifier="worms" amount="2" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Worm Flash" identifier="wormflash" type="psychosis" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" karmachangeonapplied="-1" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1.0">
+      <StatusEffect target="Character">
+        <Affliction identifier="worms" amount="5" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+  </Affliction>
+  <AfflictionPsychosis name="Worms" identifier="worms" description="" type="psychosis" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="40" showicontoothersthreshold="1000" showinhealthscannerthreshold="40" karmachangeonapplied="-20" treatmentthreshold="40" maxstrength="100">
+    <Effect minstrength="0" maxstrength="25" minradialdistort="0" maxradialdistort="0.5" minscreenblur="0.0" maxscreenblur="0.25" minchromaticaberration="0" maxchromaticaberration="5" strengthchange="-1.0">
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="true" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/voices_light.ogg" dontmuffle="true" loop="true" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" minradialdistort="0.5" maxradialdistort="1" minscreenblur="0.25" maxscreenblur="0.5" minchromaticaberration="5" maxchromaticaberration="10" strengthchange="-1.0">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+        <Affliction identifier="nausea" amount="1.05" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="true" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/voices_medium.ogg" dontmuffle="true" loop="true" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="100" minradialdistort="1" maxradialdistort="2" minscreenblur="0.5" maxscreenblur="1.0" minchromaticaberration="10" maxchromaticaberration="20" strengthchange="-1.0">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+        <Affliction identifier="nausea" amount="1.5" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="true" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Captain/voices_heavy.ogg" dontmuffle="true" loop="true" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="0,0,128,128" color="150,26,26,255" origin="0,0" />
+  </AfflictionPsychosis>
+  <Affliction name="" identifier="tyranttetherpoint" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="0,128,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Chains" identifier="tyrantpaintether" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="And">
+        <Conditional tyranttetherpoint="gte 1" />
+        <Affliction identifier="painchains" amount="2" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="painchains" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="0" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="And">
+        <Conditional IsLocalPlayer="true" />
+        <Sound file="Content/Characters/Watcher/WATCHER_idleLoop.ogg" loop="true" dontmuffle="true" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Affliction identifier="incrementalstun" amount="25" />
+        <Affliction identifier="psychosis" amount="3" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="head">
+        <ParticleEmitter particle="psychosisfx" particlespersecond="20" scalemin="0.4" scalemax="0.6" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Chains" identifier="tyrantgaintether" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="And">
+        <Conditional tyranttetherpoint="gte 1" />
+        <Affliction identifier="gainchains" amount="2" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="gainchains" description="" type="talentbuff" isbuff="true" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="0" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" resistancefor="stun" minresistance="0" maxresistance="0.5">
+      <StatValue stattype="MeleeAttackSpeed" minvalue="0" maxvalue="0.2" />
+      <StatValue stattype="RangedAttackSpeed" minvalue="0" maxvalue="0.2" />
+      <StatValue stattype="TurretAttackSpeed" minvalue="0" maxvalue="0.2" />
+      <StatValue stattype="MovementSpeed" minvalue="0" maxvalue="0.2" />
+      <StatValue stattype="RepairSpeed" minvalue="0" maxvalue="0.2" />
+      <StatValue stattype="RepairToolStructureRepairMultiplier" minvalue="0" maxvalue="0.2" />
+      <StatusEffect target="Character" targetlimb="head">
+        <ParticleEmitter particle="gazerage" particlespersecond="20" scalemin="0.3" scalemax="0.4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="256,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Chains" identifier="tyrantpaintetheramped" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="And">
+        <Conditional tyranttetherpoint="gte 1" />
+        <Affliction identifier="painchains" amount="2" />
+        <Affliction identifier="ampedpainchains" amount="2" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="ampedpainchains" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" OxygenAvailable="-50">
+        <Affliction identifier="organdamage" amount="5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="head">
+        <ParticleEmitter particle="skyholderfx" particlespersecond="20" scalemin="0.6" scalemax="0.8" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Chains" identifier="tyrantgaintetheramped" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="And">
+        <Conditional tyranttetherpoint="gte 1" />
+        <Affliction identifier="gainchains" amount="2" />
+        <Affliction identifier="ampedgainchains" amount="2" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="ampedgainchains" description="" type="talentbuff" isbuff="true" limbspecific="false" indicatorlimb="Head" duration="1" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" resistancefor="damage" minresistance="0" maxresistance="0.5">
+      <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="0.25" />
+      <StatValue stattype="MovementSpeed" minvalue="0" maxvalue="0.3" />
+      <AbilityFlag flagtype="AlwaysStayConscious" />
+      <AbilityFlag flagtype="MoveNormallyWhileDragging" />
+      <StatusEffect target="Character" targetlimb="head">
+        <ParticleEmitter particle="skyholderfx" particlespersecond="20" scalemin="0.6" scalemax="0.8" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="256,0,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="navdispenser" description="" type="talentbuff" isbuff="true" limbspecific="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.2">
+        <SpawnItem identifier="barodrama_navpda" spawnposition="ThisInventory" />
+        <ReduceAffliction identifier="navdispenser" amount="100.0" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,128,128,128" color="255,255,0,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="tagdispenser" description="" type="talentbuff" isbuff="true" limbspecific="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.2">
+        <SpawnItem identifier="barodrama_tagpda" spawnposition="ThisInventory" />
+        <ReduceAffliction identifier="tagdispenser" amount="100.0" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir:BaroDrama V5%/JobGear/Afflictions.png" sourcerect="128,128,128,128" color="255,255,0,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="The Honking" identifier="thehonking" description="" type="talentbuff" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" karmachangeonapplied="-1" maxstrength="2">
+    <Effect minstrength="0" maxstrength="30" strengthchange="-1.0" />
+    <PeriodicEffect mininterval="2" maxinterval="10">
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Assistant/thehonking01.ogg" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Assistant/thehonking02.ogg" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Assistant/thehonking03.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="monkeypump" type="debuff" translationoverride="drunk" limbspecific="false" indicatorlimb="Head" activationthreshold="20" maxstrength="100" affectmachines="false">
+    <Effect minstrength="20" maxstrength="40" strengthchange="-0.1" minfacetint="255,0,0,0" maxfacetint="255,0,0,50" minspeedmultiplier="1.0" maxspeedmultiplier="0.8"></Effect>
+    <Effect minstrength="40" maxstrength="80" minvitalitydecrease="10" maxvitalitydecrease="30" minscreenblur="0.1" maxscreenblur="1.0" strengthchange="-0.2" graincolor="255,255,255,255" mingrainstrength="0.0" maxgrainstrength="3.0" minchromaticaberration="0.0" maxchromaticaberration="5.0" dialogflag="DrunkMedium" minfacetint="255,0,0,50" maxfacetint="255,0,0,100" minspeedmultiplier="0.8" maxspeedmultiplier="0.7">
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Affliction identifier="nausea" strength="10" probability="0.05" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="80" maxstrength="100" minvitalitydecrease="30" maxvitalitydecrease="100" strengthchange="-0.2" minscreenblur="1.0" maxscreenblur="3.0" graincolor="255,255,255,255" mingrainstrength="3.0" maxgrainstrength="6.0" minchromaticaberration="5.0" maxchromaticaberration="10.0" dialogflag="DrunkHigh" minfacetint="255,0,0,150" maxfacetint="255,0,0,150" minspeedmultiplier="0.8" maxspeedmultiplier="0.5">
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="true" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Special/pumped.ogg" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Affliction identifier="nausea" strength="20" probability="0.15" />
+      </StatusEffect>
+    </Effect>
+    <!--Beans-->
+    <PeriodicEffect mininterval="30" maxinterval="60">
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Special/pump_01.ogg" selectionmode="Random" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Special/pump_02.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+  </Affliction>
+</Afflictions>

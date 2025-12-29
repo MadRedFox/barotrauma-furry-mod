@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+  <Item name="" identifier="barodrama_honeyjar" category="Medical" Tags="smallitem,medical" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" secondary="medcontainer" />
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.15" />
+    <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.1" />
+    <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.05" />
+    <Price baseprice="280">
+      <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="5" minleveldifficulty="25" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="45" amount="1">
+      <RequiredSkill identifier="medical" level="25" />
+      <RequiredItem identifier="creepingorange" amount="2" />
+      <RequiredItem identifier="elastin" amount="1" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="elastin" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="199,69,48,58" depth="0.6" origin="0.5,0.5" />
+    <Body width="60" height="20" density="12" />
+    <SuitableTreatment type="damage" suitability="15" />
+    <SuitableTreatment type="burn" suitability="50" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <RequiredSkill identifier="medical" level="25" />
+      <StatusEffect type="OnUse" target="This" Condition="-25.0">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="50">
+        <ReduceAffliction type="damage" amount="0.25" />
+        <ReduceAffliction type="burn" amount="0.25" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" duration="50">
+        <ReduceAffliction type="damage" amount="0.125" />
+        <ReduceAffliction type="burn" amount="0.125" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="medical" level="25" />
+  </Item>
+  <!--Stupid reference-->
+  <Item name="" identifier="barodrama_medicine" category="Medical" Tags="smallitem,medical" maxstacksize="2" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Price baseprice="100" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="1">
+        <Reputation faction="clowns" min="15" />
+      </Price>
+    </Price>
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.05" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20" amount="1">
+      <RequiredItem identifier="barodrama_honeyjar" amount="1" />
+      <RequiredItem identifier="ethanol" amount="1" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="ethanol" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="256,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="264,64,51,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="60" height="20" density="12" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-50.0" />
+      <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true">
+        <Conditional Condition="lte 1" />
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Special/getpumped.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
+        <Affliction identifier="psychosisresistance" amount="600" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget" duration="30">
+        <Conditional huskinfection="lt 50.0" />
+        <ReduceAffliction identifier="huskinfection" amount="0.3" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget" duration="30">
+        <ReduceAffliction identifier="psychosis" amount="3" />
+        <ReduceAffliction identifier="hallucinating" amount="3" />
+        <Affliction identifier="monkeypump" amount="3" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Admiral's Uniform (wrecked) -->
+  <Item name="" identifier="barodrama_wreckadmiralsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft" description="">
+    <Price baseprice="350" soldeverywhere="false" minleveldifficulty="100" />
+    <PreferredContainer primary="wrecksupplycab" minamount="0" maxamount="1" spawnprobability="0.04" />
+    <Deconstruct time="30">
+      <Item identifier="dementonite" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="coalitionmedal" />
+    </Deconstruct>
+    <InventoryIcon name="Uniform Icon" texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="0,448,64,64" origin="0.5,0.5" />
+    <Sprite name="Holt's Uniform" texture="%ModDir:BaroDrama V5%/Jobgear/Special/holtsuitwrecked_item.png" sourcerect="0,0,147,60" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Admiral Uniform Torso" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Waist" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding,paralysis" damagemultiplier="0.85" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="Poison" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="shellshock" armorsector="0.0,360.0" damagemultiplier="1.5" />
+      <SkillModifier skillidentifier="helm" skillvalue="10" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+  <!-- Admiral's Uniform -->
+  <Item name="" identifier="barodrama_admiralsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft" description="">
+    <Price baseprice="350" soldeverywhere="false" minleveldifficulty="100" />
+    <Deconstruct time="30">
+      <Item identifier="dementonite" />
+      <Item identifier="ballisticfiber" />
+      <Item identifier="coalitionmedal" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="50">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredSkill identifier="helm" level="50" />
+      <RequiredItem identifier="barodrama_wreckadmiralsuit" />
+      <RequiredItem identifier="dementonite" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <InventoryIcon name="Uniform Icon" texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+    <Sprite name="Holt's Uniform" texture="%ModDir:BaroDrama V5%/Jobgear/Special/holtsuit_item.png" sourcerect="0,0,147,60" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Admiral Uniform Torso" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Waist" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.75" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding,paralysis" damagemultiplier="0.75" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="poison" damagemultiplier="0.75" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="shellshock" armorsector="0.0,360.0" damagemultiplier="0.75" />
+      <SkillModifier skillidentifier="helm" skillvalue="15" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+  <!-- Admiral's Visor (Wrecked) -->
+  <Item name="" identifier="barodrama_wreckedvisage" scale="0.5" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="engcab" secondary="locker" />
+    <Price baseprice="350" soldeverywhere="false" minleveldifficulty="25">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="1.15" minavailable="3" sold="false" />
+      <Price locationtype="research" multiplier="1" minavailable="4" sold="false" />
+      <Price locationtype="military" multiplier="0.8" sold="false" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="2" sold="false" />
+    </Price>
+    <PreferredContainer primary="wrecksupplycab" minamount="0" maxamount="1" spawnprobability="0.04" />
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+    <Sprite name="Thermal Goggles" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" sourcerect="454,0,58,33" depth="0.6" origin="0.5,0.5" />
+    <Body width="70" height="24" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Holt's Visage Wearable" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuitwrecked_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="454,0,58,33" origin="0.5,0.5" />
+      <damagemodifier afflictionidentifiers="shellshock" armorsector="0.0,360.0" damagemultiplier="0.85" />
+    </Wearable>
+  </Item>
+  <!-- Admiral's Visor -->
+  <Item name="" identifier="barodrama_visage" scale="0.5" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="engcab" secondary="locker" />
+    <Price baseprice="350" soldeverywhere="false" minleveldifficulty="100" />
+    <Deconstruct time="40">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="barodrama_wreckedvisage" />
+      <Item identifier="fulgurium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="helm" level="50" />
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="barodrama_wreckedvisage" />
+      <RequiredItem identifier="fulguriumbatterycell" />
+      <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/Jobgear/icons.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
+    <Sprite name="Thermal Goggles" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" sourcerect="454,0,58,33" depth="0.6" origin="0.5,0.5" />
+    <Body width="70" height="24" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Holt's Visage Wearable" texture="%ModDir%/Items/Diving/Barodrama/Special/holtsuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="454,0,58,33" origin="0.5,0.5" />
+      <damagemodifier afflictionidentifiers="shellshock" armorsector="0.0,360.0" damagemultiplier="0.75" />
+      <SkillModifier skillidentifier="weapons" skillvalue="10" />
+      <SkillModifier skillidentifier="medical" skillvalue="10" />
+      <SkillModifier skillidentifier="electrical" skillvalue="5" />
+    </Wearable>
+    <StatusHUD drawhudwhenequipped="true" overlaycolor="176,0,0,120" range="3000" thermalgoggles="true" showdeadcharacters="false" showtexts="true" />
+  </Item>
+  <!--Narwhal Suit-->
+  <Item name="" identifier="barodrama_narwhalsuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="true" description="" allowdroppingonswap="true" impactsoundtag="impact_metal_heavy" hideinmenus="true">
+    <Price baseprice="2500" soldeverywhere="false">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="aluminium" />
+      <Item identifier="zinc" amount="2" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_item.png" sourcerect="0,0,160,160" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_item.png" sourcerect="0,0,128,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Mechanic/mechanicsuits_locker.png" sourcerect="0,66,256,63" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes+RightHand" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Narwhal Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_item.png" limb="Torso" hidelimb="true" hideotherwearables="true" origin="0.4,0.7" inherittexturescale="true" sourcerect="0,0,170,192" scale="1.1">
+        <LightComponent range="200.0" lightcolor="100,0,255,250" powerconsumption="10" IsOn="false" allowingameediting="false">
+          <poweronsound file="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_activate.ogg" range="1000" loop="false" />
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.01, 0.4" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Narwhal Diving Suit Head" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" sourcerect="0,0,1,1">
+        <LightComponent range="300.0" lightcolor="255,0,255,255" minvoltage="0" powerconsumption="0" pulsefrequency="2.5" pulseamount="0.6" IsOn="true" allowingameediting="false">
+          <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" size="1.5,1.5" />
+          <IsActive hasstatustag="narwhals" />
+          <StatusEffect type="OnActive" targettype="This" sightrange="25000" soundrange="25000" setvalue="true">
+            <Sound file="%ModDir:BaroDrama V5%/Jobgear/Special/narwhals.ogg" dontmuffle="true" loop="true" range="25000" />
+          </StatusEffect>
+        </LightComponent>
+      </sprite>
+      <sprite name="Narwhal Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" sourcerect="272,0,64,96" origin="0.5,0.75" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" sourcerect="336,0,64,96" origin="0.5,0.75" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="LeftFoot" sound="footstep_whalesuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.55" sourcerect="400,160,96,48" scale="1.1" />
+      <sprite name="Narwhal Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Special/narwhalsuit_body.png" limb="RightFoot" sound="footstep_whalesuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.55" sourcerect="400,208,96,48" scale="1.1" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="10000.0" SpeechImpediment="100" SpeedMultiplier="0.5" LowPassMultiplier="0.3" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" targetslot="0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.15" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.035" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell1" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.025" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell2" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" onlyoutside="true">
+        <Conditional IsDead="false" />
+        <Conditional InWater="true" />
+        <Affliction identifier="narwhaldelay" strength="2" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" tags="narwhals" duration="0.1">
+        <Conditional narwhalsong="gt 0" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage,bleeding" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,radiationsickness" damagemultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0" damagesound="LimbArmor" />
+      <StatValue stattype="FlowResistance" value="0.8" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+    </Wearable>
+    <Holdable slots="OuterClothes+RightHand" controlpose="true" aimpos="70,5" handle1="-25,-7" />
+    <RangedWeapon reload="0.5" barrelpos="34,6" spread="0" unskilledspread="2" drawhudwhenequipped="true" crosshairscale="0.2">
+      <sound file="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_fire1.ogg" type="OnUse" range="1000.0" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="muzzleflashnucleargun" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" scalemultiplier="0.5,0.5" colormultiplier="255,200,200,200" scalemin="0.0" scalemax="0.6" />
+      <StatusEffect type="OnUse" target="Contained" targetslot="1" Condition="-2.0" comparison="And">
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="1.5" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="3.0">
+          <Affliction identifier="psychosis" strength="2.5" />
+        </Explosion>
+      </StatusEffect>
+      <RequiredItems identifier="alienpowercell" type="Contained" targetslot="1" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="40" />
+    </RangedWeapon>
+    <SkillRequirementHint identifier="weapons" level="40" />
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="alienpowercell">
+          <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+        </Containable>
+      </SubContainer>
+      <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_oxygenlow.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Special/narwhalsuit_oxygenempty.ogg" range="500" />
+      </StatusEffect>
+    </ItemContainer>
+    <aitarget maxsightrange="25000" sonarlabel="!!!!!" />
+  </Item>
+</Items>
+</Override>

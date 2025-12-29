@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+<Items>
+  <Item name="" identifier="barodrama_routinesuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="false" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="350">
+      <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="4" />
+      <Price storeidentifier="merchantresearch" minavailable="0" sold="false" />
+      <Price storeidentifier="merchantmilitary" minavailable="0" sold="false" />
+      <Price storeidentifier="merchantmine" minavailable="0" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.3" />
+    <PreferredContainer primary="wreckdivingsuitcontainer" spawnprobability="0.1" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="64,320,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/JobGear/Assistant/greensuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/JobGear/Assistant/greensuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/JobGear/Assistant/greensuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/JobGear/Assistant/greensuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="435,5,75,76" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Routine Diving Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Routine Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/greensuit_body.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="4000.0" SpeedMultiplier="0.8" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="0.05" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.85" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <SkillModifier skillidentifier="electrical" skillvalue="1" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="1" />
+      <SkillModifier skillidentifier="medical" skillvalue="1" />
+      <SkillModifier skillidentifier="weapons" skillvalue="1" />
+      <SkillModifier skillidentifier="helm" skillvalue="1" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
+      <Containable items="oxygensource,weldingtoolfuel" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <StatusEffect type="OnWearing" target="Contained">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Assistant/greensuit_oxygenlow.ogg" range="500" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/JobGear/Assistant/greensuit_oxygenempty.ogg" range="500" loop="true" />
+      </StatusEffect>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!--Procedure Suit-->
+  <Item name="" identifier="barodrama_proceduresuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="false" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="750" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <PreferredContainer primary="wreckdivingsuitcontainer" spawnprobability="0.05" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="copper" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="60" />
+      <RequiredItem identifier="barodrama_routinesuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="128,320,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/proceduresuit_item.png" sourcerect="0,0,144,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/proceduresuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/assistantsuits_lockers.png" sourcerect="0,0,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="418,0,94,90" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="165,224,250,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Procedure Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/proceduresuit_item.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.5" sourcerect="0,0,144,192" />
+      <sprite name="Procedure Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Procedure Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,170,80,48" />
+      <sprite name="Procedure Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/proceduresuit_body.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,118,80,48" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.6" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="0.05" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <MiniMap enableitemfinder="true" enableelectricalview="false" enablehullstatus="false" enablehullcondition="false" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
+        <GuiFrame relativesize="0.3,0.3" anchor="TopRight" relativeoffset="0.006, -0.001" style="ItemUI" />
+      </MiniMap>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+      <SkillModifier skillidentifier="electrical" skillvalue="2" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="2" />
+      <SkillModifier skillidentifier="medical" skillvalue="2" />
+      <SkillModifier skillidentifier="weapons" skillvalue="2" />
+      <SkillModifier skillidentifier="helm" skillvalue="2" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
+      <Containable items="oxygensource,weldingtoolfuel" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <StatusEffect type="OnWearing" target="Contained">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenlow.ogg" range="500" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenempty.ogg" range="500" loop="true" />
+      </StatusEffect>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!--Mechanical Procedure Suit-->
+  <Item name="" identifier="barodrama_issacsuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="false" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="750" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <PreferredContainer primary="wreckdivingsuitcontainer" spawnprobability="0.05" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="copper" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="electrical" level="60" />
+      <RequiredItem identifier="barodrama_routinesuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="lead" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="64,384,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/issacsuit_item.png" sourcerect="0,0,144,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/issacsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/assistantsuits_lockers.png" sourcerect="0,64,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="418,0,94,90" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="165,224,250,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Issac Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/issacsuit_item.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.5" sourcerect="0,0,144,192" />
+      <sprite name="Issac Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,170,80,48" />
+      <sprite name="Issac Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/issacsuit_body.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,118,80,48" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.6" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" targetslot="0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.07" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell1" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell2" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <MiniMap enableitemfinder="false" enablehullstatus="false" enablehullcondition="false" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
+        <GuiFrame relativesize="0.25,0.25" anchor="TopRight" relativeoffset="0.006, -0.001" style="ItemUI" />
+      </MiniMap>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.5" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <SkillModifier skillidentifier="electrical" skillvalue="5" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="smallitem" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="smallitem" />
+      </SubContainer>
+      <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenlow.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenempty.ogg" range="500" />
+      </StatusEffect>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!--Electrical Procedure Suit-->
+  <Item name="" identifier="barodrama_apprenticesuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="false" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="750" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <PreferredContainer primary="wreckdivingsuitcontainer" spawnprobability="0.05" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="copper" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="60" />
+      <RequiredItem identifier="barodrama_routinesuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="lead" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="0,384,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/apprenticesuit_item.png" sourcerect="0,0,160,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/apprenticesuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/assistantsuits_lockers.png" sourcerect="0,128,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="418,0,94,90" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="165,224,250,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Issac Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/apprenticesuit_item.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.6,0.5" sourcerect="0,0,160,192" />
+      <sprite name="Issac Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Issac Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,170,80,48" />
+      <sprite name="Issac Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/apprenticesuit_body.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,118,80,48" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.65" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" targetslot="0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.07" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell1" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell2" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <MiniMap enableitemfinder="false" enableelectricalview="false" enablehullcondition="true" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
+        <GuiFrame relativesize="0.25,0.25" anchor="TopRight" relativeoffset="0.006, -0.001" style="ItemUI" />
+      </MiniMap>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound,bleeding" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations,bitewounds,blunttrauma" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="5" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenlow.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenempty.ogg" range="500" />
+      </StatusEffect>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!--Medical Procedure Suit-->
+  <Item name="" identifier="barodrama_nursesuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="false" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="750" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <PreferredContainer primary="wreckdivingsuitcontainer" spawnprobability="0.05" />
+    <Deconstruct time="20">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="copper" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="medical" level="60" />
+      <RequiredItem identifier="barodrama_routinesuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="128,384,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/nursesuit_item.png" sourcerect="0,0,144,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Assistant/greensuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Assistant/nursesuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Assistant/assistantsuits_lockers.png" sourcerect="0,192,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="418,0,94,90" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="165,224,250,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Nurse Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/nursesuit_item.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.5" sourcerect="0,0,144,192" />
+      <sprite name="Nurse Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Nurse Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,170,80,48" />
+      <sprite name="Nurse Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/nursesuit_body.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,118,80,48" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.65" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" targetslot="0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.07" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell1" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell2" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.4" damagesound="LimbArmor" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+      <SkillModifier skillidentifier="medical" skillvalue="5" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="8">
+        <Containable items="chem,medical" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="8">
+        <Containable items="chem,medical" />
+      </SubContainer>
+      <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenlow.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenempty.ogg" range="500" />
+      </StatusEffect>
+    </ItemContainer>
+    <StatusHUD drawhudwhenequipped="true" />
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!--Security Proecudre Suit-->
+  <Item name="" identifier="barodrama_cadetsuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="false" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="750" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <PreferredContainer primary="wreckdivingsuitcontainer" spawnprobability="0.05" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="copper" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredItem identifier="barodrama_routinesuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="ballisticfiber" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="192,384,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/cadetsuit_item.png" sourcerect="0,0,144,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/cadetsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/assistantsuits_lockers.png" sourcerect="0,256,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="418,0,94,90" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="165,224,250,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Cadet Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/cadetsuit_item.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.5" sourcerect="0,0,144,192" />
+      <sprite name="Cadet Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cadet Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,170,80,48" />
+      <sprite name="Cadet Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/cadetsuit_body.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,118,80,48" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.65" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" targetslot="0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.07" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell1" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell2" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/Map/LabelIcons.png" sourcerect="512,256,256,256" origin="0.5,0.45" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="pistolitem" />
+      </SubContainer>
+      <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenlow.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenempty.ogg" range="500" />
+      </StatusEffect>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!--Navigation Procedure Suit-->
+  <Item name="" identifier="barodrama_navigatorsuit" category="Diving" tags="diving,deepdiving,divingsuit,provocative" scale="0.5" fireproof="false" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="750" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.0" sold="false" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" sold="false" />
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <PreferredContainer primary="wreckdivingsuitcontainer" spawnprobability="0.05" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="copper" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="helm" level="60" />
+      <RequiredItem identifier="barodrama_routinesuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="256,384,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/navigatorsuit_item.png" sourcerect="0,0,144,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/navigatorsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/assistantsuits_lockers.png" sourcerect="0,320,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="418,0,94,90" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="165,224,250,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Navigator Diving Suit Torso" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/navigatorsuit_item.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.55,0.5" sourcerect="0,0,144,192">
+        <LightComponent LightColor="1,0,0,1" range="50" powerconsumption="10" blinkfrequency="2" IsOn="true" canbeselected="false">
+          <StatusEffect type="OnActive" targettype="Contained" Condition="-0.2" comparison="And" targetslot="1" />
+          <StatusEffect type="OnActive" targettype="This" SoundRange="50000" setvalue="true">
+            <sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/proceduresuit_beacon.ogg" range="1000.0" />
+          </StatusEffect>
+          <IsActive hasStatusTag="beacon" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Navigator Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Navigator Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,170,80,48" />
+      <sprite name="Navigator Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/navigatorsuit_body.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" hideotherwearables="true" origin="0.5,0.5" sourcerect="418,118,80,48" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.65" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <!-- Refill oxygen when the suit is contained. -->
+      <StatusEffect type="OnContained" target="Contained" Condition="1.0" targetslot="0" interval="1" disabledeltatime="true">
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+        <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.07" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell1" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="And" targetslot="0">
+        <Conditional IsDead="false" />
+        <RequiredItem identifier="tag_oxygencell2" type="Contained" targetslot="0" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+      <SkillModifier skillidentifier="helm" skillvalue="5" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+        <GuiFrame relativesize="0.16,0.14" anchor="BottomLeft" absoluteoffset="0,160" style="ItemUI" />
+        <TickBox text="sonarbeacon.beaconactive">
+          <StatusEffect type="OnUse" target="This" tags="beacon" duration="0.5" disabledeltatime="true" interval="0.5" stackable="false">
+            <RequiredItem items="mobilebattery" type="Contained" targetslot="1" excludebroken="true" />
+          </StatusEffect>
+        </TickBox>
+        <TextBox text="sonarbeacon.beaconsignal" propertyname="SonarLabel" maxtextlength="32" />
+      </CustomInterface>
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenlow.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="%ModDir:BaroDrama V5%/Jobgear/Assistant/greensuit_oxygenempty.ogg" range="500" />
+      </StatusEffect>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!--Fool Suit-->
+  <Item name="" identifier="barodrama_foolsuit" category="Diving" tags="diving,deepdiving,divingsuit,divinggear_wearableindoors,provocative" scale="0.5" fireproof="true" description="" allowdroppingonswap="true" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="500" minleveldifficulty="35" soldeverywhere="false" />
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.0" />
+    <Deconstruct time="30">
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <Item identifier="dementonite" />
+      <Item identifier="dementonite" />
+      <Item identifier="clowndivingmask" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="60" />
+      <RequiredItem identifier="divingsuit" />
+      <RequiredItem identifier="dementonite" />
+      <RequiredItem identifier="dementonite" />
+      <RequiredItem identifier="clowndivingmask" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="0,320,64,64" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/foolsuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/foolsuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/foolsuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/foolsuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="426,0,86,82" origin="0.5,0.5">
+        <LightComponent range="100.0" lightcolor="255,128,0,128" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Jester Diving Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Jester Diving Suit Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/foolsuit_body.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="6000.0" SpeedMultiplier="0.65" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Walk" FileName="FelinidWalkDivingSuit" priority="1" ExpectedSpecies="Felinid" />
+        <!-- high prio for run animation so e.g. affliction-based run animations won't make the character run faster -->
+        <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="10" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="FelinidRunDivingSuit" priority="10" ExpectedSpecies="Felinid" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" comaprison="And">
+        <Conditional clownpower="gte 1" type="Character" />
+        <Affliction identifier="psychosis" amount="2" />
+        <ReduceAffliction identifier="oxygenlow" strength="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="NearbyCharacters" range="150" comparison="Or">
+        <Conditional psychosis="gte 5" type="Character" />
+        <Conditional drunk="gte 5" type="Character" />
+        <Affliction identifier="thehonking" strength="2" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bleeding" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound,bitewounds" damagemultiplier="0.7" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="stun" damagemultiplier="0.7" probabilitymultiplier="0.7" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="watchersgaze" damagemultiplier="0" probabilitymultiplier="0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <StatValue stattype="PropulsionSpeed" value="-0.5" />
+      <StatValue stattype="SwimmingSpeed" value="-0.2" />
+      <StatValue stattype="WalkingSpeed" value="-0.2" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+  </Item>
+  <!--Coalition Uniform-->
+  <Item name="" identifier="barodrama_coalitionsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft" description="">
+    <Price baseprice="350" soldeverywhere="false" minleveldifficulty="25">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="1.15" minavailable="3" sold="false" />
+      <Price locationtype="research" multiplier="1" minavailable="4" sold="false" />
+      <Price locationtype="military" multiplier="0.8" sold="false" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="2" sold="false" />
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="organicfiber" />
+      <RequiredItem identifier="ballisticfiber" />
+    </Fabricate>
+    <InventoryIcon name="Uniform Icon" texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="192,320,64,64" origin="0.5,0.5" />
+    <Sprite name="Coalition Uniform" texture="%ModDir:BaroDrama V5%/Jobgear/Assistant/coalitionsuit_item.png" sourcerect="0,0,147,60" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Coalition Uniform Torso" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Right Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Left Hand" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Left Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Right Lower Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Left Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Right Upper Arm" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Waist" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Right Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Left Thigh" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Right Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Left Leg" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Right Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Uniform Left Shoe" texture="%ModDir%/Items/Diving/Barodrama/Assistant/coalitionsuit_body.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" />
+    </Wearable>
+    <ItemContainer capacity="2">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+</Items>
+</Override>
