@@ -3,6 +3,7 @@ using System;
 using System.Reflection;
 using Barotrauma;
 using Microsoft.Xna.Framework;
+using PartialItemOverride;
 
 namespace ArcticFoxFurryMod
 {
@@ -30,10 +31,14 @@ namespace ArcticFoxFurryMod
                 // Apply all patches from HumanoidTailPatch class and CharacterHeadPortraitPatch class
                 harmony.PatchAll(Assembly.GetExecutingAssembly());
                 
+                // Initialize the Partial Item Override System
+                PartialItemOverrideSystem.Initialize("com.arcticfox.barotrauma");
+                
                 isInitialized = true;
                 
                 DebugConsole.NewMessage("[ArcticFoxMod] Tail movement successfully initialized! Humanoid characters can now have animated tails.", new Color(0, 255, 0));
                 DebugConsole.NewMessage("[ArcticFoxMod] Character portrait patches initialized! Ear limbs will now render on ID cards and character icons.", new Color(0, 255, 0));
+                DebugConsole.NewMessage("[ArcticFoxMod] Partial Item Override System enabled! Use inherit=\"true\" in item XMLs.", new Color(100, 200, 255));
             }
             catch (Exception ex)
             {

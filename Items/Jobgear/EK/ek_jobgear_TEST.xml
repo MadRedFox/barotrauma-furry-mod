@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Этот файл демонстрирует, как ваш существующий ek_jobgear.xml (729 строк)
+  может быть сокращен до ~10-20 строк с использованием inherit="true"
+  
+  ИНСТРУКЦИЯ:
+  1. Скопируйте этот файл в Items/Jobgear/EK/ek_jobgear_new.xml
+  2. Добавьте в filelist.xml: <Item file="Items/Jobgear/EK/ek_jobgear_new.xml" />
+  3. Запустите игру и проверьте консоль F3
+  4. Если работает - можете заменить старый ek_jobgear.xml этим!
+-->
+<Items>
+  <Override>
+  <!-- ==================================================================
+       ek_merc_armor_uniform - Сократили с 79 строк до 15!
+       ================================================================== -->
+    <Item identifier="ek_merc_armor_uniform" inherit="true">
+      
+      <!-- Добавить условные спрайты для правой обуви (для пушистых видов) -->
+      <add tag="/Wearable/sprite[name='Mercenary Combat Undershirt Right Shoe']">
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </add>
+      
+      <!-- Добавить условные спрайты для левой обуви -->
+      <add tag="/Wearable/sprite[name='Mercenary Combat Undershirt Left Shoe']">
+        <conditionalSprite target="person">
+          <conditional hasSpecifiertag="furry" />
+          <properties>
+            <property name="hidelimb">false</property>
+          </properties>
+        </conditionalSprite>
+        <ConditionalSprite target="person">
+          <conditional hasspecifiertag="human" />
+          <properties>
+            <property name="hidelimb">true</property>
+          </properties>
+        </ConditionalSprite>
+      </add>
+      
+    </Item>
+
+  <!-- ==================================================================
+       Добавьте другие предметы из ek_jobgear.xml здесь по той же схеме!
+       Каждый предмет будет занимать 10-20 строк вместо 80-120.
+       ================================================================== -->
+
+  </Override>
+</Items>

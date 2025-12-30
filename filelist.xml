@@ -26,4 +26,8 @@
   <Text file="%ModDir%/Localization/English.xml" />
   <Text file="%ModDir%/Localization/Russian.xml" />
   <Item file="%ModDir%/Items/Diving/Barodrama/discs.xml" />
+
+  <!-- Partial Override Test File (uncomment to test) -->
+  <Item file="%ModDir%/Items/PartialOverride_Examples.xml" />
+  
 </contentpackage>
