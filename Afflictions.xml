@@ -1,54 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
-  <!-- VANILLA -->
-  <Affliction identifier="nausea">
-    <inherit identifier="nausea">
-      <doinherit />
-      <del sel="./PeriodicEffect/StatusEffect[@target='Character' or @comparison='and']" />
-      <add sel="./PeriodicEffect">
-        <StatusEffect target="Character" comparison="and">
-          <Conditional ishuman="true" />
-          <Conditional hasspecifiertag="male" />
-          <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
-          <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
-          <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="and">
-          <Conditional ishuman="true" />
-          <Conditional hasspecifiertag="female" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale2.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale3.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale4.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale5.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale6.ogg" />
-        </StatusEffect>
-      </add>
-    </inherit>
+<Afflictions>
+  <Affliction name="Stabilized" identifier="lampreypower" description="" type="talentbuff" isbuff="true" limbspecific="false" treatmentthreshold="1000" maxstrength="3">
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1" resistancefor="stun" minresistance="0" maxresistance="0.3">
+      <StatValue stattype="RangedSpreadReduction" minvalue="0" maxvalue="0.6" />
+      <StatValue stattype="MovementSpeed" minvalue="0" maxvalue="0.15" />
+      <StatValue stattype="FlowResistance" minvalue="0" maxvalue="0.5" />
+      <StatusEffect target="Character">
+        <Affliction identifier="recoilstabilized" amount="1" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="7,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction identifier="concussion">
-    <inherit identifier="concussion">
-      <doinherit />
-      <del sel="./PeriodicEffect/StatusEffect[@target='Character' or @comparison='and']" />
-      <add sel="./PeriodicEffect">
-        <StatusEffect target="Character" comparison="and">
-          <Conditional ishuman="true" />
-          <Conditional hasspecifiertag="male" />
-          <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
-          <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
-          <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="and">
-          <Conditional ishuman="true" />
-          <Conditional hasspecifiertag="female" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale2.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale3.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale4.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale5.ogg" />
-          <Sound file="%ModDir%/Sounds/HUMAN_chokeFemale6.ogg" />
-        </StatusEffect>
-      </add>
-    </inherit>
+  <Affliction name="" identifier="eelcharger" description="" type="talentbuff" isbuff="true" limbspecific="false" treatmentthreshold="1000" iconcolors="255,255,0;255,255,0;255,255,0;255,255,0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <AbilityFlag flagtype="CanTinker" />
+      <AbilityFlag flagtype="TinkeringPowersDevices" />
+      <AbilityFlag flagtype="CanTinkerFabricatorsAndDeconstructors" />
+      <StatValue stattype="TinkeringDuration" minvalue="1" maxvalue="30" />
+      <StatValue stattype="TinkeringDamage" minvalue="1" maxvalue="2" />
+      <StatValue stattype="TinkeringStrength" minvalue="0" maxvalue="-0.25" />
+      <StatusEffect target="Character" targetlimb="righthand">
+        <ParticleEmitter particle="faradayfx" particlespersecond="10" scalemin="0.3" scalemax="0.5" velocitymin="5" velocitymax="10" anglemin="0" anglemax="360" copyentityangle="false" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/Jobgear/Afflictions.png" sourcerect="128,128,128,128" color="255,255,0,255" origin="0,0" />
   </Affliction>
+</Afflictions>
 </Override>
