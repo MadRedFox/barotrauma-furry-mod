@@ -24,7 +24,7 @@
         <ParticleEmitter particle="faradayfx" particlespersecond="10" scalemin="0.3" scalemax="0.5" velocitymin="5" velocitymax="10" anglemin="0" anglemax="360" copyentityangle="false" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Jobgear/Afflictions.png" sourcerect="128,128,128,128" color="255,255,0,255" origin="0,0" />
+    <icon texture="%ModDir:BaroDrama V5%/Jobgear/Afflictions.png" sourcerect="128,128,128,128" color="255,255,0,255" origin="0,0" />
   </Affliction>
 </Afflictions>
 </Override>
