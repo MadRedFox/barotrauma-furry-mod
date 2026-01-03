@@ -26,4 +26,5 @@
   <Text file="%ModDir%/Localization/English.xml" />
   <Text file="%ModDir%/Localization/Russian.xml" />
   <Item file="%ModDir%/Items/Diving/Barodrama/discs.xml" />
+  <Afflictions file="%ModDir%/Afflictions.xml" />
 </contentpackage>
