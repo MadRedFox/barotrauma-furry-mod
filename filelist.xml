@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Arctic Fox Furry mod V2" modversion="0.0.7" corepackage="False" steamworkshopid="3375857608" gameversion="1.7.7.0">
+<contentpackage name="Arctic Fox Furry mod V2" modversion="0.0.9" corepackage="False" steamworkshopid="3375857608" gameversion="1.11.5.0">
   <Character file="%ModDir%/Characters/Human/Human.xml" />
   <Character file="%ModDir%/Characters/Felinid/Felinid.xml" />
   <UIStyle file="%ModDir%/UI/override_style.xml" />
@@ -8,7 +8,6 @@
   <Item file="%ModDir%/Items/Diving/override_divinggear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Cultist/override_cultist_gear.xml" />
   <Item file="%ModDir%/Items/Diving/Barodrama/Assistant/assistant_gear.xml" />
-    <!--<Item file="%ModDir%/Items/Diving/Barodrama/Captain/captain_drama.xml" />-->
   <Item file="%ModDir%/Items/Jobgear/Clown/override_clown.xml" />
   <Item file="%ModDir%/Items/Jobgear/Commoner/override_commoner_gear.xml" />
   <Item file="%ModDir%/Items/Diving/Barodrama/Electrician/electrician_gear.xml" />
@@ -26,5 +25,8 @@
   <Text file="%ModDir%/Localization/English.xml" />
   <Text file="%ModDir%/Localization/Russian.xml" />
   <Item file="%ModDir%/Items/Diving/Barodrama/discs.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Medic/override_medic_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Security/override_securityofficer_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Watchman/override_watchman_gear.xml" />
   <Afflictions file="%ModDir%/Afflictions.xml" />
 </contentpackage>
