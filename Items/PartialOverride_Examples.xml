@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ПРИМЕРЫ использования системы частичного переопределения предметов.
+  
+  Эти примеры показывают, как использовать inherit="true" с операциями
+  <add>, <del> и <modify> для частичного изменения предметов из других модов.
+-->
+<Items>
+  <Override>
+  <!-- ========================================================================================
+       ПРИМЕР 1: Добавление условных спрайтов для пушистых видов
+       ======================================================================================== -->
+  
+  <Item identifier="ek_merc_armor_uniform" inherit="true">
+    <!-- Добавить условный спрайт для правой обуви -->
+    <add tag="/Wearable/sprite[name='Mercenary Combat Undershirt Right Shoe']">
+      <conditionalSprite target="person">
+        <conditional hasSpecifiertag="furry" />
+        <properties>
+          <property name="hidelimb">false</property>
+        </properties>
+      </conditionalSprite>
+      <ConditionalSprite target="person">
+        <conditional hasspecifiertag="human" />
+        <properties>
+          <property name="hidelimb">true</property>
+        </properties>
+      </ConditionalSprite>
+    </add>
+    
+    <!-- Добавить условный спрайт для левой обуви -->
+    <add tag="/Wearable/sprite[name='Mercenary Combat Undershirt Left Shoe']">
+      <conditionalSprite target="person">
+        <conditional hasSpecifiertag="furry" />
+        <properties>
+          <property name="hidelimb">false</property>
+        </properties>
+      </conditionalSprite>
+      <ConditionalSprite target="person">
+        <conditional hasspecifiertag="human" />
+        <properties>
+          <property name="hidelimb">true</property>
+        </properties>
+      </ConditionalSprite>
+    </add>
+  </Item>
+
+  <!-- ========================================================================================
+       ПРИМЕР 2: Изменение значений брони
+       ======================================================================================== -->
+  
+  <Item identifier="ek_marine_armor" inherit="true">
+    <!-- Уменьшить урон от кровотечения -->
+    <modify tag="/Wearable/damagemodifier[afflictiontypes='bleeding']">
+      <update property="damagemultiplier" value="0.30" />
+    </modify>
+    
+    <!-- Улучшить защиту от пуль и взрывчатки (можно изменить несколько свойств сразу!) -->
+    <modify tag="/Wearable/damagemodifier[afflictionidentifiers='gunshotwound,explosiondamage']">
+      <update property="damagemultiplier" value="0.20" />
+      <update property="deflectprojectiles" value="true" />
+    </modify>
+    
+    <!-- Увеличить штраф к скорости -->
+    <modify tag="/Wearable/StatusEffect[type='OnActive']">
+      <update property="SpeedMultiplier" value="0.75" />
+    </modify>
+  </Item>
+
+  <!-- ========================================================================================
+       ПРИМЕР 3: Удаление требований к крафту
+       ======================================================================================== -->
+  
+  <Item identifier="ek_merc_armor_uniform" inherit="true">
+    <!-- Удалить требование пластика для упрощения крафта -->
+    <del tag="/Fabricate/RequiredItem[identifier='plastic']" />
+  </Item>
+
+  <!-- ========================================================================================
+       ПРИМЕР 4: Добавление нового варианта текстуры для вида
+       ======================================================================================== -->
+  
+  <Item identifier="combatdivingsuit" inherit="true">
+    <add tag="/Wearable">
+      <sprite name="Felinid Combat Diving Suit" 
+              texture="%ModDir%/Items/Armor/combatsuit_felinid.png"
+              limb="Torso"
+              speciesname="felinid"
+              hidelimb="false" />
+    </add>
+  </Item>
+
+  <!-- ========================================================================================
+       ПРИМЕР 5: Изменение цены в магазинах
+       ======================================================================================== -->
+  
+  <Item identifier="ek_marine_helmet" inherit="true">
+    <!-- Изменить множитель цены в военных магазинах -->
+    <modify tag="/Price/Price[storeidentifier='merchantmilitary']">
+      <update property="multiplier" value="0.8" />
+      <update property="minavailable" value="5" />
+    </modify>
+  </Item>
+
+  <!-- ========================================================================================
+       ПРИМЕР 6: Комплексное переопределение с несколькими операциями
+       ======================================================================================== -->
+  
+  <Item identifier="ek_renegade_armor_uniform" inherit="true">
+    <!-- Добавить новый модификатор урона -->
+    <add tag="/Wearable">
+      <damagemodifier armorsector="0.0,360.0" 
+                      afflictionidentifiers="alieninfection" 
+                      damagemultiplier="0.5" 
+                      damagesound="LimbArmor" />
+    </add>
+    
+    <!-- Изменить существующий модификатор -->
+    <modify tag="/Wearable/damagemodifier[afflictiontypes='bleeding']">
+      <update property="damagemultiplier" value="0.50" />
+    </modify>
+    
+    <!-- Удалить один из материалов декомпозиции -->
+    <del tag="/Deconstruct/Item[identifier='rubber']" />
+    
+    <!-- Добавить новый бонус навыка -->
+    <add tag="/Wearable">
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+    </add>
+  </Item>
+
+  <!-- ========================================================================================
+       ПРИМЕР 7: Модификация контейнера предмета
+       ======================================================================================== -->
+  
+  <Item identifier="ek_tacticalbackpack" inherit="true">
+    <!-- Увеличить вместимость и изменить допустимые предметы -->
+    <modify tag="/ItemContainer">
+      <update property="capacity" value="32" />
+      <update property="items" value="smallitem,smallarmsammo,ek_microtorpedo,ek_rocketammo,explosive,harpoonammo,mediumitem" />
+    </modify>
+  </Item>
+
+  <!-- ========================================================================================
+       ПРИМЕР 8: Изменение иконки в инвентаре
+       ======================================================================================== -->
+  
+  <Item identifier="ek_fire_jumpsuit" inherit="true">
+    <!-- Заменить иконку инвентаря на кастомную -->
+    <modify tag="/InventoryIcon">
+      <update property="texture" value="%ModDir%/Items/CustomIcons/fire_jumpsuit_icon.png" />
+      <update property="sourcerect" value="0,0,64,64" />
+    </modify>
+  </Item>
+
+  </Override>
+</Items>
