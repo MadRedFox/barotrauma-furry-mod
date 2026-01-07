@@ -1,3 +1,4 @@
+#if CLIENT
 using HarmonyLib;
 using Barotrauma;
 using Barotrauma.Items.Components;
@@ -362,3 +363,4 @@ namespace ArcticFoxFurryMod
         }
     }
 }
+#endif
