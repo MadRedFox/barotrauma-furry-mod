@@ -1,4 +1,4 @@
-﻿<HumanWalk
+﻿<FelinidWalk
   GetUpForce="1"
   HeadLeanAmount="0.05"
   TorsoLeanAmount="-0.14"

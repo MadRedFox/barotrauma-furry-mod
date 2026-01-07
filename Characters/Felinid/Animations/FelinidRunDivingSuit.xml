@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HumanRun GetUpForce="0.70000005" 
+<FelinidRun GetUpForce="0.70000005" 
 HeadLeanAmount="0.19393511" 
 TorsoLeanAmount="0.06872561" 
 FootMoveStrength="9" 

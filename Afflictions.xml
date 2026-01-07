@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Override>
 <Afflictions>
+<Override>
   <Affliction name="Stabilized" identifier="lampreypower" description="" type="talentbuff" isbuff="true" limbspecific="false" treatmentthreshold="1000" maxstrength="3">
     <Effect minstrength="0" maxstrength="3" strengthchange="-1" resistancefor="stun" minresistance="0" maxresistance="0.3">
       <StatValue stattype="RangedSpreadReduction" minvalue="0" maxvalue="0.6" />
@@ -26,5 +26,5 @@
     </Effect>
     <icon texture="%ModDir:BaroDrama V5%/Jobgear/Afflictions.png" sourcerect="128,128,128,128" color="255,255,0,255" origin="0,0" />
   </Affliction>
-</Afflictions>
 </Override>
+</Afflictions>
