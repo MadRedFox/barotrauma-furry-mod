@@ -253,10 +253,35 @@ namespace PartialItemOverride
                     return false;
                 }
 
-                // Case-insensitive comparison
-                if (!string.Equals(attribute.Value, predicate.Value, StringComparison.OrdinalIgnoreCase))
+                string attributeValue = attribute.Value;
+                string predicateValue = predicate.Value;
+
+                // Check if this is a comma-separated list (common in Barotrauma)
+                // e.g., afflictionidentifiers="gunshotwound,explosiondamage"
+                if (attributeValue.Contains(","))
                 {
-                    return false;
+                    // Split both attribute and predicate values by comma
+                    var attributeValues = attributeValue.Split(',')
+                        .Select(v => v.Trim().ToLowerInvariant())
+                        .ToHashSet();
+
+                    var predicateValues = predicateValue.Split(',')
+                        .Select(v => v.Trim().ToLowerInvariant())
+                        .ToHashSet();
+
+                    // Check if all predicate values are contained in attribute values
+                    if (!predicateValues.IsSubsetOf(attributeValues))
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    // Simple case-insensitive exact match
+                    if (!string.Equals(attributeValue, predicateValue, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return false;
+                    }
                 }
             }
 

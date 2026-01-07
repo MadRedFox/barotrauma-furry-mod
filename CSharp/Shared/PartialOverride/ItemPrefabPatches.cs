@@ -13,7 +13,7 @@ namespace PartialItemOverride
     [HarmonyPatch]
     public static class ItemPrefabPatches
     {
-        private static bool _patchesApplied = false;
+        public static bool _patchesApplied = false;
 
         /// <summary>
         /// Static constructor - runs the FIRST time this class is accessed.
@@ -83,6 +83,9 @@ namespace PartialItemOverride
         {
             try
             {
+                // ALWAYS log to confirm this patch is executing
+                DebugConsole.Log("[PartialOverride] CreatePrefab_Prefix called!");
+                
                 // Extract file path from the ItemFile instance
                 var itemFile = __instance as ContentFile;
                 string filePath = itemFile?.Path.Value ?? "Unknown";

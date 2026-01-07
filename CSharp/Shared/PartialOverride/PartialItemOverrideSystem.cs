@@ -29,11 +29,190 @@ namespace PartialItemOverride
                 return;
             }
 
-            // Accessing ItemPrefabPatches will trigger its static constructor if not already run
-            var patchStatus = ItemPrefabPatches._patchesApplied;
-            
-            _isInitialized = true;
-            DebugConsole.NewMessage($"[PartialOverride] System initialized! Patches applied: {patchStatus}", Color.Green);
+            try
+            {
+                DebugConsole.NewMessage("[PartialOverride] Processing items with inherit=\"true\"...", Color.Cyan);
+
+                // Process all items POST-LOAD (C# runs after initial item loading)
+                ProcessAllInheritItems();
+
+                _isInitialized = true;
+                DebugConsole.NewMessage("[PartialOverride] ✅ Partial override system ready!", Color.Green);
+            }
+            catch (Exception ex)
+            {
+                DebugConsole.ThrowError($"[PartialOverride] Failed to initialize: {ex.Message}\n{ex.StackTrace}");
+            }
+        }
+
+        /// <summary>
+        /// Scans all content packages for items with inherit="true" and processes them POST-LOAD.
+        /// </summary>
+        private static void ProcessAllInheritItems()
+        {
+            int processedCount = 0;
+
+            // Iterate through all content packages
+            foreach (var package in ContentPackageManager.EnabledPackages.All)
+            {
+                // Find all Item files in this package
+                foreach (var file in package.Files)
+                {
+                    if (file is ItemFile itemFile)
+                    {
+                        processedCount += ProcessItemFile(itemFile, package);
+                    }
+                }
+            }
+
+            if (processedCount > 0)
+            {
+                DebugConsole.NewMessage($"[PartialOverride] Applied overrides to {processedCount} item(s)", Color.Green);
+            }
+        }
+
+        /// <summary>
+        /// Processes a single ItemFile, looking for items with inherit="true".
+        /// </summary>
+        private static int ProcessItemFile(ItemFile file, ContentPackage package)
+        {
+            int count = 0;
+
+            try
+            {
+                // Load the XML document
+                var doc = System.Xml.Linq.XDocument.Load(file.Path.Value);
+                if (doc?.Root == null) return 0;
+
+                // Find all Item elements (recursively search in case of Override wrappers)
+                var itemElements = doc.Root.Descendants()
+                    .Where(e => e.Name.LocalName.Equals("Item", StringComparison.OrdinalIgnoreCase));
+
+                foreach (var itemElement in itemElements)
+                {
+                    // Check if this item has inherit="true"
+                    var inheritAttr = itemElement.Attribute("inherit");
+                    bool hasInherit = inheritAttr != null && inheritAttr.Value.Equals("true", StringComparison.OrdinalIgnoreCase);
+
+                    if (!hasInherit)
+                        continue;
+
+                    // Get the identifier
+                    var identifierAttr = itemElement.Attribute("identifier");
+                    if (identifierAttr == null) continue;
+
+                    Identifier itemId = identifierAttr.Value.ToIdentifier();
+
+                    // Modify existing item
+                    if (ItemPrefab.Prefabs.TryGet(itemId, out var existingPrefab))
+                    {
+                        DebugConsole.NewMessage($"[PartialOverride] 🎯 Processing item: {itemId}", Color.Yellow);
+                        
+                        var contentElement = new ContentXElement(package, itemElement);
+                        ApplyOverrideToPrefab(existingPrefab, contentElement, itemId);
+                        count++;
+                    }
+                    else
+                    {
+                        DebugConsole.AddWarning($"[PartialOverride] Item '{itemId}' not found for modification!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DebugConsole.ThrowError($"[PartialOverride] Error processing file {file.Path}: {ex.Message}");
+            }
+
+            return count;
+        }
+
+        /// <summary>
+        /// Applies override operations to an existing ItemPrefab by modifying its ConfigElement.
+        /// </summary>
+        private static void ApplyOverrideToPrefab(ItemPrefab prefab, ContentXElement overrideElement, Identifier itemId)
+        {
+            try
+            {
+                DebugConsole.Log($"[PartialOverride] Applying overrides to: {itemId}");
+
+                // Get the base XML from the existing prefab
+                var baseXml = new System.Xml.Linq.XElement(prefab.ConfigElement.Element);
+
+                // Apply the override operations
+                ApplyPartialOverrides(baseXml, overrideElement);
+
+                // Now we need to update the prefab's ConfigElement
+                // ConfigElement is a property with a private setter, we need to find its backing field
+                var configElementField = typeof(ItemPrefab).GetField("<ConfigElement>k__BackingField", 
+                    System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+
+                if (configElementField == null)
+                {
+                    // Try alternative: set via property if it has a setter
+                    var configElementProperty = typeof(ItemPrefab).GetProperty("ConfigElement",
+                        System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
+                    
+                    if (configElementProperty != null && configElementProperty.CanWrite)
+                    {
+                        var newContentElement = new ContentXElement(prefab.ConfigElement.ContentPackage, baseXml);
+                        configElementProperty.SetValue(prefab, newContentElement);
+                    }
+                    else
+                    {
+                        DebugConsole.ThrowError($"[PartialOverride] Could not update ConfigElement for {itemId}!");
+                    }
+                }
+                else
+                {
+                    var newContentElement = new ContentXElement(prefab.ConfigElement.ContentPackage, baseXml);
+                    configElementField.SetValue(prefab, newContentElement);
+                }
+                
+                DebugConsole.NewMessage($"[PartialOverride] ✅ Successfully updated {itemId}", Color.Green);
+            }
+            catch (Exception ex)
+            {
+                DebugConsole.ThrowError($"[PartialOverride] Error applying override to {itemId}: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Creates a new ItemPrefab based on an existing item's configuration.
+        /// This allows creating new items that inherit stats from other items.
+        /// </summary>
+        private static void CreateNewItemFromBase(ItemPrefab basePrefab, ContentXElement overrideElement, Identifier newItemId, Identifier baseItemId)
+        {
+            try
+            {
+                DebugConsole.Log($"[PartialOverride] Creating '{newItemId}' from base '{baseItemId}'");
+
+                // Clone the base item's XML
+                var newItemXml = new System.Xml.Linq.XElement(basePrefab.ConfigElement.Element);
+
+                // Update the identifier to the new item's ID
+                newItemXml.SetAttributeValue("identifier", newItemId.Value);
+
+                // Remove the inherit attribute from the final XML
+                newItemXml.Attribute("inherit")?.Remove();
+
+                // Apply override operations from the new item definition
+                ApplyPartialOverrides(newItemXml, overrideElement);
+
+                // Create a new ItemPrefab and add it to the collection
+                var newContentElement = new ContentXElement(overrideElement.ContentPackage, newItemXml);
+                
+                // Create new ItemPrefab (this will call the constructor)
+                var newPrefab = new ItemPrefab(newContentElement, basePrefab.ContentFile as ItemFile);
+                
+                // Add to prefab collection
+                ItemPrefab.Prefabs.Add(newPrefab, false);
+
+                DebugConsole.NewMessage($"[PartialOverride] ✅ Created new item: {newItemId}", Color.Green);
+            }
+            catch (Exception ex)
+            {
+                DebugConsole.ThrowError($"[PartialOverride] Error creating new item '{newItemId}': {ex.Message}");
+            }
         }
 
         /// <summary>
@@ -49,13 +228,13 @@ namespace PartialItemOverride
             }
 
             DebugConsole.NewMessage($"[PartialOverride] ========== PROCESSING PARTIAL OVERRIDE ==========", Color.Cyan);
-            DebugConsole.Log($"[PartialOverride] Item identifier: {itemIdentifier}");
+            DebugConsole.NewMessage($"[PartialOverride] Item identifier: {itemIdentifier}", Color.Cyan);
             DebugConsole.Log($"[PartialOverride] Package: {element.ContentPackage?.Name ?? "NULL"}");
 
             try
             {
                 // Try to get the base item
-                DebugConsole.Log($"[PartialOverride] Looking for base item '{itemIdentifier}' in ItemPrefab.Prefabs...");
+                DebugConsole.NewMessage($"[PartialOverride] Looking for base item '{itemIdentifier}'...", Color.Yellow);
                 
                 if (!ItemPrefab.Prefabs.TryGet(itemIdentifier, out var baseItemPrefab))
                 {
@@ -69,17 +248,23 @@ namespace PartialItemOverride
                     return element;
                 }
 
-                DebugConsole.NewMessage($"[PartialOverride] ✅ Found base item: {baseItemPrefab.Name} (from {baseItemPrefab.ContentFile?.ContentPackage?.Name ?? "Unknown"})", Color.Green);
+                DebugConsole.NewMessage($"[PartialOverride] ✅ Found base item!", Color.Green);
+                DebugConsole.Log($"[PartialOverride] Base item name: {baseItemPrefab.Name}");
+                DebugConsole.Log($"[PartialOverride] Base item from: {baseItemPrefab.ContentFile?.ContentPackage?.Name ?? "Unknown"}");
 
                 // Clone the base item's XML structure
                 XElement mergedXml = new XElement(baseItemPrefab.ConfigElement);
                 
-                DebugConsole.Log($"[PartialOverride] Base XML root: <{mergedXml.Name}>");
-                DebugConsole.Log($"[PartialOverride] Base XML children count: {mergedXml.Elements().Count()}");
+                DebugConsole.Log($"[PartialOverride] Cloned base XML: <{mergedXml.Name}>");
+                DebugConsole.Log($"[PartialOverride] Base XML has {mergedXml.Elements().Count()} child elements");
                 
-                // List child elements
-                var childNames = mergedXml.Elements().Select(e => e.Name.LocalName).Take(10);
-                DebugConsole.Log($"[PartialOverride] Base XML children: {string.Join(", ", childNames)}");
+                // Count override operations in incoming element
+                int addOps = element.Elements().Count(e => e.Name.ToString().Equals("add", StringComparison.OrdinalIgnoreCase));
+                int delOps = element.Elements().Count(e => e.Name.ToString().Equals("del", StringComparison.OrdinalIgnoreCase) || 
+                                                            e.Name.ToString().Equals("delete", StringComparison.OrdinalIgnoreCase));
+                int modOps = element.Elements().Count(e => e.Name.ToString().Equals("modify", StringComparison.OrdinalIgnoreCase));
+                
+                DebugConsole.NewMessage($"[PartialOverride] Override operations: {addOps} add, {delOps} delete, {modOps} modify", Color.Cyan);
                 
                 // Apply partial override operations
                 ApplyPartialOverrides(mergedXml, element);
@@ -87,7 +272,7 @@ namespace PartialItemOverride
                 // Convert back to ContentXElement with the override mod's content package
                 var result = mergedXml.FromPackage(element.ContentPackage);
                 
-                DebugConsole.NewMessage($"[PartialOverride] ========== PROCESSING COMPLETE ==========", Color.Cyan);
+                DebugConsole.NewMessage($"[PartialOverride] ========== PROCESSING COMPLETE ==========", Color.Green);
                 
                 return result;
             }
