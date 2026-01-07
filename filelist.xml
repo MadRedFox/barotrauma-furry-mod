@@ -28,8 +28,5 @@
   <Item file="%ModDir%/Items/Jobgear/Medic/override_medic_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Security/override_securityofficer_gear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Watchman/override_watchman_gear.xml" />
-
-  <!-- Partial Override Test File (uncomment to test) -->
-  <Item file="%ModDir%/Items/PartialOverride_Examples.xml" />
   
 </contentpackage>
