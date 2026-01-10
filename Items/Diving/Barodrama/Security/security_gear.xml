@@ -25,10 +25,10 @@
       <RequiredItem identifier="rubber" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="0,256,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/cobrasuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/cobrasuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
       <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Security/cobrasuit_body_[SPECIES].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.8" hidelimb="true" hideotherwearables="true" sourcerect="424,2,88,76" origin="0.5,0.5">
@@ -204,10 +204,10 @@
       <RequiredItem identifier="rubber" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="128,256,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="0,0,148,136" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="178,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/vipersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/vipersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
       <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Items/Diving/Barodrama/Security/vipersuit_[SPECIES].png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.9" hidelimb="true" hideotherwearables="true" sourcerect="432,0,80,80" origin="0.5,0.6">
@@ -339,10 +339,10 @@
       <RequiredItem identifier="fulgurium" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BaroDrama V5%/JobGear/icons.png" sourcerect="64,256,64,64" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,0,128,160" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,0,128,192" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,0,128,160" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,0,128,192" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir:BaroDrama V5%/Items/Diving/Barodrama/Security/sidewindersuit_inlocker.png" sourcerect="12,30,77,209" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir:BaroDrama V5%bs/Items/Diving/Barodrama/Security/sidewindersuit_item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
       <sprite name="Sidewinder Suit Torso" texture="%ModDir%/Items/Diving/Barodrama/Security/sidewinder_[SPECIES].png" limb="Torso" hidelimb="true" hideotherwearables="true" origin="0.55,0.6" inherittexturescale="true" sourcerect="400,0,132,226">
