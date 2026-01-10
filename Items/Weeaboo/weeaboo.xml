@@ -99,6 +99,9 @@
         </conditionalSprite>
       </sprite>
     </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
   </Item>
   <Item name="" identifier="athame" category="Equipment" tags="weapon,smallitem,hornitem" scale="0.4" cargocontaineridentifier="metalcrate">
     <Price baseprice="1" sold="false" canbespecial="false" />
@@ -198,6 +201,9 @@
         </conditionalSprite>
       </sprite>
     </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
   </Item>
 <!-- BDSM suit -->
   <Item name="" identifier="bdsmsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="" impactsoundtag="impact_soft" scale="0.8">
@@ -232,6 +238,9 @@
       <sprite name="BDSM Costume Left Shoe" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_bunny" sourcerect="0,0,512,256" origin="0.5,0.5" />
       <sprite name="BDSM Costume Right Shoe" texture="%ModDir%/Items/Weeaboo/bdsm_[GENDER]_[SPECIES].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_bunny" sourcerect="0,0,512,256" origin="0.5,0.5" />
     </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbox,toolbelt,cargoscooter" />
+    </ItemContainer>
   </Item>
 <!-- Captains cape 1 -->  
   <Item name="" identifier="ccape1" category="Equipment" tags="deepdiving,mediumitem,toolbelt,toolbox,mobilecontainer" allowdroppingonswapwith="diving" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.75" fireproof="false" description="" impactsoundtag="impact_soft">
