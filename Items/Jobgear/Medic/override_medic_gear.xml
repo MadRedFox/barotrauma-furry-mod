@@ -365,7 +365,7 @@
       <RequiredItem identifier="plastic" amount="2" />
     </Fabricate>
     <!--<InventoryIcon texture="%ModDir%/Items/Tools/ekutility_tools.png" sourcerect="768,128,112,112" origin="0.5,0.5" />-->
-    <Sprite texture="%ModDir:EK Mods for 1.x.x.x%/Items/Tools/ekutility_tools.png" depth="0.6" sourcerect="768,128,112,112" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Tools/ekutility_tools.png" depth="0.6" sourcerect="768,128,112,112" origin="0.5,0.5" />
     <Body width="112" height="98" density="12" />
     <ItemContainer capacity="16" depth="0.5" displaycontainedstatus="true">
       <Containable items="smallitem,medical,chem" excludeditems="rucksack,backpack,waistbelt" />
