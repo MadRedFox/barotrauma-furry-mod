@@ -72,7 +72,7 @@
     <!-- <Head id="57" gender="female" sheetindex="0,0" tags="furry,body_zta" /> -->
     <Head id="58" gender="female" sheetindex="2,0" tags="furry,body_ayn" />
     <Head id="59" gender="female" sheetindex="3,0" tags="furry,body_zofie" />
-    <!-- <Head id="60" gender="female" sheetindex="0,1" tags="furry,body_tvk" /> -->
+    <Head id="60" gender="female" sheetindex="0,1" tags="furry,body_wolf" />
     <!-- <Head id="61" gender="female" sheetindex="1,1" tags="furry,body_rane" /> -->
     <Head id="62" gender="female" sheetindex="2,1" tags="furry,body_srk" />
     <Head id="63" gender="female" sheetindex="3,1" tags="furry,body_kesis" />
@@ -89,7 +89,7 @@
     <Var var="SPECIES" tags="furry" />
     <Var var="GENDER" tags="female" />
     <!-- TODO: Оставить только кошачьих. Переименовать теги? -->
-    <Var var="BODY" tags="human,body_ara,body_zta,body_ayn,body_zofie,body_tvk,body_rane,body_srk,body_kesis,body_radoslav,body_vikna,body_silk,body_nytro,body_lia,body_hyena,body_aardwolf" />
+    <Var var="BODY" tags="human,body_ara,body_zta,body_ayn,body_zofie,body_tvk,body_rane,body_srk,body_kesis,body_radoslav,body_vikna,body_silk,body_nytro,body_lia,body_hyena,body_aardwolf,body_wolf" />
   </Vars>
 
   <MenuCategory var="GENDER" />
